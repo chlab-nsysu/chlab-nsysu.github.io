@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Chang Lab at National Sun Yat-sen University: marine natural products, stress biology, healthy aging, and C. elegans research." />
+  <meta name="theme-color" content="#0a2439" />
+  <title>Chang Lab | Marine Bioactives &amp; Healthy Aging</title>
+  <style>
+    :root { --navy:#0a2439; --ink:#193248; --muted:#586e7e; --teal:#087d8c; --teal-dark:#075d6a; --light:#f3f8f9; --paper:#fff; --stroke:#dbe7ea; --accent:#d65742; --max:1120px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:80px; }
+    body { margin:0; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans TC",sans-serif; line-height:1.65; color:var(--ink); background:#fff; }
+    a { color:inherit; }
+    a:focus-visible, button:focus-visible { outline:3px solid #e69d55; outline-offset:3px; }
+    .container { max-width:var(--max); padding:0 26px; margin:0 auto; }
+    .topline { background:var(--navy); color:#d8eef3; font-size:.76rem; letter-spacing:.045em; }
+    .topline .container { display:flex; justify-content:flex-end; align-items:center; min-height:32px; }
+    .topline a { color:#d8eef3; text-decoration:none; }
+    header { background:rgba(255,255,255,.97); position:sticky; top:0; z-index:10; box-shadow:0 3px 18px rgba(7,29,43,.07); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:18px; min-height:78px; }
+    .brand { display:flex; gap:11px; align-items:center; text-decoration:none; min-width:0; }
+    .brand-logo { width:42px; height:42px; border-radius:12px; background:var(--navy); display:grid; place-items:center; color:#fff; font-weight:800; font-size:20px; flex-shrink:0; }
+    .brand-name { font-weight:800; letter-spacing:.025em; color:var(--navy); font-size:1.13rem; white-space:nowrap; line-height:1.15; }
+    .brand-sub { font-size:.66rem; color:var(--muted); letter-spacing:.07em; text-transform:uppercase; margin-top:2px; }
+    .navlinks { display:flex; align-items:center; gap:21px; }
+    .navlinks a { text-decoration:none; font-size:.85rem; font-weight:650; color:#2f4e61; white-space:nowrap; }
+    .navlinks a:hover { color:var(--teal); }
+    .menu-btn { display:none; border:1px solid var(--stroke); background:#fff; border-radius:9px; padding:8px 12px; color:var(--ink); cursor:pointer; font-size:1rem; }
+    .hero { min-height:500px; background:linear-gradient(116deg, #082339 0%, #103b51 55%, #0b5665 100%); overflow:hidden; color:#fff; position:relative; }
+    .hero:before { content:""; position:absolute; width:650px; height:650px; border:1px solid rgba(173,232,223,.12); border-radius:50%; top:-300px; right:-130px; box-shadow:0 0 0 90px rgba(179,233,230,.035),0 0 0 180px rgba(179,233,230,.025); }
+    .hero-inner { display:grid; grid-template-columns:1.08fr .92fr; gap:36px; align-items:center; min-height:500px; position:relative; }
+    .eyebrow { color:#7bddd8; font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
+    h1 { font-size:clamp(2.3rem,4.25vw,4rem); line-height:1.19; letter-spacing:-.035em; margin:15px 0 20px; font-weight:800; }
+    .hero p { max-width:570px; font-size:1.04rem; color:#cee4e7; margin:0 0 28px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; background:#e8f8f6; color:#064756; border-radius:7px; padding:12px 20px; font-size:.91rem; font-weight:750; }
+    .button:hover { background:#fff; }
+    .button-outline { background:transparent; border:1px solid rgba(255,255,255,.47); color:#fff; margin-left:10px; }
+    .button-outline:hover { background:rgba(255,255,255,.1); }
+    .hero-art { max-width:460px; width:100%; justify-self:end; filter:drop-shadow(0 15px 30px rgba(0,0,0,.12)); }
+    section { padding:82px 0; }
+    section.alt { background:var(--light); }
+    .section-top { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:30px; }
+    .kicker { font-size:.75rem; text-transform:uppercase; letter-spacing:.2em; color:var(--teal); font-weight:800; margin:0 0 7px; }
+    h2 { font-size:clamp(1.85rem,2.65vw,2.55rem); color:var(--navy); margin:0; line-height:1.25; letter-spacing:-.02em; }
+    .subhead { margin:10px 0 0; color:var(--muted); max-width:700px; font-size:.97rem; }
+    .intro-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; }
+    .intro-grid p { color:#476072; margin:19px 0; }
+    .pill-row { display:flex; flex-wrap:wrap; gap:9px; margin-top:25px; }
+    .pill { background:#e9f5f5; border:1px solid #d0e6e7; color:#076677; padding:6px 12px; border-radius:30px; font-size:.79rem; font-weight:700; }
+    .panel { border-radius:16px; border:1px solid #cfdee2; background:linear-gradient(145deg,#e7f3f4,#f9fcfc); padding:31px; }
+    .panel-num { display:inline-block; color:var(--accent); font-size:3.15rem; font-weight:850; line-height:1; }
+    .panel small { display:block; font-size:.8rem; color:var(--muted); margin-top:6px; }
+    .panel hr { border:0; border-top:1px solid #d1e0e3; margin:24px 0; }
+    .panel h3 { font-size:1.2rem; margin:0 0 7px; color:var(--navy); }
+    .panel p { margin:0; font-size:.9rem; }
+    .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .card { background:#fff; border:1px solid var(--stroke); border-radius:12px; padding:26px; box-shadow:0 9px 26px rgba(9,52,66,.03); }
+    .card-symbol { width:52px; height:52px; display:grid; place-items:center; background:#e6f4f4; border-radius:13px; color:var(--teal-dark); margin-bottom:22px; }
+    .card h3 { margin:0 0 10px; font-size:1.14rem; color:var(--navy); line-height:1.35; }
+    .card p { margin:0; color:var(--muted); font-size:.9rem; }
+    .team { display:grid; grid-template-columns:260px 1fr; background:#fff; border:1px solid var(--stroke); border-radius:13px; overflow:hidden; }
+    .portrait { min-height:258px; background:linear-gradient(145deg,#0c3448,#0d7480); display:flex; align-items:center; justify-content:center; color:#c3f0e7; position:relative; }
+    .portrait svg { max-width:160px; width:70%; }
+    .team-content { padding:30px; }
+    .team-content h3 { margin:0 0 2px; color:var(--navy); font-size:1.5rem; }
+    .team-content .role { color:var(--teal-dark); font-weight:700; font-size:.87rem; margin-bottom:12px; }
+    .team-content p { color:var(--muted); font-size:.94rem; }
+    .quiet { background:#fff; border:1px dashed #b8cdd1; border-radius:11px; padding:23px; color:var(--muted); }
+    .quiet strong { color:var(--navy); }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .textlink { color:var(--teal-dark); font-weight:700; text-decoration:underline; text-underline-offset:4px; }
+    .textlink:hover { color:var(--accent); }
+    .contact-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:30px; }
+    .contact-info { border-top:1px solid var(--stroke); padding:15px 0; }
+    .contact-info strong { display:block; font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; color:var(--teal-dark); }
+    .contact-info span { display:block; color:#445f70; margin-top:3px; }
+    footer { background:var(--navy); color:#c6dce4; padding:34px 0; font-size:.82rem; }
+    footer .container { display:flex; align-items:center; justify-content:space-between; gap:15px; }
+    footer b { color:#fff; }
+    @media(max-width:980px) { .navlinks { gap:12px; } .navlinks a { font-size:.77rem; } .hero-inner { grid-template-columns:1.2fr .8fr; } }
+    @media(max-width:780px) {
+      .nav { min-height:69px; } .menu-btn { display:block; }
+      .navlinks { display:none; position:absolute; top:100%; left:0; right:0; padding:18px 26px 22px; background:#fff; border-top:1px solid var(--stroke); box-shadow:0 15px 25px rgba(8,28,40,.09); flex-direction:column; align-items:flex-start; gap:15px; }
+      .navlinks.open { display:flex; }
+      .navlinks a { font-size:.96rem; }
+      .hero-inner { grid-template-columns:1fr; min-height:0; padding-top:67px; padding-bottom:60px; }
+      .hero-art { max-width:300px; justify-self:center; margin-top:0; }
+      .cards, .intro-grid, .contact-grid, .split { grid-template-columns:1fr; }
+      .intro-grid { gap:28px; } .cards { gap:13px; }
+      .team { grid-template-columns:1fr; } .portrait { min-height:190px; }
+      section { padding:62px 0; } .section-top { display:block; }
+    }
+    @media(max-width:460px) { .container { padding:0 18px; } .brand-sub { font-size:.57rem; } .brand-name { font-size:1rem; } .button-outline { margin-left:0; margin-top:10px; } .hero-actions .button { display:flex; width:100%; } footer .container { display:block; } }
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="container"><a href="https://www.nsysu.edu.tw/" target="_blank" rel="noopener noreferrer">National Sun Yat-sen University · Kaohsiung, Taiwan</a></div></div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Chang Lab Home"><div class="brand-logo">C<span style="color:#88dfd8">.</span></div><div><div class="brand-name">CHANG LAB</div><div class="brand-sub">Marine bioactives &amp; aging</div></div></a>
+      <button class="menu-btn" id="menuButton" aria-controls="navLinks" aria-expanded="false" type="button">☰ Menu</button>
+      <nav class="navlinks" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#research">Research</a><a href="#members">Members</a><a href="#publications">Publications</a><a href="#news">News</a><a href="#join">Join Us</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div id="home" class="hero">
+      <div class="container hero-inner">
+        <div>
+          <div class="eyebrow">Marine Biotechnology · Experimental Biology</div>
+          <h1>From marine bioactives to healthier aging.</h1>
+          <p>We explore the biological potential of marine-derived compounds and investigate stress responses, aging, and neurodegeneration using <i>Caenorhabditis elegans</i>.</p>
+          <div class="hero-actions"><a href="#research" class="button">Explore Our Research <span aria-hidden="true">↗</span></a><a href="#contact" class="button button-outline">Contact the Lab</a></div>
+        </div>
+        <svg class="hero-art" viewBox="0 0 460 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a model organism and molecular research">
+          <defs><linearGradient id="swirl" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c2f7e6"/><stop offset="1" stop-color="#51c6cb"/></linearGradient></defs>
+          <circle cx="240" cy="211" r="173" fill="none" stroke="#d0f2f3" opacity=".18" stroke-width="1.5"/>
+          <circle cx="240" cy="211" r="133" fill="none" stroke="#d0f2f3" opacity=".22" stroke-width="1.5"/>
+          <circle cx="240" cy="211" r="93" fill="none" stroke="#d0f2f3" opacity=".18" stroke-width="1.5"/>
+          <path d="M98 253 C140 140 245 116 279 211 C303 279 238 304 201 258 C174 224 214 185 248 212 C292 248 271 340 192 351 C114 362 68 288 83 204" fill="none" stroke="url(#swirl)" stroke-width="20" stroke-linecap="round" opacity=".95"/>
+          <path d="M98 253 C140 140 245 116 279 211 C303 279 238 304 201 258 C174 224 214 185 248 212 C292 248 271 340 192 351 C114 362 68 288 83 204" fill="none" stroke="#f4ffff" stroke-width="4" stroke-linecap="round" opacity=".64"/>
+          <g stroke="#82dadc" stroke-width="2" opacity=".78" fill="none"><path d="M278 75 L322 110 L358 94"/><path d="M319 291 L367 310 L397 279"/><path d="M80 125 L117 102 L142 117"/></g>
+          <g fill="#c4fff1"><circle cx="278" cy="75" r="7"/><circle cx="322" cy="110" r="9"/><circle cx="358" cy="94" r="6"/><circle cx="319" cy="291" r="8"/><circle cx="367" cy="310" r="6"/><circle cx="397" cy="279" r="10"/><circle cx="80" cy="125" r="7"/><circle cx="117" cy="102" r="8"/><circle cx="142" cy="117" r="5"/></g>
+          <g fill="#e5aa85"><circle cx="358" cy="171" r="6"/><circle cx="369" cy="190" r="3"/><circle cx="344" cy="196" r="4"/><circle cx="145" cy="390" r="5"/></g>
+        </svg>
+      </div>
+    </div>
+    <section id="about">
+      <div class="container intro-grid">
+        <div><p class="kicker">Who we are</p><h2>Connecting marine resources with biomedical discovery.</h2><p>Our laboratory is based in the Department of Marine Biotechnology and Resources at National Sun Yat-sen University, Taiwan.</p><p>We study naturally occurring bioactive compounds and their potential roles in oxidative stress responses, healthy aging, and disease-related phenotypes. The nematode <i>C. elegans</i> provides an accessible whole-organism platform for hypothesis-driven research.</p><div class="pill-row"><span class="pill">Marine natural products</span><span class="pill">C. elegans</span><span class="pill">Stress biology</span><span class="pill">Healthy aging</span></div></div>
+        <div class="panel"><span class="panel-num">3</span><small>Core research directions</small><hr/><h3>Our research approach</h3><p>Bioactive compound screening, whole-organism phenotyping, and mechanistic exploration of stress- and disease-associated pathways.</p></div>
+      </div>
+    </section>
+    <section class="alt" id="research"><div class="container">
+      <div class="section-top"><div><p class="kicker">Scientific focus</p><h2>Research Areas</h2><p class="subhead">Research themes at the intersection of marine natural products and biological mechanisms.</p></div></div>
+      <div class="cards">
+        <article class="card"><div class="card-symbol"><svg width="29" height="29" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 22c7-16 12 7 24-14"/><path d="M6 25c9-13 13 5 20-7"/><circle cx="21" cy="6" r="2"/></svg></div><h3>Marine Natural Products</h3><p>Investigating marine-derived compounds and their biological activities using experimental model systems.</p></article>
+        <article class="card"><div class="card-symbol"><svg width="29" height="29" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="15" cy="15" r="10"/><path d="M15 8v7l5 4"/><path d="M10 3v3M20 24v3"/></svg></div><h3>Oxidative Stress &amp; Aging</h3><p>Exploring cellular stress responses, redox homeostasis, and longevity-associated pathways in <i>C. elegans</i>.</p></article>
+        <article class="card"><div class="card-symbol"><svg width="29" height="29" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 25V5M19 25V5M11 10l8 5-8 5"/><circle cx="7" cy="6" r="2"/><circle cx="23" cy="24" r="2"/></svg></div><h3>Neurodegeneration Models</h3><p>Studying neurodegeneration-related phenotypes, including dopaminergic neuronal integrity and protein aggregation.</p></article>
+      </div>
+    </div></section>
+    <section id="members"><div class="container"><div class="section-top"><div><p class="kicker">People</p><h2>Our Team</h2><p class="subhead">Meet the people behind the science.</p></div></div>
+      <div class="team"><div class="portrait" aria-label="Profile photograph placeholder"><svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="75" cy="50" r="24" stroke="currentColor" stroke-width="4"/><path d="M28 136c3-34 17-50 47-50s44 16 47 50" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></div><div class="team-content"><h3>Chun-Han Chang, Ph.D.</h3><div class="role">Principal Investigator · Assistant Professor</div><p>Department of Marine Biotechnology and Resources<br/>National Sun Yat-sen University, Taiwan</p><p>Research interests: marine bioactive compounds, <i>C. elegans</i> models, stress responses, aging, and neurodegenerative disease biology.</p><a class="textlink" href="https://mbr.nsysu.edu.tw/p/405-1260-359452,c23194.php?Lang=zh-tw" target="_blank" rel="noopener noreferrer">Official faculty profile ↗</a></div></div>
+      <div class="quiet" style="margin-top:18px"><strong>Students and lab members</strong><br/>Profiles and photographs will be added after the team roster is confirmed.</div>
+    </div></section>
+    <section class="alt" id="publications"><div class="container"><div class="section-top"><div><p class="kicker">Scientific output</p><h2>Selected Publications</h2><p class="subhead">Peer-reviewed publications and research outputs from the lab.</p></div></div><div class="quiet"><strong>Publication list in preparation.</strong><br/>Publication titles, journal details, and DOI links will be added as the website is updated.</div></div></section>
+    <section id="news"><div class="container"><div class="section-top"><div><p class="kicker">Lab updates</p><h2>News &amp; Activities</h2><p class="subhead">Research highlights, laboratory activities, conferences, and new publications.</p></div></div><div class="quiet"><strong>Updates coming soon.</strong><br/>This area is reserved for confirmed lab news and photographs.</div></div></section>
+    <section class="alt" id="join"><div class="container split"><div><p class="kicker">Opportunities</p><h2>Join Our Lab</h2><p class="subhead">Interested in marine bioactives, <i>C. elegans</i>, aging biology, or neurodegeneration?</p></div><div><p>Students interested in learning about possible research opportunities are welcome to contact the laboratory. Please briefly introduce your background and research interests.</p><p><strong>Note:</strong> Contacting the lab does not imply that a funded position is currently available.</p><a class="textlink" href="mailto:chchang@mail.nsysu.edu.tw?subject=Inquiry%20about%20Chang%20Lab">Email the PI ↗</a></div></div></section>
+    <section id="contact"><div class="container contact-grid"><div><p class="kicker">Get in touch</p><h2>Contact</h2><p class="subhead">We welcome scientific discussions and inquiries about our research.</p><div style="margin-top:27px"><div class="contact-info"><strong>Principal Investigator</strong><span>Chun-Han Chang, Ph.D.</span></div><div class="contact-info"><strong>Email</strong><span><a class="textlink" href="mailto:chchang@mail.nsysu.edu.tw">chchang@mail.nsysu.edu.tw</a></span></div><div class="contact-info"><strong>Location</strong><span>Department of Marine Biotechnology and Resources<br/>National Sun Yat-sen University<br/>No. 70, Lienhai Rd., Gushan District, Kaohsiung 804, Taiwan</span></div></div></div><div class="panel" style="align-self:center"><h3>National Sun Yat-sen University</h3><p style="margin:12px 0 22px">Based in Kaohsiung, Taiwan, with a focus on research at the interface of marine science and biomedical biology.</p><a class="textlink" href="https://mbr.nsysu.edu.tw/" target="_blank" rel="noopener noreferrer">Department website ↗</a></div></div></section>
+  </main>
+  <footer><div class="container"><div><b>CHANG LAB</b><br/>Marine Bioactives &amp; Healthy Aging Research</div><div>© <span id="year">2026</span> Chang Lab · National Sun Yat-sen University</div></div></footer>
+  <script>
+    (function(){
+      var button=document.getElementById('menuButton');
+      var nav=document.getElementById('navLinks');
+      button.addEventListener('click',function(){ var open=nav.classList.toggle('open'); button.setAttribute('aria-expanded',String(open)); });
+      nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){nav.classList.remove('open');button.setAttribute('aria-expanded','false');});});
+      document.getElementById('year').textContent=new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
