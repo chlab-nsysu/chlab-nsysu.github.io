@@ -1,18 +1,20 @@
-CHANG LAB — Step 4 website update
-=================================
-Files included:
-  index.html    (updated home page: Research links now point to research.html)
-  research.html (new detailed Research page)
+CHANG LAB | STEP 5 — MEMBERS PAGE
+==================================
 
-Instructions:
-1. Extract this ZIP into a new folder.
-2. Visit https://github.com/chlab-nsysu/chlab-nsysu.github.io/upload/main
-3. Upload BOTH index.html and research.html to the ROOT of the repository.
-4. Commit directly to the main branch with message: Add detailed Research page
-5. Visit https://chlab-nsysu.github.io/research.html
-6. On the home page, test the Research menu and the "Explore Our Research" button.
+This update has THREE HTML files:
+  index.html     — your existing homepage, with the Members menu link updated
+  research.html  — your existing Research page, with the Members menu link updated
+  members.html   — new dedicated Members page
 
-Notes:
-- No need to adjust Settings > Pages again.
-- The original homepage design and other sections have been retained.
-- All science descriptions are broad, non-results-oriented summaries for further review.
+HOW TO UPDATE THE SITE
+1. Extract this ZIP file.
+2. Open https://github.com/chlab-nsysu/chlab-nsysu.github.io/upload/main
+3. Upload ALL THREE HTML files together (not this ZIP and not the folder).
+4. Existing index.html and research.html will be updated; members.html is new.
+5. Click Commit changes. No need to change Settings > Pages.
+6. Once the site is deployed, check https://chlab-nsysu.github.io/members.html
+
+Before publishing personal photographs, student names, and contact details,
+confirm that the individuals agree to their public posting.
+
+No paid hosting, apps, or additional repositories are needed.
