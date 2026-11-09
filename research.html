@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Research at Chang Lab, National Sun Yat-sen University: marine bioactive compounds, stress biology, healthy aging and C. elegans neurodegeneration models."><meta name="theme-color" content="#0a2439"><title>Research | Chang Lab · NSYSU</title><style>
+    :root { --navy:#0a2439; --ink:#193248; --muted:#586e7e; --teal:#087d8c; --teal-dark:#075d6a; --light:#f3f8f9; --paper:#fff; --stroke:#dbe7ea; --accent:#d65742; --max:1120px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:80px; }
+    body { margin:0; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans TC",sans-serif; line-height:1.65; color:var(--ink); background:#fff; }
+    a { color:inherit; }
+    a:focus-visible, button:focus-visible { outline:3px solid #e69d55; outline-offset:3px; }
+    .container { max-width:var(--max); padding:0 26px; margin:0 auto; }
+    .topline { background:var(--navy); color:#d8eef3; font-size:.76rem; letter-spacing:.045em; }
+    .topline .container { display:flex; justify-content:flex-end; align-items:center; min-height:32px; }
+    .topline a { color:#d8eef3; text-decoration:none; }
+    header { background:rgba(255,255,255,.97); position:sticky; top:0; z-index:10; box-shadow:0 3px 18px rgba(7,29,43,.07); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:18px; min-height:78px; }
+    .brand { display:flex; gap:11px; align-items:center; text-decoration:none; min-width:0; }
+    .brand-logo { width:42px; height:42px; border-radius:12px; background:var(--navy); display:grid; place-items:center; color:#fff; font-weight:800; font-size:20px; flex-shrink:0; }
+    .brand-name { font-weight:800; letter-spacing:.025em; color:var(--navy); font-size:1.13rem; white-space:nowrap; line-height:1.15; }
+    .brand-sub { font-size:.66rem; color:var(--muted); letter-spacing:.07em; text-transform:uppercase; margin-top:2px; }
+    .navlinks { display:flex; align-items:center; gap:21px; }
+    .navlinks a { text-decoration:none; font-size:.85rem; font-weight:650; color:#2f4e61; white-space:nowrap; }
+    .navlinks a:hover { color:var(--teal); }
+    .menu-btn { display:none; border:1px solid var(--stroke); background:#fff; border-radius:9px; padding:8px 12px; color:var(--ink); cursor:pointer; font-size:1rem; }
+    .hero { min-height:500px; background:linear-gradient(116deg, #082339 0%, #103b51 55%, #0b5665 100%); overflow:hidden; color:#fff; position:relative; }
+    .hero:before { content:""; position:absolute; width:650px; height:650px; border:1px solid rgba(173,232,223,.12); border-radius:50%; top:-300px; right:-130px; box-shadow:0 0 0 90px rgba(179,233,230,.035),0 0 0 180px rgba(179,233,230,.025); }
+    .hero-inner { display:grid; grid-template-columns:1.08fr .92fr; gap:36px; align-items:center; min-height:500px; position:relative; }
+    .eyebrow { color:#7bddd8; font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
+    h1 { font-size:clamp(2.3rem,4.25vw,4rem); line-height:1.19; letter-spacing:-.035em; margin:15px 0 20px; font-weight:800; }
+    .hero p { max-width:570px; font-size:1.04rem; color:#cee4e7; margin:0 0 28px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; background:#e8f8f6; color:#064756; border-radius:7px; padding:12px 20px; font-size:.91rem; font-weight:750; }
+    .button:hover { background:#fff; }
+    .button-outline { background:transparent; border:1px solid rgba(255,255,255,.47); color:#fff; margin-left:10px; }
+    .button-outline:hover { background:rgba(255,255,255,.1); }
+    .hero-art { max-width:460px; width:100%; justify-self:end; filter:drop-shadow(0 15px 30px rgba(0,0,0,.12)); }
+    section { padding:82px 0; }
+    section.alt { background:var(--light); }
+    .section-top { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:30px; }
+    .kicker { font-size:.75rem; text-transform:uppercase; letter-spacing:.2em; color:var(--teal); font-weight:800; margin:0 0 7px; }
+    h2 { font-size:clamp(1.85rem,2.65vw,2.55rem); color:var(--navy); margin:0; line-height:1.25; letter-spacing:-.02em; }
+    .subhead { margin:10px 0 0; color:var(--muted); max-width:700px; font-size:.97rem; }
+    .intro-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; }
+    .intro-grid p { color:#476072; margin:19px 0; }
+    .pill-row { display:flex; flex-wrap:wrap; gap:9px; margin-top:25px; }
+    .pill { background:#e9f5f5; border:1px solid #d0e6e7; color:#076677; padding:6px 12px; border-radius:30px; font-size:.79rem; font-weight:700; }
+    .panel { border-radius:16px; border:1px solid #cfdee2; background:linear-gradient(145deg,#e7f3f4,#f9fcfc); padding:31px; }
+    .panel-num { display:inline-block; color:var(--accent); font-size:3.15rem; font-weight:850; line-height:1; }
+    .panel small { display:block; font-size:.8rem; color:var(--muted); margin-top:6px; }
+    .panel hr { border:0; border-top:1px solid #d1e0e3; margin:24px 0; }
+    .panel h3 { font-size:1.2rem; margin:0 0 7px; color:var(--navy); }
+    .panel p { margin:0; font-size:.9rem; }
+    .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .card { background:#fff; border:1px solid var(--stroke); border-radius:12px; padding:26px; box-shadow:0 9px 26px rgba(9,52,66,.03); }
+    .card-symbol { width:52px; height:52px; display:grid; place-items:center; background:#e6f4f4; border-radius:13px; color:var(--teal-dark); margin-bottom:22px; }
+    .card h3 { margin:0 0 10px; font-size:1.14rem; color:var(--navy); line-height:1.35; }
+    .card p { margin:0; color:var(--muted); font-size:.9rem; }
+    .team { display:grid; grid-template-columns:260px 1fr; background:#fff; border:1px solid var(--stroke); border-radius:13px; overflow:hidden; }
+    .portrait { min-height:258px; background:linear-gradient(145deg,#0c3448,#0d7480); display:flex; align-items:center; justify-content:center; color:#c3f0e7; position:relative; }
+    .portrait svg { max-width:160px; width:70%; }
+    .team-content { padding:30px; }
+    .team-content h3 { margin:0 0 2px; color:var(--navy); font-size:1.5rem; }
+    .team-content .role { color:var(--teal-dark); font-weight:700; font-size:.87rem; margin-bottom:12px; }
+    .team-content p { color:var(--muted); font-size:.94rem; }
+    .quiet { background:#fff; border:1px dashed #b8cdd1; border-radius:11px; padding:23px; color:var(--muted); }
+    .quiet strong { color:var(--navy); }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .textlink { color:var(--teal-dark); font-weight:700; text-decoration:underline; text-underline-offset:4px; }
+    .textlink:hover { color:var(--accent); }
+    .contact-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:30px; }
+    .contact-info { border-top:1px solid var(--stroke); padding:15px 0; }
+    .contact-info strong { display:block; font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; color:var(--teal-dark); }
+    .contact-info span { display:block; color:#445f70; margin-top:3px; }
+    footer { background:var(--navy); color:#c6dce4; padding:34px 0; font-size:.82rem; }
+    footer .container { display:flex; align-items:center; justify-content:space-between; gap:15px; }
+    footer b { color:#fff; }
+    @media(max-width:980px) { .navlinks { gap:12px; } .navlinks a { font-size:.77rem; } .hero-inner { grid-template-columns:1.2fr .8fr; } }
+    @media(max-width:780px) {
+      .nav { min-height:69px; } .menu-btn { display:block; }
+      .navlinks { display:none; position:absolute; top:100%; left:0; right:0; padding:18px 26px 22px; background:#fff; border-top:1px solid var(--stroke); box-shadow:0 15px 25px rgba(8,28,40,.09); flex-direction:column; align-items:flex-start; gap:15px; }
+      .navlinks.open { display:flex; }
+      .navlinks a { font-size:.96rem; }
+      .hero-inner { grid-template-columns:1fr; min-height:0; padding-top:67px; padding-bottom:60px; }
+      .hero-art { max-width:300px; justify-self:center; margin-top:0; }
+      .cards, .intro-grid, .contact-grid, .split { grid-template-columns:1fr; }
+      .intro-grid { gap:28px; } .cards { gap:13px; }
+      .team { grid-template-columns:1fr; } .portrait { min-height:190px; }
+      section { padding:62px 0; } .section-top { display:block; }
+    }
+    @media(max-width:460px) { .container { padding:0 18px; } .brand-sub { font-size:.57rem; } .brand-name { font-size:1rem; } .button-outline { margin-left:0; margin-top:10px; } .hero-actions .button { display:flex; width:100%; } footer .container { display:block; } }
+  
+
+    .research-hero { background:linear-gradient(114deg,#082339,#0d5361); color:white; padding:78px 0 72px; position:relative; overflow:hidden; }
+    .research-hero:after { content:""; border:1px solid rgba(190,246,236,.18); border-radius:50%; width:540px; height:540px; position:absolute; right:-110px; top:-290px; box-shadow:0 0 0 85px rgba(190,246,236,.035),0 0 0 165px rgba(190,246,236,.025); pointer-events:none; }
+    .research-hero .container { position:relative; z-index:1; }
+    .research-hero h1 { font-size:clamp(2.5rem,4.8vw,4.2rem); max-width:950px; margin:14px 0 18px; }
+    .research-hero p { color:#d1e7eb; max-width:770px; font-size:1.05rem; margin:0; }
+    .breadcrumb { font-size:.82rem; color:#b7d8e0; }
+    .breadcrumb a { text-decoration:none; color:#c1f3e9; }
+    .eyebrow-dark { color:#077987; letter-spacing:.15em; font-size:.78rem; font-weight:800; text-transform:uppercase; margin:0 0 8px; }
+    .research-overview { display:grid; grid-template-columns:1.1fr .9fr; gap:55px; align-items:center; }
+    .research-overview p { color:#486375; }
+    .stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .stat { border:1px solid var(--stroke); border-radius:13px; background:var(--light); padding:22px; }
+    .stat strong { display:block; color:#d65742; font-size:2.5rem; line-height:1; }
+    .stat span { display:block; color:#476072; margin-top:12px; font-size:.85rem; }
+    .research-unit { display:grid; grid-template-columns:260px 1fr; gap:48px; align-items:start; }
+    .research-unit .visual { border:1px solid #cde4e7; background:linear-gradient(145deg,#e7f7f5,#d5e9ee); min-height:260px; border-radius:20px; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+    .research-unit .visual svg { width:78%; max-width:215px; height:auto; }
+    .unit-num { font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; font-weight:800; color:#087d8c; margin:0 0 8px; }
+    .research-unit h2 { margin-bottom:18px; }
+    .research-unit p { color:#476072; font-size:.98rem; }
+    .tags { display:flex; gap:8px; flex-wrap:wrap; margin:23px 0 0; }
+    .tags span { background:#e8f5f5; color:#076677; border-radius:24px; padding:6px 12px; font-size:.8rem; font-weight:650; }
+    .method-box { margin-top:24px; border-left:3px solid var(--accent); background:#f5fafa; padding:17px 22px; font-size:.92rem; color:#476072; }
+    .method-box b { color:var(--navy); }
+    .workflow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:13px; margin-top:35px; }
+    .workflow-item { border:1px solid var(--stroke); border-radius:13px; padding:22px; background:white; min-width:0; }
+    .workflow-item .n { color:#c44e3e; font-weight:850; letter-spacing:.08em; font-size:.82rem; }
+    .workflow-item h3 { color:var(--navy); margin:9px 0 8px; line-height:1.35; font-size:1.07rem; }
+    .workflow-item p { font-size:.88rem; color:#526a77; margin:0; }
+    .resource-note { color:var(--muted); font-size:.85rem; margin-top:23px; }
+    .cta { display:flex; align-items:center; justify-content:space-between; gap:20px; border-radius:17px; background:linear-gradient(120deg,#0b3145,#0d5262); padding:40px; color:white; }
+    .cta h2 { color:white; }
+    .cta p { margin:12px 0 0; color:#c9e5e7; }
+    .cta a { background:#e8f8f6; color:#064756; white-space:nowrap; }
+    @media(max-width:850px){ .research-unit { grid-template-columns:210px 1fr; gap:25px; } .workflow { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:700px){ .research-overview, .research-unit { grid-template-columns:1fr; } .research-unit .visual { min-height:195px; } .research-unit .visual svg { max-width:160px; } .research-hero { padding:55px 0; } .cta { display:block; padding:28px; } .cta a { margin-top:21px; } }
+    @media(max-width:460px){ .workflow { grid-template-columns:1fr; } .stat-grid { grid-template-columns:1fr 1fr; } .stat { padding:17px; } .stat strong { font-size:2rem; } }
+</style></head>
+<body><div class="topline"><div class="container"><a href="https://www.nsysu.edu.tw/" target="_blank" rel="noopener noreferrer">National Sun Yat-sen University · Kaohsiung, Taiwan</a></div></div><header><div class="container nav"><a class="brand" href="index.html#home" aria-label="Chang Lab Home"><div class="brand-logo">C<span style="color:#88dfd8">.</span></div><div><div class="brand-name">CHANG LAB</div><div class="brand-sub">Marine bioactives &amp; aging</div></div></a><button class="menu-btn" id="menuButton" aria-controls="navLinks" aria-expanded="false" type="button">☰ Menu</button><nav class="navlinks" id="navLinks" aria-label="Main navigation"><a href="index.html#about">About</a><a href="research.html" aria-current="page" style="color:var(--teal)">Research</a><a href="index.html#members">Members</a><a href="index.html#publications">Publications</a><a href="index.html#news">News</a><a href="index.html#join">Join Us</a><a href="index.html#contact">Contact</a></nav></div></header>
+<main>
+<div class="research-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / Research</div><div class="eyebrow" style="margin-top:27px">OUR SCIENTIFIC FOCUS</div><h1>Research</h1><p>From marine-derived compounds to whole-organism biology: integrating natural product discovery with experimental models of stress, aging, and neurodegeneration.</p></div></div>
+<section><div class="container research-overview"><div><p class="eyebrow-dark">RESEARCH PHILOSOPHY</p><h2>Exploring bioactive compounds through mechanistic biology.</h2><p>Our laboratory studies the biological potential of natural products, with an emphasis on marine-derived compounds and their effects in experimental model systems.</p><p>We use <i>Caenorhabditis elegans</i> to connect molecular hypotheses with measurable phenotypes. The research directions below describe our areas of investigation; specific biological effects require experimental validation in each study.</p></div><div class="stat-grid"><div class="stat"><strong>01</strong><span>Marine natural products</span></div><div class="stat"><strong>02</strong><span>Stress responses &amp; aging</span></div><div class="stat"><strong>03</strong><span>Neurodegeneration models</span></div><div class="stat"><strong><i style="font-size:1.5rem">C. elegans</i></strong><span>Whole-organism model platform</span></div></div></div></section>
+<section id="marine" class=""><div class="container research-unit"><div class="visual"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marine compounds and molecular structures"><path d="M42 162 C61 107 99 80 143 111 C170 129 184 94 203 70" fill="none" stroke="#0b7887" stroke-width="7" stroke-linecap="round"/><path d="M40 188 C91 142 125 185 197 138" fill="none" stroke="#47b8b5" stroke-width="7" stroke-linecap="round"/><g fill="none" stroke="#1b8494" stroke-width="4"><path d="M58 83 L87 51 L125 66 L145 104 L116 136 L75 120 Z"/><path d="M145 104 L178 91 L204 114 L197 138"/></g><g fill="#d85c48"><circle cx="58" cy="83" r="8"/><circle cx="125" cy="66" r="8"/><circle cx="178" cy="91" r="8"/></g><g fill="#5bcec6"><circle cx="87" cy="51" r="8"/><circle cx="116" cy="136" r="8"/><circle cx="197" cy="138" r="8"/></g></svg></div><div><p class="unit-num">Research direction 01</p><h2>Marine Natural Products &amp; Bioactive Compounds</h2><p>Marine organisms and microorganisms produce structurally diverse natural products that provide opportunities to investigate biological activity. Our research explores marine-derived compounds as candidates for further biological characterization.</p><p>We combine compound-focused screening with organism-level observations to prioritize promising candidates and formulate testable mechanistic hypotheses.</p><div class="tags"><span>Marine-derived metabolites</span><span>Bioactivity screening</span><span>Mechanistic hypotheses</span></div><div class="method-box"><b>Scientific questions</b><div>Which marine-derived compounds exhibit measurable biological activity at non-toxic concentrations? How reproducible are their effects across phenotypic assays?</div></div></div></div></section><section id="aging" class="alt"><div class="container research-unit"><div class="visual"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stress resilience and aging pathways"><circle cx="120" cy="120" r="82" fill="none" stroke="#3ab1b6" stroke-width="6"/><circle cx="120" cy="120" r="58" fill="none" stroke="#7bc9ca" stroke-width="3" stroke-dasharray="5 10"/><path d="M120 73 V121 L155 145" fill="none" stroke="#0e7184" stroke-width="8" stroke-linecap="round"/><g fill="#d65c46"><circle cx="58" cy="67" r="9"/><circle cx="180" cy="68" r="7"/><circle cx="187" cy="175" r="9"/></g><g fill="#38adae"><circle cx="120" cy="120" r="11"/><circle cx="56" cy="169" r="7"/></g></svg></div><div><p class="unit-num">Research direction 02</p><h2>Oxidative Stress, Stress Resilience &amp; Healthy Aging</h2><p>We use Caenorhabditis elegans as a whole-organism platform to examine the relationships among environmental stress, redox balance, stress tolerance, and lifespan-associated phenotypes.</p><p>Depending on the study, experimental readouts may include survival after stress exposure, reactive oxygen species indicators, lifespan analysis, and fluorescent reporters for stress-responsive signaling pathways.</p><div class="tags"><span>Oxidative stress</span><span>Stress tolerance</span><span>Lifespan phenotypes</span><span>DAF-16 / SKN-1 signaling</span></div><div class="method-box"><b>Scientific questions</b><div>Do candidate compounds modify stress resistance or aging-associated phenotypes? Which signaling pathways merit subsequent validation?</div></div></div></div></section><section id="neuro" class=""><div class="container research-unit"><div class="visual"><svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dopaminergic neurons and neurodegeneration research"><g fill="none" stroke="#0c7186" stroke-width="6" stroke-linecap="round"><path d="M112 117 L62 73 L43 52"/><path d="M112 117 L81 158 L54 191"/><path d="M112 117 L154 80 L195 59"/><path d="M112 117 L159 139 L197 158"/><path d="M112 117 L128 186"/></g><g fill="none" stroke="#40b3b7" stroke-width="4" stroke-linecap="round"><path d="M62 73 L65 40 M62 73 L30 92"/><path d="M81 158 L45 146 M81 158 L87 202"/><path d="M154 80 L153 47 M154 80 L191 90"/><path d="M159 139 L160 190 M159 139 L204 117"/></g><circle cx="112" cy="117" r="27" fill="#0e8090"/><circle cx="112" cy="117" r="12" fill="#b9f3e7"/><g fill="#d85c48"><circle cx="43" cy="52" r="7"/><circle cx="197" cy="158" r="7"/><circle cx="54" cy="191" r="7"/></g></svg></div><div><p class="unit-num">Research direction 03</p><h2>Neurodegeneration &amp; Disease-Related Phenotypes</h2><p>Neurodegenerative conditions involve complex changes in neuronal integrity, protein homeostasis, and cellular stress responses. Our experimental work incorporates C. elegans disease-related models to explore these processes.</p><p>Relevant readouts may include α-synuclein-associated aggregation phenotypes, dopaminergic neuron integrity, and behavior. These assays support mechanistic investigation but are not substitutes for clinical validation.</p><div class="tags"><span>Parkinson’s disease-related models</span><span>α-Synuclein phenotypes</span><span>Dopaminergic neurons</span><span>Proteostasis</span></div><div class="method-box"><b>Scientific questions</b><div>How do candidate compounds affect disease-related phenotypes and neuronal stress? Can complementary assays distinguish general toxicity from potentially protective responses?</div></div></div></div></section>
+<section class="alt" id="approach"><div class="container"><p class="eyebrow-dark">EXPERIMENTAL STRATEGY</p><h2>From candidate to mechanism</h2><p class="subhead">A flexible experimental framework, adapted to each project and the evidence available.</p><div class="workflow"><div class="workflow-item"><div class="n">STEP 01</div><h3>Candidate selection</h3><p>Source and prioritize natural compounds with clear identities and appropriate controls.</p></div><div class="workflow-item"><div class="n">STEP 02</div><h3>Phenotypic assessment</h3><p>Establish tolerated exposure conditions and quantify relevant biological responses.</p></div><div class="workflow-item"><div class="n">STEP 03</div><h3>Mechanistic testing</h3><p>Use complementary reporter, genetic, imaging, or biochemical approaches as appropriate.</p></div><div class="workflow-item"><div class="n">STEP 04</div><h3>Evidence integration</h3><p>Assess reproducibility, limitations, and the need for additional model validation.</p></div></div><p class="resource-note">Specific methods and pathways vary by project. Published findings will be linked in the Publications section as the website is updated.</p></div></section>
+<section><div class="container"><div class="cta"><div><h2>Interested in our research?</h2><p>We welcome scientific exchange and inquiries about potential collaborations.</p></div><a class="button" href="index.html#contact">Contact Chang Lab ↗</a></div></div></section>
+</main><footer><div class="container"><div><b>CHANG LAB</b><br>Marine Bioactives &amp; Healthy Aging Research</div><div>© <span id="year">2026</span> Chang Lab · National Sun Yat-sen University</div></div></footer>
+<script>(function(){var button=document.getElementById('menuButton');var nav=document.getElementById('navLinks');button.addEventListener('click',function(){var open=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(open));});nav.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){nav.classList.remove('open');button.setAttribute('aria-expanded','false');});});document.getElementById('year').textContent=new Date().getFullYear();})();</script></body></html>
