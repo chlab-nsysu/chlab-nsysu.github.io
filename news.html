@@ -256,7 +256,82 @@
 @media(max-width:950px) { .menu-btn{display:block;} .navlinks{display:none;position:absolute;top:100%;left:0;right:0;padding:18px 26px 22px;background:#fff;border-top:1px solid var(--stroke);box-shadow:0 15px 25px rgba(8,28,40,.09);flex-direction:column;align-items:flex-start;gap:15px;} .navlinks.open{display:flex;} .navlinks a{font-size:.96rem;} }
 @media(max-width:780px) {.info-grid,.info-grid.two,.layout-side{grid-template-columns:1fr;} .page-hero{padding:54px 0;} .info-grid{gap:12px;}}
 @media(max-width:460px){.filter-bar input,.filter-bar select{width:100%;min-width:0;} .pub-item{padding:17px;} }
+
+/* Compact research-led news presentation */
+.news-hero{padding:48px 0 53px;}
+.news-hero h1{margin:9px 0 10px;font-size:clamp(2.3rem,4.2vw,3.45rem);}
+.news-hero p{font-size:.99rem;}
+.news-overview{padding:52px 0 62px;}
+.news-section-header{display:flex;justify-content:space-between;align-items:end;gap:26px;margin-bottom:24px;}
+.news-section-header .subhead{max-width:740px;}
+.news-section-header>a{white-space:nowrap;}
+.news-highlight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+.news-highlight{border:1px solid var(--stroke);border-radius:15px;padding:25px;background:#fff;display:flex;flex-direction:column;gap:11px;}
+.news-highlight.news-main{grid-column:1/-1;background:linear-gradient(125deg,#f1f9fa,#fff);}
+.news-highlight h3{font-size:1.3rem;line-height:1.35;color:var(--navy);margin:0;}
+.news-highlight p{margin:0;color:#4f687a;font-size:.93rem;line-height:1.62;}
+.news-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:.8rem;font-weight:750;color:#9d4b3b;}
+.news-type{border:1px solid #d2e5e7;border-radius:30px;background:#edf7f7;color:#087381;font-size:.71rem;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;}
+.news-highlight-heading{display:flex;align-items:start;justify-content:space-between;gap:30px;}
+.news-highlight-heading p{margin-top:9px;}
+.news-large-count{border-left:1px solid #cfe1e4;padding-left:22px;display:flex;align-items:center;flex-direction:column;min-width:95px;color:var(--teal-dark);}
+.news-large-count b{font-size:2.6rem;line-height:1.02;}
+.news-large-count span{font-size:.8rem;}
+.news-poster-summary{display:flex;gap:8px;flex-wrap:wrap;}
+.news-poster-summary span{font-size:.78rem;background:#e6f3f4;color:#126978;padding:4px 11px;border-radius:30px;border:1px solid #d2e5e7;}
+.poster-disclosure{margin-top:4px;border:1px solid #d2e4e7;border-radius:10px;background:#fff;overflow:hidden;}
+.poster-disclosure summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 16px;font-size:.88rem;font-weight:800;color:#076b78;cursor:pointer;list-style:none;}
+.poster-disclosure summary::-webkit-details-marker{display:none;}
+.poster-disclosure summary span,.news-archive summary span{font-size:1.4rem;line-height:1;transition:transform .2s;}
+.poster-disclosure[open] summary span,.news-archive[open] summary span{transform:rotate(180deg);}
+.news-poster-list{margin:0;padding:6px 25px 12px 39px;}
+.news-poster-list li{padding:12px 6px;border-top:1px solid #e5eef0;font-size:.88rem;line-height:1.5;color:var(--navy);}
+.news-poster-list li strong{font-weight:730;}
+.news-poster-list li p{font-size:.79rem;margin:5px 0 0;color:#5b7480;}
+.news-author-note{font-size:.75rem!important;padding:0 15px 15px;}
+.news-links{margin-top:auto;padding-top:8px;}
+.news-links a{font-size:.86rem;}
+.news-archive{border-top:1px solid #dae7ea;margin-top:27px;padding-top:6px;}
+.news-archive summary{font-size:.88rem;cursor:pointer;font-weight:780;color:#0b6877;display:flex;justify-content:space-between;align-items:center;list-style:none;padding:10px 0;}
+.news-archive summary::-webkit-details-marker{display:none;}
+.news-archive-body{padding:10px 0 0;font-size:.86rem;color:#516b7b;}
+.news-archive-body p{margin:8px 0;}
+@media(max-width:720px){.news-highlight-grid{grid-template-columns:1fr;}.news-highlight.news-main{grid-column:auto;}.news-section-header{align-items:start;flex-direction:column;gap:10px;}.news-highlight{padding:21px;}.news-highlight-heading{gap:12px;}.news-large-count{min-width:65px;padding-left:12px;}.news-large-count b{font-size:2.1rem;}.news-overview{padding:42px 0;}}
 </style></head><body><a class="skip-link" href="#main">Skip to content</a>
 <div class="topline"><div class="container"><a href="https://www.nsysu.edu.tw/" rel="noopener noreferrer" target="_blank">National Sun Yat-sen University · Kaohsiung, Taiwan</a></div></div>
-<header><div class="container nav"><a aria-label="Chang Lab Home" class="brand" href="index.html"><div class="brand-logo">C<span style="color:#88dfd8">.</span></div><div><div class="brand-name">CHANG LAB</div><div class="brand-sub">Marine Natural Products &amp; Aging</div></div></a><button aria-controls="navLinks" aria-expanded="false" class="menu-btn" id="menuButton" type="button">☰ Menu</button><nav aria-label="Main navigation" class="navlinks" id="navLinks"><a href="index.html">Home</a><a href="research.html">Research</a><a href="pi.html">PI</a><a href="members.html">Members</a><a href="publications.html">Publications</a><a aria-current="page" href="news.html">News</a><a href="join.html">Join Us</a><a href="contact.html">Contact</a></nav></div></header><main id="main"><div class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / News &amp; Activities</div><div class="eyebrow" style="margin-top:24px">CHANG LAB · NSYSU</div><h1>News &amp; Activities</h1><p>Conference presentations, published research, laboratory milestones, and scientific activities.</p></div></div><section><div class="container layout-side"><div><p class="kicker">2026 HIGHLIGHTS</p><h2>Recent laboratory activities</h2><article class="news-story"><div class="date">6 NOVEMBER 2026 · PUBLICATION</div><h2>TiO₂ nanoparticle neurotoxicity research accepted in <em>Aquatic Toxicology</em></h2><p>The study examines developmental TiO₂ nanoparticle exposure and Parkinson’s disease-related phenotypes in <em>Caenorhabditis elegans</em>, including dopaminergic neuron morphology, α-synuclein-associated fluorescence, behavior, and SKN-1-associated antioxidant responses.</p><p><a class="inline-link" href="https://doi.org/10.1016/j.aquatox.2026.108081" rel="noopener noreferrer" target="_blank">Article DOI ↗</a></p></article><article class="news-story"><div class="date">30 OCTOBER–1 NOVEMBER 2026 · CONFERENCE</div><h2>Three posters presented at the 41st Symposium of Natural Products</h2><p>Chang Lab contributed three posters to the 2026 Joint Academic Symposium at Kaohsiung Medical University, Taiwan.</p><div class="poster-list"><div class="poster-entry"><strong>Marine-derived norzoanthamine and <em>Atalantia ceylanica</em>-derived LC03 improve stress resistance and extend lifespan in <em>Caenorhabditis elegans</em></strong><p>Chun-Han Chang*, Po-Sen Yu, I-Chen Lin, Yuan-Bin Cheng, Chih-Chuang Liaw · Poster</p></div><div class="poster-entry"><strong>Marine fungal metabolites improve oxidative stress resistance in <em>Caenorhabditis elegans</em></strong><p>Fang-Ting Lin, Yuan-Bin Cheng, Chun-Han Chang* · Poster</p></div><div class="poster-entry"><strong>Marine natural compounds ameliorate Parkinson’s disease-related phenotypes in <em>Caenorhabditis elegans</em></strong><p>Wan-Jing Huang, Yuan-Bin Cheng, Chun-Han Chang* · Poster</p></div></div><p class="form-note">* Corresponding author. Titles and author order follow the three supplied conference posters.</p></article><article class="news-story"><div class="date">JULY 2026 · AWARD</div><h2>JSOT International Poster Award</h2><p>Chun-Han Chang received the JSOT International Poster Award at the 53rd Annual Meeting of the Japanese Society of Toxicology in Osaka, Japan. The research poster focused on prolonged titanium dioxide nanoparticle exposure and Parkinson’s disease-related phenotypes in <em>C. elegans</em>.</p></article><article class="news-story"><div class="date">MAY 2025 · CONFERENCE</div><h2>Cardiovascular research presented at ISHR</h2><p>Oral presentation: “A novel spontaneous atrial fibrillation mouse model unveils fibrotic remodeling,” at the XXV World Congress of the International Society for Heart Research, Nara, Japan.</p></article></div><aside><div class="address-panel"><p class="kicker">CONFERENCE FOCUS</p><h3 class="blocktitle">Our current research themes</h3><ul class="list-clean"><li>Marine fungal metabolites</li><li>Oxidative stress and longevity</li><li>Neurodegenerative disease models</li><li>Environmental neurotoxicology</li></ul><p style="margin-top:17px"><a class="inline-link" href="research.html">Explore our research ↗</a></p></div></aside></div></section></main><footer><div class="container"><div><b>CHANG LAB</b><br/>Marine Natural Products &amp; Aging Research Laboratory</div><div>© <span id="year">2026</span> Chang Lab · National Sun Yat-sen University</div></div></footer><script>(function(){const button=document.getElementById('menuButton'),nav=document.getElementById('navLinks');if(button&&nav){button.addEventListener('click',()=>{const x=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(x))});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');button.setAttribute('aria-expanded','false')}));}document.getElementById('year').textContent=new Date().getFullYear();})();
+<header><div class="container nav"><a aria-label="Chang Lab Home" class="brand" href="index.html"><div class="brand-logo">C<span style="color:#88dfd8">.</span></div><div><div class="brand-name">CHANG LAB</div><div class="brand-sub">Marine Natural Products &amp; Aging</div></div></a><button aria-controls="navLinks" aria-expanded="false" class="menu-btn" id="menuButton" type="button">☰ Menu</button><nav aria-label="Main navigation" class="navlinks" id="navLinks"><a href="index.html">Home</a><a href="research.html">Research</a><a href="pi.html">PI</a><a href="members.html">Members</a><a href="publications.html">Publications</a><a aria-current="page" href="news.html">News</a><a href="join.html">Join Us</a><a href="contact.html">Contact</a></nav></div></header><main id="main">
+<div class="page-hero news-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / News &amp; Activities</div><div class="eyebrow" style="margin-top:20px">MARINE NATURAL PRODUCTS &amp; AGING RESEARCH LABORATORY</div><h1>News &amp; Activities</h1><p>Research publications, conference presentations, and academic recognition from Chang Lab.</p></div></div>
+<section class="news-overview"><div class="container">
+  <div class="news-section-header"><div><p class="kicker">LATEST MILESTONES</p><h2>2026 Highlights</h2><p class="subhead">Research outcomes and scientific activities led by or involving Chun-Han Chang and the laboratory.</p></div><a class="inline-link" href="publications.html">All publications ↗</a></div>
+  <div class="news-highlight-grid">
+    <article class="news-highlight news-main">
+      <div class="news-meta"><time datetime="2026-10-30">30 October – 1 November 2026</time><span class="news-type">Conference</span></div>
+      <div class="news-highlight-heading"><div><h3>Three poster presentations at the 41st Symposium of Natural Products</h3><p>The laboratory presented three projects at the 2026 Joint Academic Symposium, held at Kaohsiung Medical University, Taiwan.</p></div><div class="news-large-count" aria-label="Three poster presentations"><b>03</b><span>Posters</span></div></div>
+      <div class="news-poster-summary"><span>Marine bioactives &amp; longevity</span><span>Marine fungal metabolites</span><span>Neurodegenerative disease models</span></div>
+      <details class="poster-disclosure"><summary>View the three poster titles and authors <span aria-hidden="true">⌄</span></summary>
+      <ol class="news-poster-list">
+        <li><strong>Marine-derived norzoanthamine and <em>Atalantia ceylanica</em>-derived LC03 improve stress resistance and extend lifespan in <em>Caenorhabditis elegans</em></strong><p>Chun-Han Chang*, Po-Sen Yu, I-Chen Lin, Yuan-Bin Cheng, Chih-Chuang Liaw</p></li>
+        <li><strong>Marine fungal metabolites improve oxidative stress resistance in <em>Caenorhabditis elegans</em></strong><p>Fang-Ting Lin, Yuan-Bin Cheng, Chun-Han Chang*</p></li>
+        <li><strong>Marine natural compounds ameliorate Parkinson’s disease-related phenotypes in <em>Caenorhabditis elegans</em></strong><p>Wan-Jing Huang, Yuan-Bin Cheng, Chun-Han Chang*</p></li>
+      </ol>
+      <p class="news-author-note">* Corresponding author</p>
+      </details>
+      <div class="news-links"><a class="inline-link" href="https://www.snpconf.tw/" target="_blank" rel="noopener noreferrer">Symposium website ↗</a></div>
+    </article>
+    <article class="news-highlight">
+      <div class="news-meta"><time datetime="2026-11-06">6 November 2026</time><span class="news-type">Publication</span></div>
+      <h3>Nanoparticle neurotoxicity study accepted in <em>Aquatic Toxicology</em></h3>
+      <p>Developmental exposure to TiO₂ nanoparticles and Parkinson’s disease-related phenotypes in <em>Caenorhabditis elegans</em>.</p>
+      <div class="news-links"><a class="inline-link" href="https://doi.org/10.1016/j.aquatox.2026.108081" target="_blank" rel="noopener noreferrer">Read via DOI ↗</a></div>
+    </article>
+    <article class="news-highlight">
+      <div class="news-meta"><time datetime="2026-07">July 2026</time><span class="news-type">Award</span></div>
+      <h3>JSOT International Poster Award</h3>
+      <p>Chun-Han Chang received the award at the 53rd Annual Meeting of the Japanese Society of Toxicology for poster P-147A on TiO₂ nanoparticle exposure and Parkinson’s disease-related phenotypes in <em>C. elegans</em>.</p>
+      <div class="news-links"><a class="inline-link" href="https://jsot2026.jp/contents/program.html" target="_blank" rel="noopener noreferrer">Official award announcement ↗</a></div>
+    </article>
+  </div>
+  <details class="news-archive"><summary>Earlier conference activities <span aria-hidden="true">⌄</span></summary><div class="news-archive-body"><div class="news-meta"><time datetime="2025-05">May 2025</time><span class="news-type">Oral presentation</span></div><p><strong>A novel spontaneous atrial fibrillation mouse model unveils fibrotic remodeling.</strong></p><p>XXV World Congress of the International Society for Heart Research (ISHR), Nara, Japan.</p></div></details>
+</div></section>
+</main><footer><div class="container"><div><b>CHANG LAB</b><br/>Marine Natural Products &amp; Aging Research Laboratory</div><div>© <span id="year">2026</span> Chang Lab · National Sun Yat-sen University</div></div></footer><script>(function(){const button=document.getElementById('menuButton'),nav=document.getElementById('navLinks');if(button&&nav){button.addEventListener('click',()=>{const x=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(x))});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');button.setAttribute('aria-expanded','false')}));}document.getElementById('year').textContent=new Date().getFullYear();})();
 </script></body></html>
