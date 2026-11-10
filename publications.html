@@ -1,0 +1,261 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0a2439"><meta name="description" content="Peer-reviewed research publications of Chun-Han Chang and collaborators."><meta property="og:title" content="Publications | Chang Lab NSYSU"><meta property="og:description" content="Peer-reviewed research publications of Chun-Han Chang and collaborators."><title>Publications | Chang Lab · NSYSU</title><style>
+    :root { --navy:#0a2439; --ink:#193248; --muted:#586e7e; --teal:#087d8c; --teal-dark:#075d6a; --light:#f3f8f9; --paper:#fff; --stroke:#dbe7ea; --accent:#d65742; --max:1120px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:80px; }
+    body { margin:0; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans TC",sans-serif; line-height:1.65; color:var(--ink); background:#fff; }
+    a { color:inherit; }
+    a:focus-visible, button:focus-visible { outline:3px solid #e69d55; outline-offset:3px; }
+    .container { max-width:var(--max); padding:0 26px; margin:0 auto; }
+    .topline { background:var(--navy); color:#d8eef3; font-size:.76rem; letter-spacing:.045em; }
+    .topline .container { display:flex; justify-content:flex-end; align-items:center; min-height:32px; }
+    .topline a { color:#d8eef3; text-decoration:none; }
+    header { background:rgba(255,255,255,.97); position:sticky; top:0; z-index:10; box-shadow:0 3px 18px rgba(7,29,43,.07); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:18px; min-height:78px; }
+    .brand { display:flex; gap:11px; align-items:center; text-decoration:none; min-width:0; }
+    .brand-logo { width:42px; height:42px; border-radius:12px; background:var(--navy); display:grid; place-items:center; color:#fff; font-weight:800; font-size:20px; flex-shrink:0; }
+    .brand-name { font-weight:800; letter-spacing:.025em; color:var(--navy); font-size:1.13rem; white-space:nowrap; line-height:1.15; }
+    .brand-sub { font-size:.66rem; color:var(--muted); letter-spacing:.07em; text-transform:uppercase; margin-top:2px; }
+    .navlinks { display:flex; align-items:center; gap:21px; }
+    .navlinks a { text-decoration:none; font-size:.85rem; font-weight:650; color:#2f4e61; white-space:nowrap; }
+    .navlinks a:hover { color:var(--teal); }
+    .menu-btn { display:none; border:1px solid var(--stroke); background:#fff; border-radius:9px; padding:8px 12px; color:var(--ink); cursor:pointer; font-size:1rem; }
+    .hero { min-height:500px; background:linear-gradient(116deg, #082339 0%, #103b51 55%, #0b5665 100%); overflow:hidden; color:#fff; position:relative; }
+    .hero:before { content:""; position:absolute; width:650px; height:650px; border:1px solid rgba(173,232,223,.12); border-radius:50%; top:-300px; right:-130px; box-shadow:0 0 0 90px rgba(179,233,230,.035),0 0 0 180px rgba(179,233,230,.025); }
+    .hero-inner { display:grid; grid-template-columns:1.08fr .92fr; gap:36px; align-items:center; min-height:500px; position:relative; }
+    .eyebrow { color:#7bddd8; font-size:.78rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700; }
+    h1 { font-size:clamp(2.3rem,4.25vw,4rem); line-height:1.19; letter-spacing:-.035em; margin:15px 0 20px; font-weight:800; }
+    .hero p { max-width:570px; font-size:1.04rem; color:#cee4e7; margin:0 0 28px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; background:#e8f8f6; color:#064756; border-radius:7px; padding:12px 20px; font-size:.91rem; font-weight:750; }
+    .button:hover { background:#fff; }
+    .button-outline { background:transparent; border:1px solid rgba(255,255,255,.47); color:#fff; margin-left:10px; }
+    .button-outline:hover { background:rgba(255,255,255,.1); }
+    .hero-art { max-width:460px; width:100%; justify-self:end; filter:drop-shadow(0 15px 30px rgba(0,0,0,.12)); }
+    section { padding:82px 0; }
+    section.alt { background:var(--light); }
+    .section-top { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:30px; }
+    .kicker { font-size:.75rem; text-transform:uppercase; letter-spacing:.2em; color:var(--teal); font-weight:800; margin:0 0 7px; }
+    h2 { font-size:clamp(1.85rem,2.65vw,2.55rem); color:var(--navy); margin:0; line-height:1.25; letter-spacing:-.02em; }
+    .subhead { margin:10px 0 0; color:var(--muted); max-width:700px; font-size:.97rem; }
+    .intro-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center; }
+    .intro-grid p { color:#476072; margin:19px 0; }
+    .pill-row { display:flex; flex-wrap:wrap; gap:9px; margin-top:25px; }
+    .pill { background:#e9f5f5; border:1px solid #d0e6e7; color:#076677; padding:6px 12px; border-radius:30px; font-size:.79rem; font-weight:700; }
+    .panel { border-radius:16px; border:1px solid #cfdee2; background:linear-gradient(145deg,#e7f3f4,#f9fcfc); padding:31px; }
+    .panel-num { display:inline-block; color:var(--accent); font-size:3.15rem; font-weight:850; line-height:1; }
+    .panel small { display:block; font-size:.8rem; color:var(--muted); margin-top:6px; }
+    .panel hr { border:0; border-top:1px solid #d1e0e3; margin:24px 0; }
+    .panel h3 { font-size:1.2rem; margin:0 0 7px; color:var(--navy); }
+    .panel p { margin:0; font-size:.9rem; }
+    .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .card { background:#fff; border:1px solid var(--stroke); border-radius:12px; padding:26px; box-shadow:0 9px 26px rgba(9,52,66,.03); }
+    .card-symbol { width:52px; height:52px; display:grid; place-items:center; background:#e6f4f4; border-radius:13px; color:var(--teal-dark); margin-bottom:22px; }
+    .card h3 { margin:0 0 10px; font-size:1.14rem; color:var(--navy); line-height:1.35; }
+    .card p { margin:0; color:var(--muted); font-size:.9rem; }
+    .team { display:grid; grid-template-columns:260px 1fr; background:#fff; border:1px solid var(--stroke); border-radius:13px; overflow:hidden; }
+    .portrait { min-height:258px; background:linear-gradient(145deg,#0c3448,#0d7480); display:flex; align-items:center; justify-content:center; color:#c3f0e7; position:relative; }
+    .portrait svg { max-width:160px; width:70%; }
+    .team-content { padding:30px; }
+    .team-content h3 { margin:0 0 2px; color:var(--navy); font-size:1.5rem; }
+    .team-content .role { color:var(--teal-dark); font-weight:700; font-size:.87rem; margin-bottom:12px; }
+    .team-content p { color:var(--muted); font-size:.94rem; }
+    .quiet { background:#fff; border:1px dashed #b8cdd1; border-radius:11px; padding:23px; color:var(--muted); }
+    .quiet strong { color:var(--navy); }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .textlink { color:var(--teal-dark); font-weight:700; text-decoration:underline; text-underline-offset:4px; }
+    .textlink:hover { color:var(--accent); }
+    .contact-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:30px; }
+    .contact-info { border-top:1px solid var(--stroke); padding:15px 0; }
+    .contact-info strong { display:block; font-size:.8rem; text-transform:uppercase; letter-spacing:.07em; color:var(--teal-dark); }
+    .contact-info span { display:block; color:#445f70; margin-top:3px; }
+    footer { background:var(--navy); color:#c6dce4; padding:34px 0; font-size:.82rem; }
+    footer .container { display:flex; align-items:center; justify-content:space-between; gap:15px; }
+    footer b { color:#fff; }
+    @media(max-width:980px) { .navlinks { gap:12px; } .navlinks a { font-size:.77rem; } .hero-inner { grid-template-columns:1.2fr .8fr; } }
+    @media(max-width:780px) {
+      .nav { min-height:69px; } .menu-btn { display:block; }
+      .navlinks { display:none; position:absolute; top:100%; left:0; right:0; padding:18px 26px 22px; background:#fff; border-top:1px solid var(--stroke); box-shadow:0 15px 25px rgba(8,28,40,.09); flex-direction:column; align-items:flex-start; gap:15px; }
+      .navlinks.open { display:flex; }
+      .navlinks a { font-size:.96rem; }
+      .hero-inner { grid-template-columns:1fr; min-height:0; padding-top:67px; padding-bottom:60px; }
+      .hero-art { max-width:300px; justify-self:center; margin-top:0; }
+      .cards, .intro-grid, .contact-grid, .split { grid-template-columns:1fr; }
+      .intro-grid { gap:28px; } .cards { gap:13px; }
+      .team { grid-template-columns:1fr; } .portrait { min-height:190px; }
+      section { padding:62px 0; } .section-top { display:block; }
+    }
+    @media(max-width:460px) { .container { padding:0 18px; } .brand-sub { font-size:.57rem; } .brand-name { font-size:1rem; } .button-outline { margin-left:0; margin-top:10px; } .hero-actions .button { display:flex; width:100%; } footer .container { display:block; } }
+  
+
+    .research-hero { background:linear-gradient(114deg,#082339,#0d5361); color:white; padding:78px 0 72px; position:relative; overflow:hidden; }
+    .research-hero:after { content:""; border:1px solid rgba(190,246,236,.18); border-radius:50%; width:540px; height:540px; position:absolute; right:-110px; top:-290px; box-shadow:0 0 0 85px rgba(190,246,236,.035),0 0 0 165px rgba(190,246,236,.025); pointer-events:none; }
+    .research-hero .container { position:relative; z-index:1; }
+    .research-hero h1 { font-size:clamp(2.5rem,4.8vw,4.2rem); max-width:950px; margin:14px 0 18px; }
+    .research-hero p { color:#d1e7eb; max-width:770px; font-size:1.05rem; margin:0; }
+    .breadcrumb { font-size:.82rem; color:#b7d8e0; }
+    .breadcrumb a { text-decoration:none; color:#c1f3e9; }
+    .eyebrow-dark { color:#077987; letter-spacing:.15em; font-size:.78rem; font-weight:800; text-transform:uppercase; margin:0 0 8px; }
+    .research-overview { display:grid; grid-template-columns:1.1fr .9fr; gap:55px; align-items:center; }
+    .research-overview p { color:#486375; }
+    .stat-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .stat { border:1px solid var(--stroke); border-radius:13px; background:var(--light); padding:22px; }
+    .stat strong { display:block; color:#d65742; font-size:2.5rem; line-height:1; }
+    .stat span { display:block; color:#476072; margin-top:12px; font-size:.85rem; }
+    .research-unit { display:grid; grid-template-columns:260px 1fr; gap:48px; align-items:start; }
+    .research-unit .visual { border:1px solid #cde4e7; background:linear-gradient(145deg,#e7f7f5,#d5e9ee); min-height:260px; border-radius:20px; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+    .research-unit .visual svg { width:78%; max-width:215px; height:auto; }
+    .unit-num { font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; font-weight:800; color:#087d8c; margin:0 0 8px; }
+    .research-unit h2 { margin-bottom:18px; }
+    .research-unit p { color:#476072; font-size:.98rem; }
+    .tags { display:flex; gap:8px; flex-wrap:wrap; margin:23px 0 0; }
+    .tags span { background:#e8f5f5; color:#076677; border-radius:24px; padding:6px 12px; font-size:.8rem; font-weight:650; }
+    .method-box { margin-top:24px; border-left:3px solid var(--accent); background:#f5fafa; padding:17px 22px; font-size:.92rem; color:#476072; }
+    .method-box b { color:var(--navy); }
+    .workflow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:13px; margin-top:35px; }
+    .workflow-item { border:1px solid var(--stroke); border-radius:13px; padding:22px; background:white; min-width:0; }
+    .workflow-item .n { color:#c44e3e; font-weight:850; letter-spacing:.08em; font-size:.82rem; }
+    .workflow-item h3 { color:var(--navy); margin:9px 0 8px; line-height:1.35; font-size:1.07rem; }
+    .workflow-item p { font-size:.88rem; color:#526a77; margin:0; }
+    .resource-note { color:var(--muted); font-size:.85rem; margin-top:23px; }
+    .cta { display:flex; align-items:center; justify-content:space-between; gap:20px; border-radius:17px; background:linear-gradient(120deg,#0b3145,#0d5262); padding:40px; color:white; }
+    .cta h2 { color:white; }
+    .cta p { margin:12px 0 0; color:#c9e5e7; }
+    .cta a { background:#e8f8f6; color:#064756; white-space:nowrap; }
+    @media(max-width:850px){ .research-unit { grid-template-columns:210px 1fr; gap:25px; } .workflow { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:700px){ .research-overview, .research-unit { grid-template-columns:1fr; } .research-unit .visual { min-height:195px; } .research-unit .visual svg { max-width:160px; } .research-hero { padding:55px 0; } .cta { display:block; padding:28px; } .cta a { margin-top:21px; } }
+    @media(max-width:460px){ .workflow { grid-template-columns:1fr; } .stat-grid { grid-template-columns:1fr 1fr; } .stat { padding:17px; } .stat strong { font-size:2rem; } }
+
+
+  /* Members-page layout: uses the existing Chang Lab design tokens */
+  .people-hero { background:linear-gradient(114deg,#082339,#0d5361); color:white; padding:76px 0 74px; position:relative; overflow:hidden; }
+  .people-hero:after { content:""; position:absolute; right:-95px; top:-290px; width:530px; height:530px; border:1px solid rgba(190,246,236,.18); border-radius:50%; box-shadow:0 0 0 85px rgba(190,246,236,.035),0 0 0 165px rgba(190,246,236,.025); pointer-events:none; }
+  .people-hero .container { position:relative; z-index:1; }
+  .people-hero h1 { font-size:clamp(2.5rem,4.8vw,4.2rem); line-height:1.2; margin:14px 0 18px; }
+  .people-hero p { color:#d1e7eb; max-width:790px; font-size:1.05rem; margin:0; }
+  .member-kicker { margin:0 0 9px; color:var(--teal); font-weight:800; font-size:.77rem; letter-spacing:.18em; text-transform:uppercase; }
+  .member-intro { margin-bottom:30px; }
+  .member-intro h2 { margin:0 0 9px; }
+  .member-intro p:last-child { color:var(--muted); margin:0; }
+  .pi-card { display:grid; grid-template-columns:minmax(220px,300px) minmax(0,1fr); border:1px solid var(--stroke); border-radius:19px; overflow:hidden; background:#fff; box-shadow:0 10px 36px rgba(9,43,58,.045); }
+  .pi-art { background:linear-gradient(145deg,#dff2f2,#d3e7ef); min-height:370px; padding:28px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:19px; border-right:1px solid #d5e5e9; }
+  .portrait-ring { width:min(74%,220px); aspect-ratio:1; border-radius:50%; background:linear-gradient(160deg,#0a3a4d,#0e6370); display:grid; place-items:center; position:relative; box-shadow:0 0 0 9px rgba(255,255,255,.48); color:#d4fffa; font-weight:800; font-size:clamp(3.5rem,7vw,5.2rem); letter-spacing:-.065em; }
+  .portrait-ring:before { content:""; position:absolute; width:76%; height:76%; border:1px solid rgba(195,242,240,.2); border-radius:50%; }
+  .pi-art small { color:#456c78; font-size:.78rem; text-align:center; }
+  .pi-details { padding:35px 39px; }
+  .pi-role { font-size:.8rem; font-weight:800; color:var(--teal); letter-spacing:.11em; text-transform:uppercase; }
+  .pi-details h3 { font-size:clamp(1.8rem,2.5vw,2.5rem); line-height:1.16; color:var(--navy); margin:10px 0 7px; }
+  .pi-sub { margin:0 0 19px; color:#547084; font-size:1.01rem; }
+  .pi-details p:not(.pi-sub) { color:#466172; margin:0 0 16px; }
+  .tag-row { display:flex; flex-wrap:wrap; gap:8px; margin:19px 0 24px; }
+  .tag-row span { background:#eaf6f5; border:1px solid #cde6e6; border-radius:24px; padding:5px 11px; color:#076577; font-size:.79rem; font-weight:680; }
+  .pi-links { display:flex; gap:11px; flex-wrap:wrap; margin-top:23px; }
+  .pi-links a { display:inline-flex; align-items:center; gap:7px; border-radius:8px; padding:9px 13px; font-size:.88rem; font-weight:750; text-decoration:none; background:#0b4f5e; color:#fff; }
+  .pi-links a.secondary { color:#07576a; border:1px solid #bfdde1; background:#f2fafa; }
+  .student-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+  .people-placeholder { border:1px solid var(--stroke); background:#fff; border-radius:16px; padding:28px; min-height:220px; display:flex; flex-direction:column; align-items:flex-start; }
+  .people-placeholder .symbol { width:45px; height:45px; border-radius:13px; display:grid; place-items:center; background:#e8f5f5; color:#087180; font-weight:850; font-size:1.25rem; }
+  .people-placeholder h3 { margin:21px 0 7px; color:var(--navy); font-size:1.25rem; line-height:1.3; }
+  .people-placeholder p { color:#567081; font-size:.94rem; margin:0; }
+  .notice { color:#526b7a; font-size:.9rem; margin:21px 0 0; }
+  .alumni-panel { display:flex; justify-content:space-between; gap:30px; align-items:center; border-radius:14px; padding:29px 32px; background:#eef6f7; border:1px solid #d2e4e7; }
+  .alumni-panel h3 { margin:0 0 5px; color:var(--navy); font-size:1.28rem; }
+  .alumni-panel p { margin:0; font-size:.94rem; color:#526f80; }
+  .alumni-panel .alumni-icon { font-size:2.7rem; font-weight:900; color:var(--accent); line-height:1; }
+  .join-cta { display:flex; align-items:center; justify-content:space-between; gap:24px; border-radius:17px; background:linear-gradient(115deg,#0b3145,#0d5262); padding:36px 40px; color:white; }
+  .join-cta h2 { color:#fff; font-size:1.7rem; }
+  .join-cta p { color:#c9e5e7; margin:11px 0 0; }
+  .join-cta a { display:inline-block; background:#e8f8f6; color:#064756; text-decoration:none; font-weight:750; border-radius:7px; padding:11px 16px; white-space:nowrap; }
+  @media(max-width:800px) {
+    .pi-card { grid-template-columns:240px minmax(0,1fr); }
+    .pi-art { min-height:300px; }
+    .pi-details { padding:28px; }
+  }
+  @media(max-width:670px) {
+    .people-hero { padding:55px 0 58px; }
+    .pi-card { grid-template-columns:1fr; }
+    .pi-art { min-height:230px; border-right:0; border-bottom:1px solid #d5e5e9; }
+    .portrait-ring { width:145px; font-size:3.5rem; }
+    .pi-details { padding:26px; }
+    .student-grid { grid-template-columns:1fr; }
+    .alumni-panel { padding:23px; }
+    .join-cta { display:block; padding:28px; }
+    .join-cta a { margin-top:20px; }
+  }
+
+
+/* Unified navigation & post-CV content */
+.navlinks { gap:14px; }
+.navlinks a {font-size:.80rem;}
+.navlinks a[aria-current="page"] {color:var(--teal);border-bottom:2px solid var(--teal);padding-bottom:5px;}
+.skip-link {position:absolute;left:-9999px;top:7px;z-index:50;background:#fff;color:#0a2439;padding:8px 15px;}
+.skip-link:focus {left:12px;}
+:root { --max:1160px; }
+.page-hero { background:linear-gradient(115deg,#082339,#0d5361);color:#fff;padding:70px 0 74px;position:relative;overflow:hidden; }
+.page-hero:after { content:"";position:absolute;border:1px solid rgba(206,250,245,.17);height:520px;width:520px;border-radius:50%;right:-150px;top:-310px;box-shadow:0 0 0 95px rgba(170,234,239,.035),0 0 0 170px rgba(170,234,239,.025);pointer-events:none; }
+.page-hero .container {position:relative;z-index:1;}
+.page-hero h1 {margin:11px 0 15px;font-size:clamp(2.5rem,4.5vw,4.1rem);}
+.page-hero p {max-width:850px;color:#d2e8eb;font-size:1.04rem;margin:0;}
+.lead {font-size:1.06rem;line-height:1.83;max-width:840px;color:#425f70;}
+.stack {display:grid;gap:16px;}
+.blocktitle {font-size:1.4rem;margin:0 0 14px;color:var(--navy);}
+.info-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;}
+.info-grid.two {grid-template-columns:repeat(2,minmax(0,1fr));}
+.info-card {padding:24px;background:#fff;border:1px solid var(--stroke);border-radius:14px;}
+.info-card h3 {margin:0 0 8px;font-size:1.05rem;color:var(--navy);}
+.info-card p {margin:0;color:#536c78;font-size:.92rem;}
+.info-card .date {font-weight:800;color:#a84c3b;font-size:.77rem;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px;}
+.layout-side {display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:48px;align-items:start;}
+.list-clean {list-style:none;padding:0;margin:0;}
+.list-clean li {padding:13px 0;border-bottom:1px solid var(--stroke);}
+.inline-link {color:#06717f;font-weight:730;text-decoration:underline;text-underline-offset:3px;}
+.inline-link:hover {color:#d65742;}
+.timeline {border-left:2px solid #c6dfe1;padding-left:23px;display:grid;gap:25px;}
+.timeline-item {position:relative;}
+.timeline-item:before {content:"";position:absolute;left:-32px;top:7px;width:14px;height:14px;background:#0b8390;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px #8bc7ce;}
+.timeline-item time {display:block;color:#b04e3d;font-size:.82rem;font-weight:800;}
+.timeline-item h3 {font-size:1.1rem;line-height:1.42;margin:3px 0;color:var(--navy);}
+.timeline-item p {margin:4px 0;color:#516b7c;font-size:.93rem;}
+.mini-note {padding:18px 20px;border:1px solid #cfe4e7;background:#f1f8f9;border-radius:12px;color:#496575;font-size:.91rem;}
+.site-button {display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:1px solid #0b6574;border-radius:8px;padding:10px 15px;font-weight:800;font-size:.9rem;background:#0b6574;color:white;}
+.site-button:hover{background:#064654;color:white;}
+.site-button.ghost {background:#fff;color:#0b6574;}
+.year-head {display:flex;align-items:center;gap:15px;margin:35px 0 18px;}
+.year-head h2 {font-size:1.6rem;margin:0;}
+.year-head:after {content:"";display:block;flex:1;border-top:1px solid var(--stroke);}
+.pub-list {display:grid;gap:11px;}
+.pub-item {border:1px solid var(--stroke);background:white;border-radius:11px;padding:21px 23px;}
+.pub-item .pub-id {color:#a84e3d;font-size:.77rem;font-weight:800;letter-spacing:.06em;}
+.pub-item h3 {font-size:1.02rem;line-height:1.5;margin:7px 0;color:#0b2b3f;}
+.pub-item .authors {font-size:.87rem;color:#536c7d;line-height:1.6;margin:0 0 6px;}
+.pub-item .journal {font-size:.9rem;color:#24495c;line-height:1.55;margin:0;}
+.pub-item .pub-link {font-size:.84rem;display:inline-block;color:#076b7a;font-weight:750;margin-top:9px;}
+.pub-count {color:#5d7884;font-size:.9rem;margin:7px 0 0;}
+.filter-bar {display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:20px;background:#f4fafb;border-radius:12px;border:1px solid #d5e8ea;margin-top:27px;}
+.filter-bar input,.filter-bar select {border:1px solid #bfd6db;padding:10px 12px;border-radius:8px;background:#fff;font:inherit;font-size:.94rem;color:var(--ink);}
+.filter-bar input{flex:1;min-width:230px;}
+.filter-bar select{min-width:145px;}
+.statline {display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;color:#d7e9ed;font-size:.88rem;}
+.statline span{padding:6px 12px;border:1px solid rgba(198,235,233,.25);border-radius:20px;}
+.news-story {border-bottom:1px solid var(--stroke);padding:26px 0;}
+.news-story:first-child {padding-top:4px;}
+.news-story .date{font-size:.83rem;font-weight:800;color:#a84e3d;letter-spacing:.04em;}
+.news-story h2{font-size:1.5rem;margin:7px 0 10px;}
+.news-story p{color:#506a7b;max-width:790px;}
+.poster-list{display:grid;gap:12px;margin-top:19px;}
+.poster-entry{padding:15px 18px;background:#f4f9fa;border:1px solid var(--stroke);border-radius:10px;}
+.poster-entry strong{color:var(--navy);font-size:.94rem;}
+.poster-entry p{margin:5px 0 0;font-size:.84rem;}
+.address-panel{background:linear-gradient(130deg,#e4f3f4,#f7fcfc);border:1px solid #d1e4e8;border-radius:16px;padding:28px;}
+.address-panel a {color:#075e70;}
+.form-note{font-size:.89rem;color:#5e7785;}
+.join-step{display:grid;grid-template-columns:45px 1fr;gap:15px;align-items:start;padding:18px 0;border-top:1px solid var(--stroke);}
+.join-step .num{width:37px;height:37px;background:#e2f3f3;color:#077887;display:grid;place-items:center;font-weight:800;border-radius:50%;}
+.join-step h3{font-size:1.05rem;margin:2px 0 5px;color:var(--navy);}
+.join-step p{margin:0;color:#526e7d;font-size:.94rem;}
+@media(max-width:1050px) { .navlinks{gap:10px}.navlinks a{font-size:.73rem;} }
+@media(max-width:950px) { .menu-btn{display:block;} .navlinks{display:none;position:absolute;top:100%;left:0;right:0;padding:18px 26px 22px;background:#fff;border-top:1px solid var(--stroke);box-shadow:0 15px 25px rgba(8,28,40,.09);flex-direction:column;align-items:flex-start;gap:15px;} .navlinks.open{display:flex;} .navlinks a{font-size:.96rem;} }
+@media(max-width:780px) {.info-grid,.info-grid.two,.layout-side{grid-template-columns:1fr;} .page-hero{padding:54px 0;} .info-grid{gap:12px;}}
+@media(max-width:460px){.filter-bar input,.filter-bar select{width:100%;min-width:0;} .pub-item{padding:17px;} }
+</style></head><body><a href="#main" class="skip-link">Skip to content</a>
+    <div class="topline"><div class="container"><a href="https://www.nsysu.edu.tw/" target="_blank" rel="noopener noreferrer">National Sun Yat-sen University · Kaohsiung, Taiwan</a></div></div>
+    <header><div class="container nav"><a class="brand" href="index.html" aria-label="Chang Lab Home"><div class="brand-logo">C<span style="color:#88dfd8">.</span></div><div><div class="brand-name">CHANG LAB</div><div class="brand-sub">Marine bioactives &amp; aging</div></div></a><button class="menu-btn" type="button" id="menuButton" aria-controls="navLinks" aria-expanded="false">☰ Menu</button><nav class="navlinks" id="navLinks" aria-label="Main navigation"><a href="index.html">Home</a><a href="research.html">Research</a><a href="pi.html">PI</a><a href="members.html">Members</a><a href="publications.html" aria-current="page">Publications</a><a href="news.html">News</a><a href="join.html">Join Us</a><a href="contact.html">Contact</a></nav></div></header><main id="main"><div class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">Home</a> / Publications</div><div class="eyebrow" style="margin-top:24px">CHANG LAB · NSYSU</div><h1>Publications</h1><p>Peer-reviewed research spanning marine bioactives, aging, neurodegeneration, cardiovascular biology, and environmental toxicology.</p></div></div><section><div class="container"><p class="kicker">RESEARCH OUTPUT</p><h2>Peer-reviewed publications</h2><p class="lead">A chronological list of 28 articles based on the laboratory PI’s academic CV (updated November 2026). Publication and journal information are displayed directly on the website.</p><div class="filter-bar"><label for="pubQuery" style="font-weight:700">Search papers</label><input id="pubQuery" type="search" placeholder="Search title, author, journal..." aria-label="Search publications"><label for="pubYear" style="font-weight:700">Year</label><select id="pubYear" aria-label="Filter by publication year"><option value="all">All years</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2017">2017</option><option value="2016">2016</option><option value="2014">2014</option><option value="2012">2012</option></select></div><p class="pub-count" id="pubCount" role="status">Showing 28 publications</p><div class="pub-year" data-group="2026"><div class="year-head"><h2>2026</h2></div><div class="pub-list"><article class="pub-item" id="pub-1" data-year="2026" data-search="prolonged developmental tio₂ nanoparticle exposure at environmentally relevant level drives parkinson’s disease-related phenotypes in caenorhabditis elegans aquatic toxicology chun-han chang, chia-chun tu, eddie hsiang-hua lai, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 01 · 2026</span><h3>Prolonged developmental TiO₂ nanoparticle exposure at environmentally relevant level drives Parkinson’s disease-related phenotypes in <em>Caenorhabditis elegans</em></h3><p class="authors"><strong>Chun-Han Chang</strong>, Chia-Chun Tu, Eddie Hsiang-Hua Lai, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Aquatic Toxicology</em>, Article 108081 · In press (accepted 6 November 2026).</p><a class="pub-link" href="https://doi.org/10.1016/j.aquatox.2026.108081" target="_blank" rel="noopener noreferrer">DOI ↗</a></article><article class="pub-item" id="pub-2" data-year="2026" data-search="pcpe-1 promotes cardiac fibrosis with aging and obesity jci insight yung-ting hsiao, yohko yoshida, hirotsugu tsuchimochi, jingyuan tang, tin may aung, chun-han chang, agian jeffilano barinda, zhihong li, nur syakirah binti othman, tom yoshizaki, yiwei ling, shujiro okuda, manabu abe, seiya mizuno, satoru takahashi, takayuki inomata, hidetaka kioka, yasushi sakata, daichi maeda, yuya matsue, takaaki furihata, hiroshi iwata, james t pearson, kinya otsu, kenneth walsh, akihito ishigami, tohru minamino, ippei shimizu*"><span class="pub-id">PUBLICATION 02 · 2026</span><h3>PCPE-1 promotes cardiac fibrosis with aging and obesity</h3><p class="authors">Yung-Ting Hsiao, Yohko Yoshida, Hirotsugu Tsuchimochi, Jingyuan Tang, Tin May Aung, <strong>Chun-Han Chang</strong>, Agian Jeffilano Barinda, Zhihong Li, Nur Syakirah Binti Othman, Tom Yoshizaki, Yiwei Ling, Shujiro Okuda, Manabu Abe, Seiya Mizuno, Satoru Takahashi, Takayuki Inomata, Hidetaka Kioka, Yasushi Sakata, Daichi Maeda, Yuya Matsue, Takaaki Furihata, Hiroshi Iwata, James T Pearson, Kinya Otsu, Kenneth Walsh, Akihito Ishigami, Tohru Minamino, Ippei Shimizu*</p><p class="journal"><em>JCI Insight</em>, 11(13), e195508.</p></article></div></div><div class="pub-year" data-group="2025"><div class="year-head"><h2>2025</h2></div><div class="pub-list"><article class="pub-item" id="pub-3" data-year="2025" data-search="early-life long-term exposure to di(2-ethylhexyl) phthalate (dehp) impairs pathogenic avoidance behavior associated with dopaminergic pathway in caenorhabditis elegans environmental toxicology and pharmacology ting-an lin, chun-han chang, tzu-ting chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 03 · 2025</span><h3>Early-life long-term exposure to di(2-ethylhexyl) phthalate (DEHP) impairs pathogenic avoidance behavior associated with dopaminergic pathway in <em>Caenorhabditis elegans</em></h3><p class="authors">Ting-An Lin, <strong>Chun-Han Chang</strong>, Tzu-Ting Chang, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Environmental Toxicology and Pharmacology</em>, 117:104726.</p></article><article class="pub-item" id="pub-4" data-year="2025" data-search="impact of constant light-induced circadian disruption on hepatic lipid metabolism: evaluating the effects of gaba oolong tea extract journal of food bioactives yen-chun koh, sang he, chun-han chang, meei-ju yang, chang liu, min-hsiung pan*"><span class="pub-id">PUBLICATION 04 · 2025</span><h3>Impact of constant light-induced circadian disruption on hepatic lipid metabolism: Evaluating the effects of GABA oolong tea extract</h3><p class="authors">Yen-Chun Koh, Sang He, <strong>Chun-Han Chang</strong>, Meei-Ju Yang, Chang Liu, Min-Hsiung Pan*</p><p class="journal"><em>Journal of Food Bioactives</em>, 29, 47–59.</p></article><article class="pub-item" id="pub-5" data-year="2025" data-search="early life long-term exposure to aflatoxin b1 induces aging and alters innate immunity associated with skn-1/nrf2 in caenorhabditis elegans chemico-biological interactions tzu-ting chang, chun-han chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 05 · 2025</span><h3>Early life long-term exposure to aflatoxin B1 induces aging and alters innate immunity associated with SKN-1/Nrf2 in <em>Caenorhabditis elegans</em></h3><p class="authors">Tzu-Ting Chang, <strong>Chun-Han Chang</strong>, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Chemico-Biological Interactions</em>, 406, 111349.</p></article></div></div><div class="pub-year" data-group="2024"><div class="year-head"><h2>2024</h2></div><div class="pub-list"><article class="pub-item" id="pub-6" data-year="2024" data-search="di(2-ethylhexyl) phthalate disrupts circadian rhythm associated with changes in metabolites and cytochrome p450 gene expression in caenorhabditis elegans environmental pollution pei-ling yen, ting-an lin, chun-han chang, chan-wei yu, yu-hsuan kuo, tzu-ting chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 06 · 2024</span><h3>Di(2-ethylhexyl) phthalate disrupts circadian rhythm associated with changes in metabolites and cytochrome P450 gene expression in <em>Caenorhabditis elegans</em></h3><p class="authors">Pei-Ling Yen, Ting-An Lin, <strong>Chun-Han Chang</strong>, Chan-Wei Yu, Yu-Hsuan Kuo, Tzu-Ting Chang, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Environmental Pollution</em>, 363(Part 1), 125062.</p></article><article class="pub-item" id="pub-7" data-year="2024" data-search="the food-borne carcinogenic 2-amino-1-methyl-6-phenylimidazo[4, 5-b]pyridine (phip) disrupts circadian rhythms and ameliorated by pterostilbene (psb) in caenorhabditis elegans archives of toxicology chun-han chang, pei-ling yen, min-hsiung pan*, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 07 · 2024</span><h3>The food-borne carcinogenic 2-amino-1-methyl-6-phenylimidazo[4, 5-b]pyridine (PhIP) disrupts circadian rhythms and ameliorated by pterostilbene (PSB) in <em>Caenorhabditis elegans</em></h3><p class="authors"><strong>Chun-Han Chang</strong>, Pei-Ling Yen, Min-Hsiung Pan*, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Archives of Toxicology</em>, 98(12), 4131–4141.</p></article></div></div><div class="pub-year" data-group="2023"><div class="year-head"><h2>2023</h2></div><div class="pub-list"><article class="pub-item" id="pub-8" data-year="2023" data-search="high gamma-aminobutyric acid (gaba) oolong tea alleviates high-fat diet-induced metabolic disorders in mice acs omega monthana weerawatanakorn, sang he, chun-han chang, yen-chun koh, meei-ju yang, min-hsiung pan*"><span class="pub-id">PUBLICATION 08 · 2023</span><h3>High gamma-aminobutyric acid (GABA) oolong tea alleviates high-fat diet-induced metabolic disorders in mice</h3><p class="authors">Monthana Weerawatanakorn, Sang He, <strong>Chun-Han Chang</strong>, Yen-Chun Koh, Meei-Ju Yang, Min-Hsiung Pan*</p><p class="journal"><em>ACS Omega</em>, 8(37), 33997–34007.</p></article><article class="pub-item" id="pub-9" data-year="2023" data-search="prevention of glutamate-induced neurodegeneration by piceatannol via mitochondrial rescue in vitro and in vivo molecular nutrition &amp; food research yen-chun koh, dickson chok, chun-han chang, chia-cheng wei, chia-tung wu, ko-chun cheng, kalyanam nagabhushanam, chi-tang ho, min-hsiung pan*"><span class="pub-id">PUBLICATION 09 · 2023</span><h3>Prevention of glutamate-induced neurodegeneration by piceatannol via mitochondrial rescue in vitro and in vivo</h3><p class="authors">Yen-Chun Koh, Dickson Chok, <strong>Chun-Han Chang</strong>, Chia-Cheng Wei, Chia-Tung Wu, Ko-Chun Cheng, Kalyanam Nagabhushanam, Chi-Tang Ho, Min-Hsiung Pan*</p><p class="journal"><em>Molecular Nutrition &amp; Food Research</em>, 67(13), e2300139.</p></article><article class="pub-item" id="pub-10" data-year="2023" data-search="protective effects of piceatannol on dna damage in benzo[a]pyrene-induced human colon epithelial cells journal of agricultural and food chemistry chun-han chang#, you-tsz lien#, wei-sheng lin, kalyanam nagabhushanam, chi-tang ho, min-hsiung pan*"><span class="pub-id">PUBLICATION 10 · 2023</span><h3>Protective effects of piceatannol on DNA damage in benzo[a]pyrene-induced human colon epithelial cells</h3><p class="authors"><strong>Chun-Han Chang</strong>#, You-Tsz Lien#, Wei-Sheng Lin, Kalyanam Nagabhushanam, Chi-Tang Ho, Min-Hsiung Pan*</p><p class="journal"><em>Journal of Agricultural and Food Chemistry</em>, 71(19), 7370–7381.</p></article><article class="pub-item" id="pub-11" data-year="2023" data-search="co-contaminants of ethinylestradiol and sulfamethoxazole in groundwater exacerbate ecotoxicity and ecological risk and compromise the energy budget of c. elegans aquatic toxicology yu-hsuan kuo, chun ming how, chi-wei huang, pei-ling yen, chan-wei yu, chun-han chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 11 · 2023</span><h3>Co-contaminants of ethinylestradiol and sulfamethoxazole in groundwater exacerbate ecotoxicity and ecological risk and compromise the energy budget of <em>C. elegans</em></h3><p class="authors">Yu-Hsuan Kuo, Chun Ming How, Chi-Wei Huang, Pei-Ling Yen, Chan-Wei Yu, <strong>Chun-Han Chang</strong>, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Aquatic Toxicology</em>, 257, 106473.</p></article></div></div><div class="pub-year" data-group="2022"><div class="year-head"><h2>2022</h2></div><div class="pub-list"><article class="pub-item" id="pub-12" data-year="2022" data-search="nanoplastic exposure in soil compromises the energy budget of the soil nematode c. elegans and decreases reproductive fitness environmental pollution chi-wei huang, pei-ling yen, yu-hsuan kuo, chun-han chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 12 · 2022</span><h3>Nanoplastic exposure in soil compromises the energy budget of the soil nematode <em>C. elegans</em> and decreases reproductive fitness</h3><p class="authors">Chi-Wei Huang, Pei-Ling Yen, Yu-Hsuan Kuo, <strong>Chun-Han Chang</strong>, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Environmental Pollution</em>, 312, 120071.</p></article><article class="pub-item" id="pub-13" data-year="2022" data-search="chronic di(2-ethylhexyl) phthalate exposure leads to dopaminergic neuron degeneration through mitochondrial dysfunction in c. elegans environmental pollution mei-lun huang, pei-ling yen, chun-han chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 13 · 2022</span><h3>Chronic di(2-ethylhexyl) phthalate exposure leads to dopaminergic neuron degeneration through mitochondrial dysfunction in <em>C. elegans</em></h3><p class="authors">Mei-Lun Huang, Pei-Ling Yen, <strong>Chun-Han Chang</strong>, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Environmental Pollution</em>, 307, 119574.</p></article><article class="pub-item" id="pub-14" data-year="2022" data-search="potential anti-parkinsonian&#x27;s effect of s-(+)-linalool from cinnamomum osmophloeum ct. linalool leaves are associated with mitochondrial regulation via gas-1, nuo-1 and mev-1 in caenorhabditis elegans phytotherapy research chun-han chang, shang-tzen chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 14 · 2022</span><h3>Potential anti-Parkinsonian&#x27;s effect of S-(+)-linalool from Cinnamomum osmophloeum ct. linalool leaves are associated with mitochondrial regulation via gas-1, nuo-1 and mev-1 in <em>Caenorhabditis elegans</em></h3><p class="authors"><strong>Chun-Han Chang</strong>, Shang-Tzen Chang, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Phytotherapy Research</em>, 36(8), 3325–3334.</p></article><article class="pub-item" id="pub-15" data-year="2022" data-search="s-allylcysteine ameliorates aging features via regulating mitochondrial dynamics in naturally aged c57bl/6j mice molecular nutrition &amp; food research pin-hua chen#, chun-han chang#, wei-sheng lin, chi-tang ho, min-hsiung pan*"><span class="pub-id">PUBLICATION 15 · 2022</span><h3>S-allylcysteine ameliorates aging features via regulating mitochondrial dynamics in naturally aged C57BL/6J mice</h3><p class="authors">Pin-Hua Chen#, <strong>Chun-Han Chang</strong>#, Wei-Sheng Lin, Chi-Tang Ho, Min-Hsiung Pan*</p><p class="journal"><em>Molecular Nutrition &amp; Food Research</em>, 66(7), e2101077.</p></article></div></div><div class="pub-year" data-group="2021"><div class="year-head"><h2>2021</h2></div><div class="pub-list"><article class="pub-item" id="pub-16" data-year="2021" data-search="n-γ-(l-glutamyl)-l-selenomethionine shows neuroprotective effects against parkinson&#x27;s disease associated with skn-1/nrf2 and trxr- 1 in caenorhabditis elegans phytomedicine chun-han chang, chia-cheng wei, chi-tang ho, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 16 · 2021</span><h3>N-γ-(L-glutamyl)-L-selenomethionine shows neuroprotective effects against Parkinson&#x27;s disease associated with SKN-1/Nrf2 and TRXR- 1 in <em>Caenorhabditis elegans</em></h3><p class="authors"><strong>Chun-Han Chang</strong>, Chia-Cheng Wei, Chi-Tang Ho, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Phytomedicine</em>, 92, 153733.</p></article></div></div><div class="pub-year" data-group="2020"><div class="year-head"><h2>2020</h2></div><div class="pub-list"><article class="pub-item" id="pub-17" data-year="2020" data-search="parental cuo nanoparticles exposure results in transgenerational toxicity in caenorhabditis elegans associated with possible epigenetic regulation ecotoxicology and environmental safety chia-cheng wei, pei-ling yen, amornrat chaikritsadakarn, chi-wei huang, chun-han chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 17 · 2020</span><h3>Parental CuO nanoparticles exposure results in transgenerational toxicity in <em>Caenorhabditis elegans</em> associated with possible epigenetic regulation</h3><p class="authors">Chia-Cheng Wei, Pei-Ling Yen, Amornrat Chaikritsadakarn, Chi-Wei Huang, <strong>Chun-Han Chang</strong>, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Ecotoxicology and Environmental Safety</em>, 203, 111001.</p></article><article class="pub-item" id="pub-18" data-year="2020" data-search="the bioavailability and potential ecological risk of copper and zinc in river sediment are affected by seasonal variation and spatial distribution aquatic toxicology chi-wei huang, zhen you chai, pei-ling yen, chun ming how, chan-wei yu, chun-han chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 18 · 2020</span><h3>The bioavailability and potential ecological risk of copper and zinc in river sediment are affected by seasonal variation and spatial distribution</h3><p class="authors">Chi-Wei Huang, Zhen You Chai, Pei-Ling Yen, Chun Ming How, Chan-Wei Yu, <strong>Chun-Han Chang</strong>, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Aquatic Toxicology</em>, 227, 105604.</p></article><article class="pub-item" id="pub-19" data-year="2020" data-search="co-exposure to foodborne and waterborne zno nanoparticles in aquatic sediment environments enhances dna damage and stress gene expression in freshwater asian clam corbicula fluminea environmental science: nano chi-wei huang, chun-han chang, shang-wei li, pei-ling yen, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 19 · 2020</span><h3>Co-exposure to foodborne and waterborne ZnO nanoparticles in aquatic sediment environments enhances DNA damage and stress gene expression in freshwater Asian clam Corbicula fluminea</h3><p class="authors">Chi-Wei Huang, <strong>Chun-Han Chang</strong>, Shang-Wei Li, Pei-Ling Yen, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Environmental Science: Nano</em>, 7(4), 1252–1265.</p></article></div></div><div class="pub-year" data-group="2019"><div class="year-head"><h2>2019</h2></div><div class="pub-list"><article class="pub-item" id="pub-20" data-year="2019" data-search="n-γ-(l-glutamyl)-l-selenomethionine inhibits fat storage via the stearoyl-coa desaturases fat-6 and fat-7 and the selenoprotein trxr-1 in caenorhabditis elegans molecular nutrition &amp; food research chun-han chang, harrison xian-qi liao, fu-lan hsu, chi-tang ho, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 20 · 2019</span><h3>N-γ-(l-Glutamyl)-l-selenomethionine inhibits fat storage via the stearoyl-CoA desaturases FAT-6 and FAT-7 and the selenoprotein TRXR-1 in <em>Caenorhabditis elegans</em></h3><p class="authors"><strong>Chun-Han Chang</strong>, Harrison Xian-Qi Liao, Fu-Lan Hsu, Chi-Tang Ho, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Molecular Nutrition &amp; Food Research</em>, 63(4), e1800784.</p></article></div></div><div class="pub-year" data-group="2017"><div class="year-head"><h2>2017</h2></div><div class="pub-list"><article class="pub-item" id="pub-21" data-year="2017" data-search="anti-parkinsonian effects of β-amyrin are regulated via lgg-1 involved autophagy pathway in caenorhabditis elegans phytomedicine chia-cheng wei, chun-han chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 21 · 2017</span><h3>Anti-Parkinsonian effects of β-amyrin are regulated via LGG-1 involved autophagy pathway in <em>Caenorhabditis elegans</em></h3><p class="authors">Chia-Cheng Wei, <strong>Chun-Han Chang</strong>, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Phytomedicine</em>, 36, 118–125.</p></article><article class="pub-item" id="pub-22" data-year="2017" data-search="n-γ-(l-glutamyl)-l-selenomethionine enhances stress resistance and ameliorates aging indicators via the selenoprotein trxr-1 in caenorhabditis elegans molecular nutrition &amp; food research chun-han chang, chi-tang ho, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 22 · 2017</span><h3>N-γ-(L-Glutamyl)-L-selenomethionine enhances stress resistance and ameliorates aging indicators via the selenoprotein TRXR-1 in <em>Caenorhabditis elegans</em></h3><p class="authors"><strong>Chun-Han Chang</strong>, Chi-Tang Ho, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Molecular Nutrition &amp; Food Research</em>, 61(8), 1600954.</p></article></div></div><div class="pub-year" data-group="2016"><div class="year-head"><h2>2016</h2></div><div class="pub-list"><article class="pub-item" id="pub-23" data-year="2016" data-search="both phosphorus fertilizers and indigenous bacteria enhance arsenic release into groundwater in arsenic-contaminated aquifers journal of agricultural and food chemistry tzu-yu lin, chia-cheng wei, chi-wei huang, chun-han chang, fu-lan hsu, and vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 23 · 2016</span><h3>Both phosphorus fertilizers and indigenous bacteria enhance arsenic release into groundwater in arsenic-contaminated aquifers</h3><p class="authors">Tzu-Yu Lin, Chia-Cheng Wei, Chi-Wei Huang, <strong>Chun-Han Chang</strong>, Fu-Lan Hsu, and Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Journal of Agricultural and Food Chemistry</em>, 64(11), 2214–2222.</p></article><article class="pub-item" id="pub-24" data-year="2016" data-search="humic acids enhance the microbially mediated release of sedimentary ferrous iron environmental science and pollution research chun-han chang, chia-cheng wei, li-hung lin, tzu-hsuan tu, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 24 · 2016</span><h3>Humic acids enhance the microbially mediated release of sedimentary ferrous iron</h3><p class="authors"><strong>Chun-Han Chang</strong>, Chia-Cheng Wei, Li-Hung Lin, Tzu-Hsuan Tu, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Environmental Science and Pollution Research</em>, 23(5), 4176–4184.</p></article></div></div><div class="pub-year" data-group="2014"><div class="year-head"><h2>2014</h2></div><div class="pub-list"><article class="pub-item" id="pub-25" data-year="2014" data-search="selenite enhances immune response against pseudomonas aeruginosa pa14 via skn-1 in caenorhabditis elegans plos one wen-hsuan li#, chun-han chang#, chi-wei huang, chia-cheng wei, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 25 · 2014</span><h3>Selenite enhances immune response against Pseudomonas aeruginosa PA14 via SKN-1 in <em>Caenorhabditis elegans</em></h3><p class="authors">Wen-Hsuan Li#, <strong>Chun-Han Chang</strong>#, Chi-Wei Huang, Chia-Cheng Wei, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>PLOS ONE</em>, 9(8), e105810.</p></article><article class="pub-item" id="pub-26" data-year="2014" data-search="selenite protects caenorhabditis elegans from oxidative stress via daf-16 and trxr-1 molecular nutrition &amp; food research wen-hsuan li, yeu-ching shi, chun-han chang, chi-wei huang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 26 · 2014</span><h3>Selenite protects <em>Caenorhabditis elegans</em> from oxidative stress via DAF-16 and TRXR-1</h3><p class="authors">Wen-Hsuan Li, Yeu-Ching Shi, <strong>Chun-Han Chang</strong>, Chi-Wei Huang, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Molecular Nutrition &amp; Food Research</em>, 58(4), 863–874.</p></article></div></div><div class="pub-year" data-group="2012"><div class="year-head"><h2>2012</h2></div><div class="pub-list"><article class="pub-item" id="pub-27" data-year="2012" data-search="caenorhabditis elegans as model organisms to study the antioxidant potency of acacia confusa twig extract quarterly journal of chinese forestry chun-han chang, wen-hsuan li, yeu-ching shi, chi-wei huang, shang-tzen chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 27 · 2012</span><h3><em>Caenorhabditis elegans</em> as model organisms to study the antioxidant potency of Acacia confusa twig extract</h3><p class="authors"><strong>Chun-Han Chang</strong>, Wen-Hsuan Li, Yeu-Ching Shi, Chi-Wei Huang, Shang-Tzen Chang, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Quarterly Journal of Chinese Forestry</em>, 45(4), 503–514.</p></article><article class="pub-item" id="pub-28" data-year="2012" data-search="caenorhabditis elegans as a useful model animal for anti-oxidative study of apigenin taiwanese journal of agricultural chemistry and food science chi-wei huang, yeu-ching shi, wen-hsuan li, chun-han chang, vivian hsiu-chuan liao*"><span class="pub-id">PUBLICATION 28 · 2012</span><h3><em>Caenorhabditis elegans</em> as a useful model animal for anti-oxidative study of apigenin</h3><p class="authors">Chi-Wei Huang, Yeu-Ching Shi, Wen-Hsuan Li, <strong>Chun-Han Chang</strong>, Vivian Hsiu-Chuan Liao*</p><p class="journal"><em>Taiwanese Journal of Agricultural Chemistry and Food Science</em>, 50(3), 165–170.</p></article></div></div><p class="mini-note" style="margin-top:30px">Journal Impact Factors and JCR ranks are intentionally omitted until the official JCR data source and update procedure have been verified. The first 2026 article is listed as in press based on the supplied publisher proof.</p></div></section></main><footer><div class="container"><div><b>CHANG LAB</b><br>Marine Bioactives &amp; Healthy Aging Research</div><div>© <span id="year">2026</span> Chang Lab · National Sun Yat-sen University</div></div></footer><script>(function(){const button=document.getElementById('menuButton'),nav=document.getElementById('navLinks');if(button&&nav){button.addEventListener('click',()=>{const x=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(x))});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');button.setAttribute('aria-expanded','false')}));}document.getElementById('year').textContent=new Date().getFullYear();})();
+(function(){let q=document.getElementById('pubQuery'),yr=document.getElementById('pubYear'),count=document.getElementById('pubCount'),all=[...document.querySelectorAll('.pub-item')];if(!q||!yr)return;function update(){let needle=q.value.trim().toLowerCase(),year=yr.value,n=0;all.forEach(x=>{let ok=(year==='all'||x.dataset.year===year)&&x.dataset.search.includes(needle);x.hidden=!ok;if(ok)n++;});document.querySelectorAll('.pub-year').forEach(g=>{g.hidden=![...g.querySelectorAll('.pub-item')].some(x=>!x.hidden)});count.textContent='Showing '+n+' of '+all.length+' publications';}q.addEventListener('input',update);yr.addEventListener('change',update)})();</script></body></html>
