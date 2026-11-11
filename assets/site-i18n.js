@@ -214,6 +214,8 @@ function initialize(){
     const selector='main h1,main h2,main h3,main h4,main p,main label,main small,main summary,main span,main time,main a,main strong,main .eyebrow,main .eyebrow-dark,main .date,main .pi-role';
     document.querySelectorAll(selector).forEach(function(el){
       if(protectedContent(el)||(el.tagName==='P'&&el.querySelector('a')))return;
+      // Preserve gallery image markup: translate only the caption span, never its enclosing link.
+      if(el.tagName==='A' && (el.hasAttribute('data-snp-view') || el.querySelector('img,picture,svg')))return;
       const en=normal(el.textContent);
       const matched=dict.find(function(row){return en===row[0]||en.startsWith(row[0]);});
       if(!matched)return;
