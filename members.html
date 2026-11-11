@@ -256,7 +256,29 @@
 @media(max-width:950px) { .menu-btn{display:block;} .navlinks{display:none;position:absolute;top:100%;left:0;right:0;padding:18px 26px 22px;background:#fff;border-top:1px solid var(--stroke);box-shadow:0 15px 25px rgba(8,28,40,.09);flex-direction:column;align-items:flex-start;gap:15px;} .navlinks.open{display:flex;} .navlinks a{font-size:.96rem;} }
 @media(max-width:780px) {.info-grid,.info-grid.two,.layout-side{grid-template-columns:1fr;} .page-hero{padding:54px 0;} .info-grid{gap:12px;}}
 @media(max-width:460px){.filter-bar input,.filter-bar select{width:100%;min-width:0;} .pub-item{padding:17px;} }
-.pi-art-photo{padding:0;min-height:330px;background:#eaf3f5;overflow:hidden}.pi-art-photo img{display:block;width:100%;height:100%;min-height:330px;object-fit:cover;object-position:center top}@media(max-width:670px){.pi-art-photo{min-height:0}.pi-art-photo img{height:300px;min-height:0;object-fit:contain;background:#edf5f7}} </style></head><body><a class="skip-link" href="#main">Skip to content</a>
+.pi-art-photo{padding:0;min-height:330px;background:#eaf3f5;overflow:hidden}.pi-art-photo img{display:block;width:100%;height:100%;min-height:330px;object-fit:cover;object-position:center top}@media(max-width:670px){.pi-art-photo{min-height:0}.pi-art-photo img{height:300px;min-height:0;object-fit:contain;background:#edf5f7}} 
+/* Team spotlight — replaces unverified roster/alumni placeholders. */
+.people-hero{padding-top:52px;padding-bottom:58px;}
+.people-hero h1{margin-bottom:10px;}
+.team-life-section{padding-top:58px;padding-bottom:65px;}
+.team-life-grid{display:grid;grid-template-columns:1.12fr 0.88fr;gap:22px;align-items:stretch;}
+.team-life-photo{margin:0;background:#fff;border:1px solid #d5e5e8;border-radius:15px;overflow:hidden;box-shadow:0 12px 28px rgba(6,45,60,.06);}
+.team-life-photo img{display:block;width:100%;height:380px;object-fit:cover;object-position:center 38%;transition:transform .35s ease;}
+.team-life-photo:hover img{transform:scale(1.025);}
+.team-life-photo figcaption{font-size:.84rem;color:#537280;padding:12px 17px;}
+.team-life-details{background:#fff;border:1px solid #d6e5e8;border-radius:15px;padding:27px;display:flex;flex-direction:column;justify-content:center;gap:11px;}
+.team-life-eyebrow{font-size:.76rem;color:var(--teal);letter-spacing:.13em;font-weight:800;}
+.team-life-details h3{font-size:1.47rem;line-height:1.25;margin:0;color:var(--navy);}
+.team-life-details p{margin:0;color:#537081;font-size:.91rem;}
+.team-focus-list{display:grid;gap:10px;padding:7px 0;}
+.team-focus-list>div{display:flex;align-items:start;gap:12px;border-bottom:1px solid #e0eaed;padding-bottom:10px;color:#173c4b;font-size:.9rem;}
+.team-focus-list span{font-size:.81rem;color:#0b7a86;font-weight:800;flex-shrink:0;}
+.team-life-note{font-size:.8rem!important;}
+.team-life-link{font-size:.9rem;font-weight:790;color:#08707d;text-underline-offset:4px;margin-top:2px;}
+@media(max-width:850px){.team-life-grid{grid-template-columns:1fr;}.team-life-photo img{height:300px;}}
+@media(max-width:500px){.team-life-photo img{height:230px;}.team-life-details{padding:20px;}}
+@media(prefers-reduced-motion:reduce){.team-life-photo img{transition:none;}}
+</style></head><body><a class="skip-link" href="#main">Skip to content</a>
 <div class="topline"><div class="container"><a href="https://www.nsysu.edu.tw/" rel="noopener noreferrer" target="_blank">National Sun Yat-sen University · Kaohsiung, Taiwan</a></div></div>
 <header><div class="container nav"><a aria-label="Chang Lab Home" class="brand" href="index.html"><div class="brand-logo">C<span style="color:#88dfd8">.</span></div><div><div class="brand-name">CHANG LAB</div><div class="brand-sub">Marine Natural Products &amp; Aging</div></div></a><button aria-controls="navLinks" aria-expanded="false" class="menu-btn" id="menuButton" type="button">☰ Menu</button><nav aria-label="Main navigation" class="navlinks" id="navLinks"><a href="index.html">Home</a><a href="research.html">Research</a><a href="pi.html">PI</a><a aria-current="page" href="members.html">Members</a><a href="publications.html">Publications</a><a href="news.html">News</a><a href="join.html">Join Us</a><a href="contact.html">Contact</a></nav></div></header><main id="main">
 <div class="people-hero">
@@ -281,9 +303,9 @@
 <h3>Chun-Han Chang, Ph.D.</h3>
 <p class="pi-sub">Assistant Professor</p>
 <p>Department of Marine Biotechnology and Resources<br/>National Sun Yat-sen University, Taiwan</p>
-<p>Dr. Chang's research focuses on the biological activity of natural compounds, with particular interest in marine-derived metabolites, stress resistance, healthy aging, and neurodegenerative disease-related phenotypes using <i><em>Caenorhabditis elegans</em></i>.</p>
+<p>Dr. Chang's research focuses on the biological activity of natural compounds, with particular interest in marine-derived metabolites, stress resistance, healthy aging, and neurodegenerative disease-related phenotypes using <em>Caenorhabditis elegans</em>.</p>
 <div aria-label="Research interests" class="tag-row">
-<span>Marine bioactives</span><span><i><em>C. elegans</em></i></span><span>Stress biology</span><span>Healthy aging</span><span>Neurodegeneration</span>
+<span>Marine bioactives</span><span><em>C. elegans</em></span><span>Stress biology</span><span>Healthy aging</span><span>Neurodegeneration</span>
 </div>
 <div class="pi-links">
 <a href="pi.html" rel="noopener noreferrer" target="_blank">Read full PI profile ↗</a>
@@ -293,38 +315,31 @@
 </article>
 </div>
 </section>
-<section class="alt" id="students">
+<section class="alt team-life-section" id="students" aria-labelledby="team-life-title">
 <div class="container">
-<div class="member-intro">
-<p class="member-kicker">OUR PEOPLE</p>
-<h2>Student Researchers</h2>
-<p>We provide interdisciplinary training across marine natural products, molecular biology, and organismal experiments. Please contact the PI for confirmed current member details.</p>
-</div>
-<div class="student-grid">
-<div class="people-placeholder">
-<div aria-hidden="true" class="symbol">M</div>
-<h3>Graduate Students</h3>
-<p>Research projects include natural product screening, oxidative-stress responses, lifespan assays, and neurodegeneration models.</p>
-</div>
-<div class="people-placeholder">
-<div aria-hidden="true" class="symbol">U</div>
-<h3>Undergraduate Students</h3>
-<p>Undergraduate project researchers can gain experience in model organism biology, data analysis, and laboratory methods.</p>
-</div>
-</div>
-<p class="notice">Individual names and photographs will be published after authorization and roster verification.</p>
-</div>
-</section>
-<section id="alumni">
-<div class="container">
-<div class="member-intro">
-<p class="member-kicker">OUR COMMUNITY</p>
-<h2>Alumni</h2>
-</div>
-<div class="alumni-panel">
-<div><h3>Former lab members</h3><p>Former team-member names will be added with their permission.</p></div>
-<div aria-hidden="true" class="alumni-icon">↗</div>
-</div>
+  <div class="member-intro">
+    <p class="member-kicker">LAB LIFE &amp; COLLABORATION</p>
+    <h2 id="team-life-title">Research is a team effort</h2>
+    <p>Our work brings together marine natural product chemistry, whole-organism biology, and molecular approaches to questions about aging and stress resistance.</p>
+  </div>
+  <div class="team-life-grid">
+    <figure class="team-life-photo">
+      <img src="assets/snp-group.jpg" alt="Chang Lab group photograph taken during the 2026 Joint Academic Symposium" loading="lazy" decoding="async">
+      <figcaption>Chang Lab at the 2026 Joint Academic Symposium, Kaohsiung.</figcaption>
+    </figure>
+    <div class="team-life-details">
+      <div class="team-life-eyebrow">RECENT TEAM ACTIVITIES</div>
+      <h3>Exploring marine bioactives, together.</h3>
+      <p>At the 41st Symposium of Natural Products, research presented by the lab addressed three complementary themes:</p>
+      <div class="team-focus-list">
+        <div><span>01</span><strong>Marine natural products &amp; healthy aging</strong></div>
+        <div><span>02</span><strong>Marine fungal metabolites &amp; stress resistance</strong></div>
+        <div><span>03</span><strong>Natural compounds &amp; neurodegeneration</strong></div>
+      </div>
+      <p class="team-life-note">Conference author information and presentation highlights are available on our News &amp; Activities page.</p>
+      <a class="team-life-link" href="news.html">See the 2026 symposium highlights ↗</a>
+    </div>
+  </div>
 </div>
 </section>
 <section style="padding-top:20px">
