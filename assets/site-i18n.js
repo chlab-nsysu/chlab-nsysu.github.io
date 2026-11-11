@@ -177,8 +177,10 @@ function changeLanguage(value){
       if(!el.dataset.originalCitationLabel)el.dataset.originalCitationLabel=el.textContent;
       el.textContent=value==='en'?el.dataset.originalCitationLabel:el.dataset.originalCitationLabel.replace(/^PUBLICATION\s+(\d+)/i,'期刊論文 $1');
     });
-    const search=document.getElementById('pubQuery');if(search)search.placeholder=value==='en'?'Search title, author, journal...':'搜尋論文標題、作者或期刊…';
+    const search=document.getElementById('pubQuery');if(search){search.placeholder=value==='en'?'Search title, author, journal...':'搜尋英文標題、作者或期刊…';search.setAttribute('aria-label',value==='en'?'Search publications by title, author, or journal':'搜尋論文英文標題、作者或期刊名稱');}
+    const help=document.getElementById('pubSearchHelp');if(help)help.textContent=value==='en'?'Bibliographic entries remain in English. Search using English titles, author names, or journal names.':'論文書目保留英文原文，請使用英文標題、作者姓名或期刊名稱搜尋。';
     const all=document.querySelector('#pubYear option[value="all"]');if(all)all.textContent=value==='en'?'All years':'所有年份';
+    const yearSelect=document.getElementById('pubYear');if(yearSelect)yearSelect.setAttribute('aria-label',value==='en'?'Filter publications by year':'依出版年份篩選論文');
     const stat=document.getElementById('pubCount');
     if(stat){
       if(!countObserver){countObserver=new MutationObserver(function(){
