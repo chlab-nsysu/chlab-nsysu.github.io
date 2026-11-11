@@ -173,6 +173,10 @@ function changeLanguage(value){
       crumb.innerHTML=value==='en'?crumb.dataset.englishHtml:'<a href="index.html">首頁</a> / '+cn;
     }
     elements.forEach(function(el){const original=originals.get(el);if(original&&el.isConnected)el.innerHTML=value==='en'?original.english:original.chinese;});
+    document.querySelectorAll('.pub-id').forEach(function(el){
+      if(!el.dataset.originalCitationLabel)el.dataset.originalCitationLabel=el.textContent;
+      el.textContent=value==='en'?el.dataset.originalCitationLabel:el.dataset.originalCitationLabel.replace(/^PUBLICATION\s+(\d+)/i,'期刊論文 $1');
+    });
     const search=document.getElementById('pubQuery');if(search)search.placeholder=value==='en'?'Search title, author, journal...':'搜尋論文標題、作者或期刊…';
     const all=document.querySelector('#pubYear option[value="all"]');if(all)all.textContent=value==='en'?'All years':'所有年份';
     const stat=document.getElementById('pubCount');
