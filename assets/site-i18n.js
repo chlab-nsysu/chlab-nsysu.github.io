@@ -111,6 +111,8 @@ const zh={
 ['Swipe to explore the photos','左右滑動瀏覽照片 →'],['Lab crew, poster sessions','實驗室團隊、海報展示，以及研究交流的美好時刻。'],
 ['BEHIND THE POSTERS','海報背後的研究'],['Three research stories','三個研究故事'],['Three presentations · 2026','三篇海報發表 · 2026'],
 ['* Corresponding author. Titles and author order','* 通訊作者。海報題名及作者順序均依原始海報保留英文。'],
+['New paper in','新發表於 <em>Aquatic Toxicology</em> 的研究論文'],
+['Chun-Han Chang received the JSOT International Poster Award in 2026.','張鈞涵博士於 2026 年獲頒日本毒理學會國際海報獎。獲獎海報（P-147A）探討 TiO₂ 奈米粒子相關的 <em>C. elegans</em> 神經毒性。'],
 ['Publication','期刊論文'],['Award','學術獎項'],['Earlier conference activities','歷年研討會活動'],['Oral presentation','口頭報告'],
 ['Read via DOI','開啟 DOI ↗'],['Official award announcement','官方獲獎公告 ↗']
 ],
