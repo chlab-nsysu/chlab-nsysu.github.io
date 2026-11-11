@@ -297,6 +297,75 @@
 .news-archive-body{padding:10px 0 0;font-size:.86rem;color:#516b7b;}
 .news-archive-body p{margin:8px 0;}
 @media(max-width:720px){.news-highlight-grid{grid-template-columns:1fr;}.news-highlight.news-main{grid-column:auto;}.news-section-header{align-items:start;flex-direction:column;gap:10px;}.news-highlight{padding:21px;}.news-highlight-heading{gap:12px;}.news-large-count{min-width:65px;padding-left:12px;}.news-large-count b{font-size:2.1rem;}.news-overview{padding:42px 0;}}
+
+/* SNP symposium: photo collage and original poster gallery */
+.snp-feature{background:linear-gradient(128deg,#f8fcfc,#eef8f8 65%,#fff)!important;padding:clamp(20px,3vw,34px)!important;gap:16px!important;}
+.snp-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.snp-lab-diary{background:#fff5e9;color:#9b5c32;border:1px solid #ead7c5;border-radius:40px;padding:5px 12px;font-size:.76rem;font-weight:800;white-space:nowrap;}
+.snp-feature .news-highlight-heading h3{font-size:clamp(1.3rem,2.4vw,1.85rem);letter-spacing:-.018em;max-width:780px;}
+.snp-feature .news-highlight-heading p{max-width:790px;}
+.snp-gallery-section,.snp-posters-section{margin-top:12px;}
+.snp-subtitle{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:13px;}
+.snp-subtitle h4{color:var(--navy);font-size:clamp(1.15rem,2vw,1.5rem);margin:4px 0 0;line-height:1.25;}
+.snp-subtitle h4 span{color:#d69e70;}
+.snp-overline{font-size:.7rem;letter-spacing:.14em;font-weight:850;color:#097786;}
+.snp-subtitle small{font-size:.75rem;color:#537483;font-weight:700;white-space:nowrap;}
+.snp-mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:185px 185px;gap:12px;isolation:isolate;}
+.snp-shot{position:relative;display:block;overflow:hidden;min-width:0;border-radius:17px;background:#deebec;box-shadow:0 11px 28px rgba(19,58,68,.13);transition:transform .24s,box-shadow .24s;}
+.snp-shot::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(3,31,43,.66));pointer-events:none;}
+.snp-shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+.snp-shot span{position:absolute;z-index:1;left:12px;bottom:11px;color:white;font-size:.75rem;font-weight:800;text-shadow:0 1px 3px #1238;}
+.snp-shot:hover,.snp-shot:focus-visible{z-index:3;transform:translateY(-4px) rotate(0deg);box-shadow:0 16px 31px rgba(9,56,70,.22);}
+.snp-shot:hover img{transform:scale(1.05);}
+.snp-shot-group{grid-column:1/span 2;grid-row:1/span 2;transform:rotate(-.5deg);}
+.snp-shot-group img{object-position:center 43%;}
+.snp-shot-group span{font-size:.95rem;left:17px;bottom:17px;}
+.snp-shot-longevity{grid-column:3;grid-row:1;transform:rotate(.7deg);}
+.snp-shot-fungal{grid-column:4;grid-row:1;transform:rotate(-.75deg);}
+.snp-shot-neuro{grid-column:3;grid-row:2;transform:rotate(-.7deg);}
+.snp-shot-venue{grid-column:4;grid-row:2;transform:rotate(.7deg);}
+.snp-shot-venue img{object-position:center 40%;}
+.snp-gallery-caption{color:#5b7784!important;font-size:.81rem!important;margin:13px 0 0!important;}
+.snp-swipe-hint{display:none;}
+.snp-research-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.snp-research-card{display:flex;flex-direction:column;background:#fff;border:1px solid #d5e6e9;border-radius:14px;overflow:hidden;min-width:0;box-shadow:0 7px 20px rgba(20,57,63,.05);}
+.snp-research-preview{height:218px;display:block;position:relative;background:#fff;overflow:hidden;border-bottom:1px solid #e1edef;}
+.snp-research-preview img{display:block;width:100%;height:100%;object-fit:contain;object-position:top center;transition:transform .35s;}
+.snp-research-preview:hover img,.snp-research-preview:focus-visible img{transform:scale(1.055);}
+.snp-research-preview span{position:absolute;bottom:10px;right:10px;border-radius:999px;background:#0b5869;color:white;font-size:.72rem;font-weight:800;padding:5px 11px;box-shadow:0 4px 12px #1235;}
+.snp-research-body{padding:15px;display:flex;flex-direction:column;gap:8px;flex:1;}
+.snp-research-kicker{color:#087782;font-size:.69rem;font-weight:850;letter-spacing:.075em;text-transform:uppercase;}
+.snp-research-body h4{margin:0;font-size:.93rem;line-height:1.5;color:#102f42;}
+.snp-research-body p{font-size:.75rem!important;color:#657984!important;margin:auto 0 0!important;padding-top:7px;}
+.snp-feature .news-author-note{font-size:.75rem!important;color:#6a7c85!important;margin:6px 0 0!important;}
+.snp-lightbox{max-width:96vw;width:min(1100px,96vw);max-height:95vh;background:#072a38;border:0;border-radius:16px;color:white;padding:24px 49px;box-shadow:0 24px 95px #0018;}
+.snp-lightbox::backdrop{background:#051d2ee8;backdrop-filter:blur(6px);}
+.snp-lightbox figure{margin:0;display:flex;align-items:center;flex-direction:column;gap:9px;}
+.snp-lightbox figure img{display:block;max-width:100%;max-height:77vh;object-fit:contain;}
+.snp-lightbox figcaption{font-size:.86rem;color:#d0edf0;text-align:center;line-height:1.45;}
+.snp-lightbox-count{text-align:center;font-size:.77rem;color:#9dd9db;margin-top:5px;}
+.snp-lightbox button{cursor:pointer;color:white;border:1px solid #ffffff55;background:#0d596e;border-radius:999px;display:grid;place-items:center;}
+.snp-lightbox-close{position:absolute;top:8px;right:9px;width:36px;height:36px;font-size:1.4rem;}
+.snp-lightbox-prev,.snp-lightbox-next{position:absolute;top:45%;height:36px;width:36px;font-size:1.4rem;}
+.snp-lightbox-prev{left:7px;}.snp-lightbox-next{right:7px;}
+@media(max-width:850px){.snp-mosaic{grid-template-rows:150px 150px;gap:9px;}.snp-research-preview{height:150px;}}
+@media(max-width:660px){
+.snp-mosaic{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;gap:12px;padding:5px 4px 14px;scrollbar-width:thin;}
+.snp-mosaic .snp-shot{flex:0 0 min(78vw,305px);height:290px;transform:none;scroll-snap-align:center;}
+.snp-shot img{object-position:center 34%;}
+.snp-swipe-hint{display:block;text-align:right;color:#067382!important;font-size:.77rem!important;font-weight:750;margin:0!important;}
+.snp-research-grid{grid-template-columns:1fr;gap:12px;}
+.snp-research-card{display:grid;grid-template-columns:118px minmax(0,1fr);}
+.snp-research-preview{height:100%;min-height:192px;border-right:1px solid #e1edef;border-bottom:0;}
+.snp-research-body{padding:12px;gap:6px;}
+.snp-research-body h4{font-size:.85rem;line-height:1.4;}
+.snp-research-body p{font-size:.72rem!important;}
+.snp-subtitle{align-items:start;flex-direction:column;gap:5px;}
+.snp-lightbox{padding:47px 32px 21px;}
+.snp-lightbox figure img{max-height:73vh;}
+.snp-lightbox-prev,.snp-lightbox-next{top:auto;bottom:7px;}
+}
+@media(prefers-reduced-motion:reduce){.snp-shot,.snp-shot img,.snp-research-preview img{transition:none;}}
 </style></head><body><a class="skip-link" href="#main">Skip to content</a>
 <div class="topline"><div class="container"><a href="https://www.nsysu.edu.tw/" rel="noopener noreferrer" target="_blank">National Sun Yat-sen University · Kaohsiung, Taiwan</a></div></div>
 <header><div class="container nav"><a aria-label="Chang Lab Home" class="brand" href="index.html"><div class="brand-logo">C<span style="color:#88dfd8">.</span></div><div><div class="brand-name">CHANG LAB</div><div class="brand-sub">Marine Natural Products &amp; Aging</div></div></a><button aria-controls="navLinks" aria-expanded="false" class="menu-btn" id="menuButton" type="button">☰ Menu</button><nav aria-label="Main navigation" class="navlinks" id="navLinks"><a href="index.html">Home</a><a href="research.html">Research</a><a href="pi.html">PI</a><a href="members.html">Members</a><a href="publications.html">Publications</a><a aria-current="page" href="news.html">News</a><a href="join.html">Join Us</a><a href="contact.html">Contact</a></nav></div></header><main id="main">
@@ -304,20 +373,13 @@
 <section class="news-overview"><div class="container">
   <div class="news-section-header"><div><p class="kicker">LATEST MILESTONES</p><h2>2026 Highlights</h2><p class="subhead">Research outcomes and scientific activities led by or involving Chun-Han Chang and the laboratory.</p></div><a class="inline-link" href="publications.html">All publications ↗</a></div>
   <div class="news-highlight-grid">
-    <article class="news-highlight news-main">
-      <div class="news-meta"><time datetime="2026-10-30">30 October – 1 November 2026</time><span class="news-type">Conference</span></div>
-      <div class="news-highlight-heading"><div><h3>Three poster presentations at the 41st Symposium of Natural Products</h3><p>The laboratory presented three projects at the 2026 Joint Academic Symposium, held at Kaohsiung Medical University, Taiwan.</p></div><div class="news-large-count" aria-label="Three poster presentations"><b>03</b><span>Posters</span></div></div>
-      <div class="news-poster-summary"><span>Marine bioactives &amp; longevity</span><span>Marine fungal metabolites</span><span>Neurodegenerative disease models</span></div>
-      <details class="poster-disclosure"><summary>View the three poster titles and authors <span aria-hidden="true">⌄</span></summary>
-      <ol class="news-poster-list">
-        <li><strong>Marine-derived norzoanthamine and <em>Atalantia ceylanica</em>-derived LC03 improve stress resistance and extend lifespan in <em>Caenorhabditis elegans</em></strong><p>Chun-Han Chang*, Po-Sen Yu, I-Chen Lin, Yuan-Bin Cheng, Chih-Chuang Liaw</p></li>
-        <li><strong>Marine fungal metabolites improve oxidative stress resistance in <em>Caenorhabditis elegans</em></strong><p>Fang-Ting Lin, Yuan-Bin Cheng, Chun-Han Chang*</p></li>
-        <li><strong>Marine natural compounds ameliorate Parkinson’s disease-related phenotypes in <em>Caenorhabditis elegans</em></strong><p>Wan-Jing Huang, Yuan-Bin Cheng, Chun-Han Chang*</p></li>
-      </ol>
-      <p class="news-author-note">* Corresponding author</p>
-      </details>
-      <div class="news-links"><a class="inline-link" href="https://www.snpconf.tw/" target="_blank" rel="noopener noreferrer">Symposium website ↗</a></div>
-    </article>
+    <article class="news-highlight news-main snp-feature">
+<div class="snp-top"><div class="news-meta"><time datetime="2026-10-30">30 October – 1 November 2026</time><span class="news-type">Conference</span></div><span class="snp-lab-diary">✦ Lab diary · 2026</span></div>
+<div class="news-highlight-heading"><div><h3>Three poster presentations at the 41st Symposium of Natural Products</h3><p>From marine natural products to healthy aging and neuroprotection — three research stories shared at the 2026 Joint Academic Symposium, Kaohsiung Medical University, Taiwan.</p></div><div class="news-large-count"><b>03</b><span>Posters</span></div></div>
+<div class="news-poster-summary"><span>Marine bioactives &amp; longevity</span><span>Marine fungal metabolites</span><span>Neurodegenerative disease models</span></div>
+<div class="snp-gallery-section"><div class="snp-subtitle"><div><span class="snp-overline">CONFERENCE MOMENTS</span><h4>A little glimpse behind the science <span aria-hidden="true">✺</span></h4></div><small>5 photos · Kaohsiung 2026</small></div><div class="snp-mosaic" aria-label="Five-photo collage from the 2026 symposium"><a class="snp-shot snp-shot-group" href="assets/snp-group.jpg" data-snp-view data-snp-group="moments" data-snp-caption="Chang Lab team photo at the 41st Symposium of Natural Products" aria-label="Open conference photo 1 of 5"><img src="assets/snp-group.jpg" alt="Chang Lab team photo at the 41st Symposium of Natural Products" loading="lazy" decoding="async"><span>Lab crew · 2026</span></a><a class="snp-shot snp-shot-longevity" href="assets/snp-poster-longevity.jpg" data-snp-view data-snp-group="moments" data-snp-caption="Research discussion at the norzoanthamine and LC03 poster" aria-label="Open conference photo 2 of 5"><img src="assets/snp-poster-longevity.jpg" alt="Research discussion at the norzoanthamine and LC03 poster" loading="lazy" decoding="async"><span>01 / Healthy aging</span></a><a class="snp-shot snp-shot-fungal" href="assets/snp-poster-fungal.jpg" data-snp-view data-snp-group="moments" data-snp-caption="Marine fungal metabolite research poster discussion" aria-label="Open conference photo 3 of 5"><img src="assets/snp-poster-fungal.jpg" alt="Marine fungal metabolite research poster discussion" loading="lazy" decoding="async"><span>02 / Marine fungi</span></a><a class="snp-shot snp-shot-neuro" href="assets/snp-poster-neuro.jpg" data-snp-view data-snp-group="moments" data-snp-caption="Poster discussion on marine natural products and Parkinson's disease-related phenotypes" aria-label="Open conference photo 4 of 5"><img src="assets/snp-poster-neuro.jpg" alt="Poster discussion on marine natural products and Parkinson's disease-related phenotypes" loading="lazy" decoding="async"><span>03 / Neurobiology</span></a><a class="snp-shot snp-shot-venue" href="assets/snp-venue.jpg" data-snp-view data-snp-group="moments" data-snp-caption="A moment from symposium week in Kaohsiung" aria-label="Open conference photo 5 of 5"><img src="assets/snp-venue.jpg" alt="A moment from symposium week in Kaohsiung" loading="lazy" decoding="async"><span>Event moments</span></a></div><p class="snp-swipe-hint">Swipe to explore the photos →</p><p class="snp-gallery-caption">Lab crew, poster sessions, and conversations that sparked new ideas.</p></div>
+<div class="snp-posters-section"><div class="snp-subtitle"><div><span class="snp-overline">BEHIND THE POSTERS</span><h4>Three research stories</h4></div><small>Tap a poster to view it larger</small></div><div class="snp-research-grid"><article class="snp-research-card"><a class="snp-research-preview" href="assets/snp-abstract-longevity.jpg" data-snp-view data-snp-group="posters" data-snp-caption="2026 symposium research poster 01: Longevity" aria-label="Open research poster 1 of 3"><img src="assets/snp-abstract-longevity.jpg" alt="Original research poster 01 on Longevity" loading="lazy" decoding="async"><span>Zoom poster ↗</span></a><div class="snp-research-body"><div class="snp-research-kicker">POSTER 01 / Longevity</div><h4>Marine-derived norzoanthamine and <em>Atalantia ceylanica</em>-derived LC03 improve stress resistance and extend lifespan in <em>Caenorhabditis elegans</em></h4><p>Chun-Han Chang*, Po-Sen Yu, I-Chen Lin, Yuan-Bin Cheng, Chih-Chuang Liaw</p></div></article><article class="snp-research-card"><a class="snp-research-preview" href="assets/snp-abstract-fungal.jpg" data-snp-view data-snp-group="posters" data-snp-caption="2026 symposium research poster 02: Stress resistance" aria-label="Open research poster 2 of 3"><img src="assets/snp-abstract-fungal.jpg" alt="Original research poster 02 on Stress resistance" loading="lazy" decoding="async"><span>Zoom poster ↗</span></a><div class="snp-research-body"><div class="snp-research-kicker">POSTER 02 / Stress resistance</div><h4>Marine fungal metabolites improve oxidative stress resistance in <em>Caenorhabditis elegans</em></h4><p>Fang-Ting Lin, Yuan-Bin Cheng, Chun-Han Chang*</p></div></article><article class="snp-research-card"><a class="snp-research-preview" href="assets/snp-abstract-neuro.jpg" data-snp-view data-snp-group="posters" data-snp-caption="2026 symposium research poster 03: Neuroprotection" aria-label="Open research poster 3 of 3"><img src="assets/snp-abstract-neuro.jpg" alt="Original research poster 03 on Neuroprotection" loading="lazy" decoding="async"><span>Zoom poster ↗</span></a><div class="snp-research-body"><div class="snp-research-kicker">POSTER 03 / Neuroprotection</div><h4>Marine natural compounds ameliorate Parkinson’s disease-related phenotypes in <em>Caenorhabditis elegans</em></h4><p>Wan-Jing Huang, Yuan-Bin Cheng, Chun-Han Chang*</p></div></article></div><p class="news-author-note">* Corresponding author. Titles and author order follow the three original poster files.</p></div>
+</article>
     <article class="news-highlight">
       <div class="news-meta"><time datetime="2026-11-06">6 November 2026</time><span class="news-type">Publication</span></div>
       <h3>Nanoparticle neurotoxicity study accepted in <em>Aquatic Toxicology</em></h3>
@@ -334,4 +396,21 @@
   <details class="news-archive"><summary>Earlier conference activities <span aria-hidden="true">⌄</span></summary><div class="news-archive-body"><div class="news-meta"><time datetime="2025-05">May 2025</time><span class="news-type">Oral presentation</span></div><p><strong>A novel spontaneous atrial fibrillation mouse model unveils fibrotic remodeling.</strong></p><p>XXV World Congress of the International Society for Heart Research (ISHR), Nara, Japan.</p></div></details>
 </div></section>
 </main><footer><div class="container"><div><b>CHANG LAB</b><br/>Marine Natural Products &amp; Aging Research Laboratory</div><div>© <span id="year">2026</span> Chang Lab · National Sun Yat-sen University</div></div></footer><script>(function(){const button=document.getElementById('menuButton'),nav=document.getElementById('navLinks');if(button&&nav){button.addEventListener('click',()=>{const x=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(x))});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');button.setAttribute('aria-expanded','false')}));}document.getElementById('year').textContent=new Date().getFullYear();})();
-</script></body></html>
+</script><dialog class="snp-lightbox" id="snpLightbox" aria-label="Conference photo and poster viewer">
+<button class="snp-lightbox-close" type="button" aria-label="Close image">×</button><button class="snp-lightbox-prev" type="button" aria-label="Previous image">‹</button>
+<figure><img id="snpLightboxImage" alt=""><figcaption id="snpLightboxCaption"></figcaption></figure><div class="snp-lightbox-count" id="snpLightboxCount"></div>
+<button class="snp-lightbox-next" type="button" aria-label="Next image">›</button></dialog>
+<script>(function(){
+ const d=document.getElementById('snpLightbox');if(!d||typeof d.showModal!=='function')return;
+ const img=document.getElementById('snpLightboxImage'),cap=document.getElementById('snpLightboxCaption'),num=document.getElementById('snpLightboxCount');
+ const list=[...document.querySelectorAll('[data-snp-view]')];let group=[],pos=0,last=null;
+ function render(){let a=group[pos];img.src=a.href;img.alt=a.querySelector('img')?.alt||'Research image';cap.textContent=a.dataset.snpCaption||'';num.textContent=(pos+1)+' / '+group.length;}
+ function step(delta){if(!group.length)return;pos=(pos+delta+group.length)%group.length;render();}
+ list.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();last=a;group=list.filter(x=>x.dataset.snpGroup===a.dataset.snpGroup);pos=group.indexOf(a);render();d.showModal();}));
+ d.querySelector('.snp-lightbox-close').addEventListener('click',()=>d.close());
+ d.querySelector('.snp-lightbox-prev').addEventListener('click',()=>step(-1));d.querySelector('.snp-lightbox-next').addEventListener('click',()=>step(1));
+ d.addEventListener('click',e=>{if(e.target===d)d.close();});
+ d.addEventListener('close',()=>{img.removeAttribute('src');last?.focus();});
+ document.addEventListener('keydown',e=>{if(!d.open)return;if(e.key==='ArrowLeft'){e.preventDefault();step(-1)}if(e.key==='ArrowRight'){e.preventDefault();step(1)}});
+})();</script>
+</body></html>
