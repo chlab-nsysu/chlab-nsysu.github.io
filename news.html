@@ -376,7 +376,7 @@
 .news-highlight--award p{text-align:left;}
 
 /* Aquatic Toxicology cover thumbnail and JSOT 2026 photo gallery */
-.news-paper-wrap{display:grid;grid-template-columns:minmax(0,1fr) 132px;gap:19px;align-items:start;width:100%;height:100%;}
+.news-paper-wrap{display:grid;grid-template-columns:minmax(0,1fr) 140px;gap:clamp(14px,2vw,24px);align-items:start;width:100%;height:100%;}
 .news-paper-main{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0;height:100%;}
 .news-paper-main .news-links{margin-top:auto;}
 .news-paper-thumb{display:block;align-self:start;overflow:hidden;border-radius:11px;border:1px solid #d4e4e7;background:#f8fbfc;box-shadow:0 6px 18px rgba(13,58,69,.11);text-decoration:none;transition:transform .25s,box-shadow .25s;}
@@ -392,7 +392,7 @@ html[data-language="zh-TW"] .jsot-photo [data-copy][lang="en"],html[data-languag
 html:not([data-language]) .jsot-photo [data-copy][lang="zh-TW"]{display:none;}
 @media(max-width:900px){.news-paper-wrap{grid-template-columns:minmax(0,1fr) 100px;gap:13px;}.jsot-photo img{height:110px;}}
 @media(max-width:720px){.news-paper-wrap{grid-template-columns:minmax(0,1fr) 132px;gap:15px;}.jsot-photo img{height:145px;}}
-@media(max-width:500px){.news-paper-wrap{grid-template-columns:minmax(0,1fr) 96px;gap:10px;}.news-paper-main{gap:10px;}.news-paper-thumb-caption{font-size:.64rem;}.jsot-photo img{height:105px;}}
+@media(max-width:500px){.news-paper-wrap{grid-template-columns:minmax(0,1fr) 92px;gap:10px;}.news-paper-main{gap:10px;}.news-paper-thumb-caption{font-size:.64rem;}.jsot-photo img{height:105px;}}
 @media(prefers-reduced-motion:reduce){.news-paper-thumb,.jsot-photo img{transition:none;}}
 </style><link rel="stylesheet" href="assets/site-i18n.css"/>
 <script src="assets/site-i18n.js?v=news-cards-20261110" defer></script>
@@ -419,7 +419,7 @@ html:not([data-language]) .jsot-photo [data-copy][lang="zh-TW"]{display:none;}
           <div class="news-links"><a class="inline-link" href="https://doi.org/10.1016/j.aquatox.2026.108081" target="_blank" rel="noopener noreferrer" aria-label="Open the Aquatic Toxicology article DOI">DOI: 10.1016/j.aquatox.2026.108081 ↗</a></div>
         </div>
         <a class="news-paper-thumb" href="https://doi.org/10.1016/j.aquatox.2026.108081" target="_blank" rel="noopener noreferrer" aria-label="Open Aquatic Toxicology article 108081">
-          <img src="assets/paper-aquatox-108081-thumb.jpg" alt="Aquatic Toxicology journal cover, 2026 article 108081" loading="lazy" decoding="async">
+          <img src="assets/paper-aquatox-108081-thumb.jpg" alt="Aquatic Toxicology publisher preview and journal cover for article 108081" width="300" height="400" loading="lazy" decoding="async">
           <span class="news-paper-thumb-caption">Article 108081</span>
         </a>
       </div>
