@@ -278,6 +278,22 @@
 @media(max-width:850px){.team-life-grid{grid-template-columns:1fr;}.team-life-photo img{height:300px;}}
 @media(max-width:500px){.team-life-photo img{height:230px;}.team-life-details{padding:20px;}}
 @media(prefers-reduced-motion:reduce){.team-life-photo img{transition:none;}}
+
+/* Verified undergraduate member roster */
+html[data-language="zh-TW"] .undergraduate-section [data-copy][lang="en"],
+html[data-language="en"] .undergraduate-section [data-copy][lang="zh-TW"]{display:none}
+html:not([data-language]) .undergraduate-section [data-copy][lang="zh-TW"]{display:none}
+.undergraduate-section{padding:62px 0 67px;background:#fff}
+.undergraduate-section .member-intro{margin-bottom:22px}
+.undergraduate-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.undergraduate-card{display:flex;align-items:center;flex-wrap:wrap;gap:14px;background:#f8fbfc;border:1px solid #d7e5e8;border-radius:15px;padding:21px 23px;min-height:108px;transition:box-shadow .2s ease,border-color .2s ease}
+.undergraduate-card:hover{border-color:#a5d4d9;box-shadow:0 9px 23px rgba(7,65,78,.07)}
+.undergraduate-card .member-number{color:#087d8c;background:#e6f4f4;border-radius:10px;min-width:37px;height:37px;display:grid;place-items:center;font-size:.8rem;font-weight:800}
+.undergraduate-card h3{font-size:1.2rem;margin:0;color:var(--navy);line-height:1.3;font-weight:780}
+.undergraduate-card .member-role{flex-basis:100%;color:#597482;font-size:.82rem;margin-left:51px;margin-top:-7px}
+@media(max-width:850px){.undergraduate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.undergraduate-grid{grid-template-columns:1fr}.undergraduate-section{padding:46px 0}.undergraduate-card{min-height:92px}}
+@media(prefers-reduced-motion:reduce){.undergraduate-card{transition:none}}
 </style><link rel="stylesheet" href="assets/site-i18n.css"/>
 <script src="assets/site-i18n.js" defer></script>
 </head><body><a class="skip-link" href="#main">Skip to content</a>
@@ -315,6 +331,22 @@
 </div>
 </div>
 </article>
+</div>
+</section>
+<section class="undergraduate-section" id="undergraduates" aria-labelledby="undergraduate-title">
+<div class="container">
+  <div class="member-intro">
+    <p class="member-kicker"><span data-copy lang="zh-TW">實驗室成員</span><span data-copy lang="en">LAB MEMBERS</span></p>
+    <h2 id="undergraduate-title"><span data-copy lang="zh-TW">大專生</span><span data-copy lang="en">Undergraduate Students</span></h2>
+    <p><span data-copy lang="zh-TW">Chang Lab 大專生研究成員。</span><span data-copy lang="en">Undergraduate researchers at Chang Lab.</span></p>
+  </div>
+  <ol class="undergraduate-grid">
+    <li class="undergraduate-card"><span class="member-number" aria-hidden="true">01</span><h3 lang="zh-Hant">游博森</h3><span class="member-role"><span data-copy lang="zh-TW">大專生</span><span data-copy lang="en">Undergraduate Researcher</span></span></li>
+    <li class="undergraduate-card"><span class="member-number" aria-hidden="true">02</span><h3 lang="zh-Hant">桂玟</h3><span class="member-role"><span data-copy lang="zh-TW">大專生</span><span data-copy lang="en">Undergraduate Researcher</span></span></li>
+    <li class="undergraduate-card"><span class="member-number" aria-hidden="true">03</span><h3 lang="zh-Hant">黃菀靚</h3><span class="member-role"><span data-copy lang="zh-TW">大專生</span><span data-copy lang="en">Undergraduate Researcher</span></span></li>
+    <li class="undergraduate-card"><span class="member-number" aria-hidden="true">04</span><h3 lang="zh-Hant">林芳莛</h3><span class="member-role"><span data-copy lang="zh-TW">大專生</span><span data-copy lang="en">Undergraduate Researcher</span></span></li>
+    <li class="undergraduate-card"><span class="member-number" aria-hidden="true">05</span><h3 lang="zh-Hant">林易辰</h3><span class="member-role"><span data-copy lang="zh-TW">大專生</span><span data-copy lang="en">Undergraduate Researcher</span></span></li>
+  </ol>
 </div>
 </section>
 <section class="alt team-life-section" id="students" aria-labelledby="team-life-title">
