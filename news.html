@@ -374,6 +374,26 @@
 .news-highlight--paper .news-article-title{font-size:1rem;line-height:1.55;font-weight:650;color:var(--navy);overflow-wrap:break-word;text-align:left;}
 .news-highlight--paper .news-links a{overflow-wrap:anywhere;text-underline-offset:3px;}
 .news-highlight--award p{text-align:left;}
+
+/* Aquatic Toxicology cover thumbnail and JSOT 2026 photo gallery */
+.news-paper-wrap{display:grid;grid-template-columns:minmax(0,1fr) 132px;gap:19px;align-items:start;width:100%;height:100%;}
+.news-paper-main{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0;height:100%;}
+.news-paper-main .news-links{margin-top:auto;}
+.news-paper-thumb{display:block;align-self:start;overflow:hidden;border-radius:11px;border:1px solid #d4e4e7;background:#f8fbfc;box-shadow:0 6px 18px rgba(13,58,69,.11);text-decoration:none;transition:transform .25s,box-shadow .25s;}
+.news-paper-thumb:hover{transform:translateY(-3px);box-shadow:0 11px 22px rgba(13,58,69,.17);}
+.news-paper-thumb img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;}
+.news-paper-thumb-caption{display:block;padding:8px 5px;color:#547182;font-size:.7rem;text-align:center;font-weight:760;background:#f5fafb;}
+.jsot-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:6px;}
+.jsot-photo{min-width:0;margin:0;background:#f5fafb;overflow:hidden;border:1px solid #d7e6e9;border-radius:11px;}
+.jsot-photo img{display:block;width:100%;height:135px;object-fit:cover;object-position:center;transition:transform .3s;}
+.jsot-photo:hover img{transform:scale(1.035);}
+.jsot-photo figcaption{min-height:30px;padding:6px 8px;color:#557482;font-size:.75rem;font-weight:700;text-align:center;line-height:1.4;}
+html[data-language="zh-TW"] .jsot-photo [data-copy][lang="en"],html[data-language="en"] .jsot-photo [data-copy][lang="zh-TW"]{display:none;}
+html:not([data-language]) .jsot-photo [data-copy][lang="zh-TW"]{display:none;}
+@media(max-width:900px){.news-paper-wrap{grid-template-columns:minmax(0,1fr) 100px;gap:13px;}.jsot-photo img{height:110px;}}
+@media(max-width:720px){.news-paper-wrap{grid-template-columns:minmax(0,1fr) 132px;gap:15px;}.jsot-photo img{height:145px;}}
+@media(max-width:500px){.news-paper-wrap{grid-template-columns:minmax(0,1fr) 96px;gap:10px;}.news-paper-main{gap:10px;}.news-paper-thumb-caption{font-size:.64rem;}.jsot-photo img{height:105px;}}
+@media(prefers-reduced-motion:reduce){.news-paper-thumb,.jsot-photo img{transition:none;}}
 </style><link rel="stylesheet" href="assets/site-i18n.css"/>
 <script src="assets/site-i18n.js?v=news-cards-20261110" defer></script>
 </head><body><a class="skip-link" href="#main">Skip to content</a>
@@ -391,15 +411,33 @@
 <div class="snp-posters-section"><div class="snp-subtitle"><div><span class="snp-overline">BEHIND THE POSTERS</span><h4>Three research stories</h4></div><small>Three presentations · 2026</small></div><div class="snp-research-grid"><article class="snp-research-card"><div class="snp-research-preview"><img src="assets/snp-header-longevity.jpg?v=20261110" alt="Original poster header with title, authors and laboratory logos, without unpublished experimental data" loading="lazy" decoding="async"></div><div class="snp-research-body"><div class="snp-research-kicker">POSTER 01 / Longevity</div><h4>Marine-derived norzoanthamine and <em>Atalantia ceylanica</em>-derived LC03 improve stress resistance and extend lifespan in <em>Caenorhabditis elegans</em></h4><p>Chun-Han Chang*, Po-Sen Yu, I-Chen Lin, Yuan-Bin Cheng, Chih-Chuang Liaw</p></div></article><article class="snp-research-card"><div class="snp-research-preview"><img src="assets/snp-header-fungal.jpg?v=20261110" alt="Original poster header for marine fungal metabolites research, without unpublished experimental data" loading="lazy" decoding="async"></div><div class="snp-research-body"><div class="snp-research-kicker">POSTER 02 / Stress resistance</div><h4>Marine fungal metabolites improve oxidative stress resistance in <em>Caenorhabditis elegans</em></h4><p>Fang-Ting Lin, Yuan-Bin Cheng, Chun-Han Chang*</p></div></article><article class="snp-research-card"><div class="snp-research-preview"><img src="assets/snp-header-neuro.jpg?v=20261110" alt="Original poster header for marine natural compounds and Parkinson disease models, without unpublished experimental data" loading="lazy" decoding="async"></div><div class="snp-research-body"><div class="snp-research-kicker">POSTER 03 / Neuroprotection</div><h4>Marine natural compounds ameliorate Parkinson’s disease-related phenotypes in <em>Caenorhabditis elegans</em></h4><p>Wan-Jing Huang, Yuan-Bin Cheng, Chun-Han Chang*</p></div></article></div><p class="news-author-note">* Corresponding author. Titles and author order follow the three original poster files.</p></div>
 </article>
     <article class="news-highlight news-highlight--paper">
-      <div class="news-meta"><time datetime="2026-11-06">6 November 2026</time><span class="news-type">Publication</span></div>
-      <h3>New paper in <em>Aquatic Toxicology</em></h3>
-      <p class="news-article-title" lang="en">Prolonged developmental TiO₂ nanoparticle exposure at environmentally relevant level drives Parkinson’s disease-related phenotypes in <em>Caenorhabditis elegans</em></p>
-      <div class="news-links"><a class="inline-link" href="https://doi.org/10.1016/j.aquatox.2026.108081" target="_blank" rel="noopener noreferrer" aria-label="Open the Aquatic Toxicology article DOI">DOI: 10.1016/j.aquatox.2026.108081 ↗</a></div>
+      <div class="news-paper-wrap">
+        <div class="news-paper-main">
+          <div class="news-meta"><time datetime="2026-11-06">6 November 2026</time><span class="news-type">Publication</span></div>
+          <h3>New paper in <em>Aquatic Toxicology</em></h3>
+          <p class="news-article-title" lang="en">Prolonged developmental TiO₂ nanoparticle exposure at environmentally relevant level drives Parkinson’s disease-related phenotypes in <em>Caenorhabditis elegans</em></p>
+          <div class="news-links"><a class="inline-link" href="https://doi.org/10.1016/j.aquatox.2026.108081" target="_blank" rel="noopener noreferrer" aria-label="Open the Aquatic Toxicology article DOI">DOI: 10.1016/j.aquatox.2026.108081 ↗</a></div>
+        </div>
+        <a class="news-paper-thumb" href="https://doi.org/10.1016/j.aquatox.2026.108081" target="_blank" rel="noopener noreferrer" aria-label="Open Aquatic Toxicology article 108081">
+          <img src="assets/paper-aquatox-108081-thumb.jpg" alt="Aquatic Toxicology journal cover, 2026 article 108081" loading="lazy" decoding="async">
+          <span class="news-paper-thumb-caption">Article 108081</span>
+        </a>
+      </div>
     </article>
     <article class="news-highlight news-highlight--award">
       <div class="news-meta"><time datetime="2026-07">July 2026</time><span class="news-type">Award</span></div>
       <h3>JSOT International Poster Award</h3>
       <p>Chun-Han Chang received the JSOT International Poster Award in 2026. The awarded poster (P-147A) examined TiO₂ nanoparticle-associated neurotoxicity in <em>C. elegans</em>.</p>
+      <div class="jsot-photo-grid" aria-label="Photos from JSOT 2026">
+        <figure class="jsot-photo">
+          <img src="assets/jsot-2026-poster-discussion.jpg" alt="Scientific poster discussion at the Japanese Society of Toxicology 2026 meeting" loading="lazy" decoding="async">
+          <figcaption><span data-copy lang="zh-TW">海報研究交流</span><span data-copy lang="en">Poster discussion</span></figcaption>
+        </figure>
+        <figure class="jsot-photo">
+          <img src="assets/jsot-2026-award-ceremony.jpg" alt="Award recipients and organizers at the JSOT 2026 awards ceremony" loading="lazy" decoding="async">
+          <figcaption><span data-copy lang="zh-TW">國際海報獎頒獎合照</span><span data-copy lang="en">Award ceremony</span></figcaption>
+        </figure>
+      </div>
       <div class="news-links"><a class="inline-link" href="https://jsot2026.jp/contents/program.html" target="_blank" rel="noopener noreferrer">Official award announcement ↗</a></div>
     </article>
   </div>
