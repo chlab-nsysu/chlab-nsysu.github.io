@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 760" role="img" aria-labelledby="title desc">
+<title id="title">Marine natural products, C. elegans and healthy aging</title><desc id="desc">Marine bioactives connect with a nematode research model to investigate healthy aging.</desc>
+<defs>
+ <linearGradient id="ocean" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b5267"/><stop offset="1" stop-color="#092d48"/></linearGradient>
+ <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#48d6c8"/><stop offset="1" stop-color="#148aab"/></linearGradient>
+ <linearGradient id="worm" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fbf7d4"/><stop offset=".55" stop-color="#c7f6ec"/><stop offset="1" stop-color="#53cad4"/></linearGradient>
+ <linearGradient id="life" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#83d4a3"/><stop offset="1" stop-color="#def9d8"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="22"/></filter>
+ <clipPath id="a"><circle cx="180" cy="362" r="149"/></clipPath><clipPath id="b"><circle cx="455" cy="362" r="149"/></clipPath><clipPath id="c"><circle cx="730" cy="362" r="149"/></clipPath>
+</defs>
+<g opacity=".26" stroke="#c3faff" fill="none"><circle cx="455" cy="362" r="332"/><circle cx="455" cy="362" r="295" stroke-dasharray="3 13"/><path d="M54 618Q455 735 847 620"/></g>
+<g fill="#24c5c4" opacity=".18" filter="url(#glow)"><circle cx="175" cy="360" r="150"/><circle cx="460" cy="355" r="150"/><circle cx="738" cy="358" r="150"/></g>
+<circle cx="180" cy="362" r="158" fill="#0c3c54" stroke="#85e4df" stroke-width="3"/><circle cx="455" cy="362" r="158" fill="#0c3c54" stroke="#85e4df" stroke-width="3"/><circle cx="730" cy="362" r="158" fill="#0c3c54" stroke="#85e4df" stroke-width="3"/>
+<g clip-path="url(#a)">
+<rect x="30" y="210" width="310" height="310" fill="url(#ocean)"/>
+<g fill="none" stroke-linecap="round">
+ <path d="M105 493Q95 405 127 345T137 255M103 411Q60 390 69 345M112 379Q174 357 167 300" stroke="#f6ab7b" stroke-width="17"/>
+ <path d="M221 492Q199 430 230 382T235 276M220 418Q269 403 279 347M224 365Q185 337 193 287" stroke="#7ce1cc" stroke-width="13"/>
+ <path d="M148 493Q166 438 151 401M156 436Q193 421 187 389" stroke="#68aede" stroke-width="11"/>
+</g>
+<g fill="#ffd2ae"><circle cx="127" cy="315" r="12"/><circle cx="68" cy="340" r="9"/><circle cx="166" cy="300" r="8"/></g>
+<g fill="#a6f7dd"><circle cx="235" cy="274" r="11"/><circle cx="279" cy="347" r="10"/><circle cx="191" cy="286" r="8"/></g>
+<g fill="none" stroke="#c3f8f3" opacity=".48"><circle cx="75" cy="283" r="13"/><circle cx="275" cy="456" r="15"/><circle cx="290" cy="267" r="7"/></g>
+</g>
+<g clip-path="url(#b)">
+<rect x="300" y="210" width="310" height="310" fill="#123e57"/>
+<g stroke="#4d8d9a" stroke-width="2" opacity=".65"><path d="M330 260H575M333 459H573M355 236V489M554 236V489"/></g>
+<path d="M353 404C389 289 480 257 526 325S521 444 466 424S419 339 476 336S550 405 522 457" fill="none" stroke="#a2e0dd" stroke-width="35" stroke-linecap="round" opacity=".36"/>
+<path d="M353 404C389 289 480 257 526 325S521 444 466 424S419 339 476 336S550 405 522 457" fill="none" stroke="url(#worm)" stroke-width="23" stroke-linecap="round"/>
+<path d="M353 404C389 289 480 257 526 325S521 444 466 424S419 339 476 336S550 405 522 457" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+<g fill="#b9ffff"><circle cx="362" cy="282" r="5"/><circle cx="560" cy="279" r="4"/><circle cx="387" cy="464" r="7"/></g>
+</g>
+<g clip-path="url(#c)">
+<rect x="575" y="210" width="310" height="310" fill="#124e53"/>
+<g fill="none" stroke="#8dd4bf" opacity=".24" stroke-width="3"><circle cx="730" cy="362" r="110"/><circle cx="730" cy="362" r="83"/></g>
+<path d="M730 479V363" stroke="url(#life)" stroke-width="15" stroke-linecap="round"/>
+<path d="M727 411Q647 396 651 333Q712 325 731 388Q749 317 809 319Q819 387 745 405" fill="url(#life)" stroke="#efffed" stroke-width="3"/>
+<path d="M723 355Q688 349 686 290Q738 296 742 350Q759 272 799 268Q808 321 755 352" fill="#9de6c8" stroke="#dcfae9" stroke-width="3"/>
+<circle cx="729" cy="360" r="19" fill="#e2ffda" opacity=".88"/>
+<g fill="#d7ffce"><circle cx="655" cy="279" r="7"/><circle cx="809" cy="424" r="6"/><circle cx="670" cy="454" r="5"/></g>
+</g>
+<g stroke="#e4fffb" stroke-width="5" fill="none" stroke-linecap="round" opacity=".9"><path d="M349 361h-24m13-11 11 11-11 11"/><path d="M624 361h-24m13-11 11 11-11 11"/></g>
+<g fill="#eafcf9" stroke="#8ce1d8" stroke-width="2"><circle cx="180" cy="362" r="158" fill="none"/><circle cx="455" cy="362" r="158" fill="none"/><circle cx="730" cy="362" r="158" fill="none"/></g>
+<g stroke="#b5eeee" stroke-width="1.5" opacity=".45"><path d="M180 526v40M455 526v40M730 526v40"/></g>
+<g fill="#d3f3ef" opacity=".7"><circle cx="180" cy="580" r="4"/><circle cx="455" cy="580" r="4"/><circle cx="730" cy="580" r="4"/></g>
+</svg>
