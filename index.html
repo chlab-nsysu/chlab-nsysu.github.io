@@ -161,6 +161,13 @@
 @media(max-width:620px){#news .highlight-thumb,#news .highlight-paper-art{height:156px}#news .news-preview-text{min-height:112px;padding:18px 20px 20px}#news .news-preview-text h3{font-size:1.08rem;margin-bottom:12px}#news .highlight-paper-art{padding:12px 20px}#news .highlight-paper-art img{height:131px}#news .paper-art-copy b{font-size:clamp(1.2rem,5.4vw,1.85rem)}}
 @media(max-width:350px){#news .paper-art-copy b{font-size:1rem}}
 @media(prefers-reduced-motion:reduce){#news .news-preview-card{transition:none}}
+
+    /* Compact sitewide visit statistics, anchored to the lower-right corner. */
+    .visitor-counter{position:fixed;right:17px;bottom:17px;z-index:18;display:flex;gap:12px;align-items:center;padding:10px 14px;border:1px solid rgba(180,219,224,.75);border-radius:11px;background:rgba(248,253,253,.96);box-shadow:0 7px 27px rgba(10,36,57,.16);color:#163f50;font-size:.77rem;line-height:1.35;backdrop-filter:blur(7px)}
+    .visitor-stat{display:flex;flex-direction:column;min-width:60px;gap:2px}
+    .visitor-stat + .visitor-stat{border-left:1px solid #cbdfe3;padding-left:12px}
+    .visitor-stat strong{color:#075d6a;font-size:1.12rem;font-variant-numeric:tabular-nums}
+    @media(max-width:480px){.visitor-counter{right:9px;bottom:9px;padding:7px 10px;gap:8px;font-size:.68rem}.visitor-stat + .visitor-stat{padding-left:8px}.visitor-stat strong{font-size:.98rem}}
 </style>
 <script src="assets/site-i18n.js" defer></script>
 </head>
@@ -210,17 +217,7 @@
             <a href="#research" class="button button-outline"><span data-copy lang="zh-TW">探索實驗室研究</span><span data-copy lang="en">Explore Our Research</span></a>
           </div>
         </div>
-        <svg class="hero-art" viewBox="0 0 460 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <defs><linearGradient id="swirl" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c2f7e6"/><stop offset="1" stop-color="#51c6cb"/></linearGradient></defs>
-          <circle cx="240" cy="211" r="173" fill="none" stroke="#d0f2f3" opacity=".18" stroke-width="1.5"/>
-          <circle cx="240" cy="211" r="133" fill="none" stroke="#d0f2f3" opacity=".22" stroke-width="1.5"/>
-          <circle cx="240" cy="211" r="93" fill="none" stroke="#d0f2f3" opacity=".18" stroke-width="1.5"/>
-          <path d="M98 253 C140 140 245 116 279 211 C303 279 238 304 201 258 C174 224 214 185 248 212 C292 248 271 340 192 351 C114 362 68 288 83 204" fill="none" stroke="url(#swirl)" stroke-width="20" stroke-linecap="round" opacity=".95"/>
-          <path d="M98 253 C140 140 245 116 279 211 C303 279 238 304 201 258 C174 224 214 185 248 212 C292 248 271 340 192 351 C114 362 68 288 83 204" fill="none" stroke="#f4ffff" stroke-width="4" stroke-linecap="round" opacity=".64"/>
-          <g stroke="#82dadc" stroke-width="2" opacity=".78" fill="none"><path d="M278 75 L322 110 L358 94"/><path d="M319 291 L367 310 L397 279"/><path d="M80 125 L117 102 L142 117"/></g>
-          <g fill="#c4fff1"><circle cx="278" cy="75" r="7"/><circle cx="322" cy="110" r="9"/><circle cx="358" cy="94" r="6"/><circle cx="319" cy="291" r="8"/><circle cx="367" cy="310" r="6"/><circle cx="397" cy="279" r="10"/><circle cx="80" cy="125" r="7"/><circle cx="117" cy="102" r="8"/><circle cx="142" cy="117" r="5"/></g>
-          <g fill="#e5aa85"><circle cx="358" cy="171" r="6"/><circle cx="369" cy="190" r="3"/><circle cx="344" cy="196" r="4"/><circle cx="145" cy="390" r="5"/></g>
-        </svg>
+        <img class="hero-art" src="assets/banner-marine-worm-aging.svg" alt="Marine natural products, C. elegans, and healthy aging research concept" width="900" height="760" decoding="async" fetchpriority="high"/>
       </div>
     </div>
 
@@ -458,6 +455,34 @@
         menuButton.focus();
       }
     });
+  </script>
+
+  <aside class="visitor-counter" aria-label="Website page view statistics" title="Page views counted since 13 November 2026 (Taiwan time); counts are not unique visitors.">
+    <span class="visitor-stat"><span data-copy lang="zh-TW">今日瀏覽</span><span data-copy lang="en">Today</span><strong id="views-today" aria-live="polite">—</strong></span>
+    <span class="visitor-stat"><span data-copy lang="zh-TW">累計瀏覽</span><span data-copy lang="en">Total</span><strong id="views-total" aria-live="polite">—</strong></span>
+  </aside>
+  <script>
+  (function(){
+    const base='https://countapi.mileshilliard.com/api/v1/';
+    const day=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()).replaceAll('/','-');
+    const keys=[['chlab_nsysu_home_views_'+day,'views-today'],['chlab_nsysu_home_views_total_20261113','views-total']];
+    keys.forEach(async ([key,id])=>{
+      const el=document.getElementById(id);
+      try {
+        const seenKey='chlab-counted-'+key;
+        let mode='hit';
+        try { if(sessionStorage.getItem(seenKey)) mode='get'; }catch(e){}
+        let resp=await fetch(base+mode+'/'+encodeURIComponent(key),{cache:'no-store'});
+        if(mode==='get'&&resp.status===404){mode='hit';resp=await fetch(base+mode+'/'+encodeURIComponent(key),{cache:'no-store'});}
+        if(!resp.ok)throw Error('Count service unavailable');
+        const data=await resp.json();
+        const n=Number(data.value);
+        if(!Number.isFinite(n))throw Error('Invalid count');
+        el.textContent=n.toLocaleString();
+        if(mode==='hit')try{sessionStorage.setItem(seenKey,'1');}catch(e){}
+      }catch(e){el.textContent='—';el.title='Counter temporarily unavailable';}
+    });
+  })();
   </script>
 </body>
 </html>
