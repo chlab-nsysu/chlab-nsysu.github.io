@@ -145,6 +145,22 @@
     .open-house p{font-size:.8rem;}
     @media(max-width:860px){.department-compact-row{display:block;}.department-actions{margin-top:10px;}.pi-home-intro{gap:16px;}}
     @media(max-width:470px){.pi-home-photo{width:86px;height:112px;}.pi-home-intro{align-items:flex-start;}.pi-home-intro h2{font-size:1.5rem;}}
+
+/* Approved Recent Highlights photos */
+#news .news-preview-card{padding:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s}
+#news .news-preview-card:hover{transform:translateY(-3px);border-color:#adcfd4;box-shadow:0 14px 28px rgba(9,52,66,.08)}
+#news .highlight-thumb{width:100%;height:132px;display:block;object-fit:cover;object-position:center;background:#d8e8e9}
+#news .news-preview-text{padding:22px 24px 23px;display:flex;flex:1;flex-direction:column;min-height:141px}
+#news .news-preview-text h3{margin-bottom:15px;font-size:1.09rem;line-height:1.38}
+#news .news-preview-text p{margin-top:auto;font-size:.85rem}
+#news .highlight-paper-art{height:132px;display:flex;justify-content:space-between;align-items:center;gap:12px;overflow:hidden;padding:12px 24px;background:radial-gradient(circle at 17% -50%,transparent 145px,rgba(31,112,137,.12) 147px,transparent 149px),linear-gradient(110deg,#dcedef,#cbe4e6 65%,#abd6dc)}
+#news .paper-art-copy{min-width:0;display:flex;flex-direction:column;gap:7px;color:#0a3d4e}
+#news .paper-art-copy b{font-size:clamp(1.1rem,2vw,1.65rem);line-height:1.02;letter-spacing:.02em;font-weight:850;white-space:nowrap}
+#news .paper-art-copy small{font-size:.7rem;color:#356a7a;white-space:nowrap}
+#news .highlight-paper-art img{height:110px;width:auto;max-width:38%;object-fit:contain;flex-shrink:0;box-shadow:0 4px 12px #08334530;border:2px solid #fff}
+@media(max-width:620px){#news .highlight-thumb,#news .highlight-paper-art{height:156px}#news .news-preview-text{min-height:112px;padding:18px 20px 20px}#news .news-preview-text h3{font-size:1.08rem;margin-bottom:12px}#news .highlight-paper-art{padding:12px 20px}#news .highlight-paper-art img{height:131px}#news .paper-art-copy b{font-size:clamp(1.2rem,5.4vw,1.85rem)}}
+@media(max-width:350px){#news .paper-art-copy b{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){#news .news-preview-card{transition:none}}
 </style>
 <script src="assets/site-i18n.js" defer></script>
 </head>
@@ -315,18 +331,12 @@
           <a class="textlink" href="news.html"><span data-copy lang="zh-TW">更多消息與活動（英文）</span><span data-copy lang="en">More news and activities</span> ↗</a>
         </div>
         <div class="cards">
-          <article class="card">
-            <h3><span data-copy lang="zh-TW">二氧化鈦奈米粒子研究獲期刊接受</span><span data-copy lang="en">Nanoparticle Study Accepted in <i>Aquatic Toxicology</i></span></h3>
-            <p><span data-copy lang="zh-TW">2026 年 11 月</span><span data-copy lang="en">November 2026</span></p>
-          </article>
-          <article class="card">
-            <h3><span data-copy lang="zh-TW">在第 41 屆天然物研討會發表三篇海報</span><span data-copy lang="en">Three Posters at the 41st Symposium of Natural Products</span></h3>
-            <p><span data-copy lang="zh-TW">2026 年 10–11 月</span><span data-copy lang="en">October–November 2026</span></p>
-          </article>
-          <article class="card">
-            <h3><span data-copy lang="zh-TW">日本毒理學會國際海報獎</span><span data-copy lang="en">JSOT International Poster Award</span></h3>
-            <p><span data-copy lang="zh-TW">2026 年 7 月</span><span data-copy lang="en">July 2026</span></p>
-          </article>
+          <article class="card news-preview-card"><div class="highlight-paper-art" role="img" aria-label="Aquatic Toxicology journal cover"><div class="paper-art-copy" aria-hidden="true"><b>AQUATIC<br>TOXICOLOGY</b><small>Elsevier / 2026</small></div><img src="assets/paper-aquatox-108081-thumb.jpg" alt="" loading="lazy" decoding="async"></div><div class="news-preview-text"><h3><span data-copy lang="zh-TW">二氧化鈦奈米粒子研究獲期刊接受</span><span data-copy lang="en">Nanoparticle Study Accepted in <i>Aquatic Toxicology</i></span></h3>
+            <p><span data-copy lang="zh-TW">2026 年 11 月</span><span data-copy lang="en">November 2026</span></p></div></article>
+          <article class="card news-preview-card"><img class="highlight-thumb" src="assets/snp-group.jpg" alt="Chang Lab at the 41st Symposium of Natural Products" loading="lazy" decoding="async"><div class="news-preview-text"><h3><span data-copy lang="zh-TW">在第 41 屆天然物研討會發表三篇海報</span><span data-copy lang="en">Three Posters at the 41st Symposium of Natural Products</span></h3>
+            <p><span data-copy lang="zh-TW">2026 年 10–11 月</span><span data-copy lang="en">October–November 2026</span></p></div></article>
+          <article class="card news-preview-card"><img class="highlight-thumb" src="assets/jsot-2026-award-ceremony.jpg" alt="JSOT International Poster Award ceremony 2026" loading="lazy" decoding="async"><div class="news-preview-text"><h3><span data-copy lang="zh-TW">日本毒理學會國際海報獎</span><span data-copy lang="en">JSOT International Poster Award</span></h3>
+            <p><span data-copy lang="zh-TW">2026 年 7 月</span><span data-copy lang="en">July 2026</span></p></div></article>
         </div>
       </div>
     </section>
