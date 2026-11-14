@@ -42,7 +42,7 @@
     .button:hover { background:#fff; }
     .button-outline { background:transparent; border:1px solid rgba(255,255,255,.47); color:#fff; margin-left:10px; }
     .button-outline:hover { background:rgba(255,255,255,.1); }
-    .hero-art { max-width:460px; width:100%; justify-self:end; filter:drop-shadow(0 15px 30px rgba(0,0,0,.12)); }
+    .hero-art { display:block; width:100%; max-width:100%; height:auto; object-fit:contain; aspect-ratio:auto; justify-self:end; }
     section { padding:82px 0; }
     section.alt { background:var(--light); }
     .section-top { display:flex; justify-content:space-between; align-items:end; gap:30px; margin-bottom:30px; }
@@ -110,7 +110,7 @@
       .navlinks a { font-size:.96rem; padding:7px 0; }
       .hero-inner { grid-template-columns:1fr; min-height:0; padding-top:56px; padding-bottom:30px; gap:20px; }
       .hero { min-height:0; }
-      .hero-art { max-width:245px; justify-self:center; }
+      .hero-art { max-width:100%; width:100%; height:auto; justify-self:center; }
       .cards, .intro-grid, .split { grid-template-columns:1fr; }
       .intro-grid { gap:28px; }
       .cards { gap:13px; }
