@@ -169,6 +169,31 @@
     .visitor-stat strong{color:#075d6a;font-size:1.12rem;font-variant-numeric:tabular-nums}
     @media(max-width:480px){.visitor-counter{right:9px;bottom:9px;padding:7px 10px;gap:8px;font-size:.68rem}.visitor-stat + .visitor-stat{padding-left:8px}.visitor-stat strong{font-size:.98rem}}
 
+
+/* Expandable traffic history, using the existing CountAPI daily counters. */
+.visitor-counter{display:block;padding:0;min-width:154px}
+.visitor-counter summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:center;padding:10px 14px}
+.visitor-counter summary::-webkit-details-marker{display:none}
+.visitor-counter summary::marker{content:""}
+.visitor-counter summary:focus-visible{outline:3px solid #087d8c;outline-offset:3px;border-radius:11px}
+.visitor-counter .visitor-stat{min-width:54px}
+.visitor-toggle-icon{color:#087d8c;flex:0 0 auto;margin-left:1px;transition:transform .2s}
+.visitor-counter[open] .visitor-toggle-icon{transform:rotate(180deg)}
+.visitor-history{position:absolute;right:0;bottom:calc(100% + 10px);width:min(510px,calc(100vw - 24px));max-height:min(76vh,660px);overflow:auto;background:#fff;border:1px solid #cbdfe3;border-radius:15px;padding:20px;box-shadow:0 12px 36px rgba(10,36,57,.2);color:#15384a}
+.visitor-history h3{font-size:1.05rem;line-height:1.35;margin:0 0 11px;color:var(--navy)}
+.visitor-history-actions{display:flex;gap:7px;margin-bottom:13px}
+.visitor-range{border:1px solid #cddfe3;border-radius:7px;padding:6px 12px;background:white;color:#205a68;cursor:pointer;font:inherit;font-size:.79rem}
+.visitor-range[aria-pressed="true"]{background:#e2f3f4;border-color:#7dbec8;font-weight:800}
+.visitor-range:focus-visible{outline:2px solid #087d8c;outline-offset:2px}
+.visitor-chart-block+.visitor-chart-block{margin-top:14px}
+.visitor-chart-heading{font-size:.83rem;font-weight:750;margin:0 0 5px;color:#194456}
+.visitor-chart{min-height:157px;border:1px solid #e1ecee;border-radius:9px;background:#fcfefe;padding:6px}
+.visitor-chart svg{width:100%;height:auto;display:block;overflow:visible}
+.visitor-note,.visitor-status{color:#597280;font-size:.73rem;line-height:1.5;margin:9px 0 0}
+.visitor-status:empty{display:none}
+@media(max-width:480px){.visitor-counter summary{padding:7px 10px;gap:8px}.visitor-history{padding:14px}.visitor-history h3{font-size:.99rem}.visitor-counter .visitor-stat{min-width:45px}}
+@media(prefers-reduced-motion:reduce){.visitor-toggle-icon{transition:none}}
+
 /* Selected publications: compact journal cover thumbnails */
 #publications .card{display:flex;flex-direction:column;gap:16px;min-width:0}
 #publications .pub-featured-top{display:flex;align-items:flex-start;gap:12px;min-width:0;flex:1}
@@ -412,50 +437,175 @@
   </footer>
   <script>
     const languageOptions = document.querySelectorAll('.language-options a');
-    const metadata = {
-      'zh-TW': {
-        title: 'Chang Lab｜海洋活性成分與健康老化',
-        description: '國立中山大學張鈞涵博士主持 Marine Natural Products & Aging Research Laboratory，以秀麗隱桿線蟲研究海洋天然物與老化。'
-      },
-      en: {
-        title: 'Chang Lab | Marine Natural Products & Aging Research Laboratory',
-        description: 'Led by Chun-Han Chang, Ph.D., the Marine Natural Products & Aging Research Laboratory studies marine natural products, aging, and neurodegeneration using C. elegans.'
+    const metada  <details class="visitor-counter" id="visitor-counter" aria-label="Website page view statistics">
+    <summary aria-controls="visitor-history" title="Click to show daily and cumulative page-view charts">
+      <span class="visitor-stat"><span data-copy lang="zh-TW">今日瀏覽</span><span data-copy lang="en">Today</span><strong id="views-today" aria-live="polite">—</strong></span>
+      <span class="visitor-stat"><span data-copy lang="zh-TW">累計瀏覽</span><span data-copy lang="en">Total</span><strong id="views-total" aria-live="polite">—</strong></span>
+      <svg class="visitor-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </summary>
+    <div class="visitor-history" id="visitor-history">
+      <h3><span data-copy lang="zh-TW">網站瀏覽趨勢</span><span data-copy lang="en">Website traffic trends</span></h3>
+      <div class="visitor-history-actions" aria-label="Choose chart time range">
+        <button class="visitor-range" data-days="7" aria-pressed="true" type="button"><span data-copy lang="zh-TW">近 7 日</span><span data-copy lang="en">Last 7 days</span></button>
+        <button class="visitor-range" data-days="30" aria-pressed="false" type="button"><span data-copy lang="zh-TW">近 30 日</span><span data-copy lang="en">Last 30 days</span></button>
+      </div>
+      <div class="visitor-chart-block">
+        <p class="visitor-chart-heading"><span data-copy lang="zh-TW">每日瀏覽次數</span><span data-copy lang="en">Daily page views</span></p>
+        <div class="visitor-chart" id="visitor-daily-chart" role="img" aria-label="Daily page view line chart"></div>
+      </div>
+      <div class="visitor-chart-block">
+        <p class="visitor-chart-heading"><span data-copy lang="zh-TW">累積瀏覽次數</span><span data-copy lang="en">Cumulative page views</span></p>
+        <div class="visitor-chart" id="visitor-cumulative-chart" role="img" aria-label="Cumulative page view area chart"></div>
+      </div>
+      <p class="visitor-status" id="visitor-status" role="status" aria-live="polite"></p>
+      <p class="visitor-note"><span data-copy lang="zh-TW">自 2026/11/13 起計數；臺灣時間。圖表呈現網頁瀏覽次數，非不重複訪客。</span><span data-copy lang="en">Counted since 13 Nov 2026 (Taiwan time). Page views, not unique visitors.</span></p>
+    </div>
+  </details>
+  <script>
+  (function(){
+    'use strict';
+    const base='https://countapi.mileshilliard.com/api/v1/';
+    const initial='2026-11-13';
+    const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()).replaceAll('/','-');
+    const dailyPrefix='chlab_nsysu_home_views_';
+    const totalKey='chlab_nsysu_home_views_total_20261113';
+    const counter=document.getElementById('visitor-counter');
+    const status=document.getElementById('visitor-status');
+    const cached=new Map();
+    const num=new Intl.NumberFormat('en-US');
+    const zh=()=>document.documentElement.dataset.language!=='en';
+    const msg=(cn,en)=>zh()?cn:en;
+    let range=7;
+    let running=false;
+    let total=null;
+    function dateISO(d){return d.toISOString().slice(0,10);}
+    function recentDates(n){
+      const start=new Date(initial+'T00:00:00Z');
+      const end=new Date(today+'T00:00:00Z');
+      const dates=[];
+      for(let i=n-1;i>=0;i--){
+        const d=new Date(end.getTime()-i*86400000);
+        if(d>=start) dates.push(dateISO(d));
       }
-    };
-
-    function showLanguage(language) {
-      document.documentElement.lang = language;
-      document.documentElement.dataset.language = language;
-      document.title = metadata[language].title;
-      document.querySelector('meta[name="description"]').content = metadata[language].description;
-      languageOptions.forEach(link => {
-        if (link.hreflang === language) {
-          link.setAttribute('aria-current', 'true');
-        } else {
-          link.removeAttribute('aria-current');
-        }
-      });
+      return dates;
     }
-
-    languageOptions.forEach(link => {
-      link.addEventListener('click', event => {
-        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-        event.preventDefault();
-        const url = new URL(location.href);
-        url.searchParams.set('lang', link.hreflang);
-        if (location.protocol !== 'file:') history.replaceState(null, '', url);
-        showLanguage(link.hreflang);
-      });
+    async function request(key,mode){
+      const response=await fetch(base+mode+'/'+encodeURIComponent(key),{cache:'no-store'});
+      if(mode==='get'&&response.status===404) return null;
+      if(!response.ok) throw Error('CountAPI '+response.status);
+      const data=await response.json();
+      const value=Number(data.value);
+      if(!Number.isFinite(value)||value<0)throw Error('Invalid page-view count');
+      return value;
+    }
+    async function countOnce(key,id){
+      const el=document.getElementById(id);
+      let counted=false;
+      try{counted=!!sessionStorage.getItem('chlab-counted-'+key);}catch(e){}
+      try{
+        let value=await request(key,counted?'get':'hit');
+        if(value===null){value=await request(key,'hit');counted=false;}
+        el.textContent=num.format(value);
+        if(!counted)try{sessionStorage.setItem('chlab-counted-'+key,'1');}catch(e){}
+        return value;
+      }catch(e){el.textContent='—';el.title=msg('計數器暫時無法讀取','Counter temporarily unavailable');return null;}
+    }
+    const initialCounts=Promise.all([countOnce(dailyPrefix+today,'views-today'),countOnce(totalKey,'views-total')]).then(values=>{
+      if(values[0]!==null)cached.set(today,values[0]);
+      total=values[1];
+      return values;
     });
-    showLanguage(initialLanguage);
-
-    const menuButton = document.getElementById('menuButton');
-    const nav = document.getElementById('navLinks');
-    function setMenu(open) {
-      nav.classList.toggle('open', open);
-      menuButton.setAttribute('aria-expanded', String(open));
+    async function readDay(date){
+      if(cached.has(date))return cached.get(date);
+      try{
+        const value=await request(dailyPrefix+date,'get');
+        const resolved=value===null?0:value; // an uncreated historical day had zero recorded visits
+        cached.set(date,resolved);
+        return resolved;
+      }catch(e){return null;} // fetch failure is not a zero count
     }
-    menuButton.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+    function svgChart(target,rows,kind){
+      const node=document.getElementById(target);
+      node.replaceChildren();
+      if(!rows.length||rows.every(p=>p.value===null)){
+        node.textContent=msg('暫無可用的歷史資料','Historical data unavailable');
+        return;
+      }
+      const ns='http://www.w3.org/2000/svg',W=446,H=165,L=41,R=12,T=16,B=29;
+      const svg=document.createElementNS(ns,'svg');
+      svg.setAttribute('viewBox','0 0 '+W+' '+H);
+      svg.setAttribute('role','img');
+      svg.setAttribute('aria-label',msg(kind==='daily'?'每日瀏覽折線圖':'累積瀏覽面積圖',kind==='daily'?'Daily page view line chart':'Cumulative page view area chart'));
+      const values=rows.filter(p=>p.value!==null).map(p=>p.value);
+      const ymin=0,ymax=Math.max(1,...values);
+      const x=i=>L+(rows.length===1?(W-L-R)/2:i*(W-L-R)/(rows.length-1));
+      const y=n=>H-B-(n-ymin)/(ymax-ymin)*(H-T-B);
+      function add(tag,attrs,parent=svg,textValue){
+        const e=document.createElementNS(ns,tag);
+        Object.keys(attrs||{}).forEach(k=>e.setAttribute(k,attrs[k]));
+        if(textValue!==undefined)e.textContent=textValue;
+        parent.appendChild(e);return e;
+      }
+      for(let i=0;i<=3;i++){
+        const v=ymax*i/3,py=y(v);
+        add('line',{x1:L,y1:py,x2:W-R,y2:py,stroke:'#e4edef','stroke-width':'1'});
+        add('text',{x:L-7,y:py+4,'text-anchor':'end',fill:'#627988','font-size':'10'},svg,num.format(Math.round(v)));
+      }
+      const ticks=[0,Math.floor((rows.length-1)/2),rows.length-1].filter((x,i,a)=>a.indexOf(x)===i);
+      ticks.forEach(i=>add('text',{x:x(i),y:H-8,'text-anchor':'middle',fill:'#627988','font-size':'10'},svg,rows[i].date.slice(5).replace('-','/')));
+      const color=kind==='daily'?'#087d8c':'#2b798c';
+      let group=[];
+      function draw(segment){
+        if(!segment.length)return;
+        const d=segment.map((p,i)=>(i?'L':'M')+x(p.idx).toFixed(1)+' '+y(p.value).toFixed(1)).join(' ');
+        if(kind==='cumulative'){
+          const area=d+' L'+x(segment[segment.length-1].idx).toFixed(1)+' '+(H-B)+' L'+x(segment[0].idx).toFixed(1)+' '+(H-B)+' Z';
+          add('path',{d:area,fill:'#b8dde2','fill-opacity':'.52'});
+        }
+        add('path',{d,stroke:color,'stroke-width':'2.6',fill:'none','stroke-linecap':'round','stroke-linejoin':'round'});
+        segment.forEach(p=>{
+          const circle=add('circle',{cx:x(p.idx),cy:y(p.value),r:rows.length>18?'2.4':'3.6',fill:'#fff',stroke:color,'stroke-width':'2'});
+          add('title',{},circle,p.date+' · '+num.format(p.value));
+        });
+      }
+      rows.forEach((p,idx)=>{if(p.value===null){draw(group);group=[];}else{group.push({...p,idx});}});
+      draw(group);
+      node.appendChild(svg);
+    }
+    async function render(){
+      if(running)return;
+      running=true;
+      status.textContent=msg('正在讀取每日歷史紀錄…','Loading daily history…');
+      try{
+        const dates=recentDates(range);
+        // Read in small batches to avoid overwhelming the public counter endpoint.
+        for(let i=0;i<dates.length;i+=5){await Promise.all(dates.slice(i,i+5).map(readDay));}
+        await initialCounts;
+        const daily=dates.map(date=>({date,value:cached.has(date)?cached.get(date):null}));
+        // Anchor cumulative values to the existing total counter, subtracting known later days.
+        // If any later day failed to load, previous cumulative values are unknown, not zero.
+        let later=0,valid=total!==null;
+        const cumulative=new Array(daily.length);
+        for(let i=daily.length-1;i>=0;i--){
+          const point=daily[i];
+          cumulative[i]={date:point.date,value:valid?Math.max(0,total-later):null};
+          if(point.value===null)valid=false;
+          else later+=point.value;
+        }
+        svgChart('visitor-daily-chart',daily,'daily');
+        svgChart('visitor-cumulative-chart',cumulative,'cumulative');
+        const missing=daily.filter(p=>p.value===null).length;
+        status.textContent=missing?msg('有 '+missing+' 天紀錄暫時無法取得；缺失資料不以零代替。',missing+' daily records unavailable; missing data are not shown as zero.'):total===null?msg('累計總數暫時無法取得，累積圖可能無法顯示。','Total unavailable; cumulative trend cannot be completed.'):'';
+      }finally{running=false;}
+    }
+    counter.addEventListener('toggle',()=>{if(counter.open)render();});
+    counter.querySelectorAll('.visitor-range').forEach(button=>button.addEventListener('click',()=>{
+      range=Number(button.dataset.days);
+      counter.querySelectorAll('.visitor-range').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+      render();
+    }));
+  })();
+  </script>() => setMenu(!nav.classList.contains('open')));
     nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
     document.querySelector('header').addEventListener('keydown', event => {
       if (event.key === 'Escape' && nav.classList.contains('open')) {
