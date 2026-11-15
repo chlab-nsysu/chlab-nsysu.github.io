@@ -162,6 +162,7 @@ function propagateLanguage(value){
 }
 function changeLanguage(value){
   language=value;document.documentElement.dataset.language=value;document.documentElement.lang=value;
+  const piName=document.getElementById('pi-name');if(piName)piName.textContent=value==='en'?'Chun-Han Chang, Ph.D.':'張鈞涵 博士';
   if(!home){
     document.title=headings[page][value==='en'?1:0];
     document.querySelectorAll('.navlinks a').forEach(function(a){
