@@ -48,6 +48,7 @@ const zh={
 'pi.html':[
 ['Principal Investigator','主持人'],
 ['Research profile, academic training','張鈞涵博士的研究簡介、學經歷、研究計畫與學術活動。'],['ABOUT THE PI','關於主持人'],
+['Chun-Han Chang, Ph.D.','張鈞涵 博士'],
 ['Dr. Chun-Han Chang is an Assistant Professor','張鈞涵博士現任國立中山大學海洋生物科技暨資源學系助理教授，研究主題包括海洋天然物、氧化壓力、健康老化、神經退化及環境毒理。'],
 ['At the Marine Natural Products & Aging Research Laboratory','於 Marine Natural Products &amp; Aging Research Laboratory，透過天然物活性篩選、分子生物學與活體模式，尤其是秀麗隱桿線蟲（<em>Caenorhabditis elegans</em>），研究天然及環境化合物的生物效應與可能機制。'],
 ['View all 28 publications','查看全部 28 篇研究著作 ↗'],['CURRENT POSITION','現職'],
