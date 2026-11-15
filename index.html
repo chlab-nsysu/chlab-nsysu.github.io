@@ -192,6 +192,22 @@
 .visitor-note{font-size:.73rem;color:#536e7e;line-height:1.5;margin:10px 0 0}
 @media(max-width:480px){.visitor-counter summary{padding:7px 10px;gap:8px}.visitor-panel{padding:13px}}
 
+/* 2026-11-15: sunset-view hero, user-supplied NSYSU waterfront photo */
+#home.hero{
+  background-image:linear-gradient(90deg,rgba(6,35,54,.94) 0%,rgba(7,43,60,.81) 31%,rgba(10,48,67,.31) 68%,rgba(8,44,60,.40) 100%),linear-gradient(0deg,rgba(5,37,51,.54),transparent 56%),url("assets/chang-lab-ocean-blurred-hero.svg");
+  background-position:center,center,center 53%;
+  background-size:cover,cover,cover;
+  background-repeat:no-repeat;
+}
+#home .hero-inner{display:flex;align-items:center;justify-content:flex-start;min-height:500px}
+#home .hero-inner>div:first-child{width:min(100%,780px);position:relative;z-index:2}
+#home .hero-art{display:none}
+#home .hero:before{pointer-events:none}
+@media(max-width:760px){
+ #home .hero-inner{min-height:520px}
+ #home.hero{background-position:center,center,54% center}
+}
+
 /* Selected publications: compact journal cover thumbnails */
 #publications .card{display:flex;flex-direction:column;gap:16px;min-width:0}
 #publications .pub-featured-top{display:flex;align-items:flex-start;gap:12px;min-width:0;flex:1}
