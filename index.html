@@ -194,7 +194,7 @@
 
 /* 2026-11-15: sunset-view hero, user-supplied NSYSU waterfront photo */
 #home.hero{
-  background-image:linear-gradient(90deg,rgba(6,35,54,.94) 0%,rgba(7,43,60,.81) 31%,rgba(10,48,67,.31) 68%,rgba(8,44,60,.40) 100%),linear-gradient(0deg,rgba(5,37,51,.54),transparent 56%),url("assets/chang-lab-ocean-blurred-hero.svg");
+  background-image:linear-gradient(90deg,rgba(5,39,58,.36) 0%,rgba(5,40,59,.19) 35%,rgba(6,42,61,.02) 70%),linear-gradient(0deg,rgba(5,37,51,.18),transparent 57%),url("assets/chang-lab-ocean-blurred-hero.svg");
   background-position:center,center,center 53%;
   background-size:cover,cover,cover;
   background-repeat:no-repeat;
@@ -202,7 +202,7 @@
 #home .hero-inner{display:flex;align-items:center;justify-content:flex-start;min-height:500px}
 #home .hero-inner>div:first-child{width:min(100%,780px);position:relative;z-index:2}
 #home .hero-art{display:none}
-#home .hero:before{pointer-events:none}
+#home.hero:before{display:none}
 @media(max-width:760px){
  #home .hero-inner{min-height:520px}
  #home.hero{background-position:center,center,54% center}
