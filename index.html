@@ -168,6 +168,14 @@
     .visitor-stat + .visitor-stat{border-left:1px solid #cbdfe3;padding-left:12px}
     .visitor-stat strong{color:#075d6a;font-size:1.12rem;font-variant-numeric:tabular-nums}
     @media(max-width:480px){.visitor-counter{right:9px;bottom:9px;padding:7px 10px;gap:8px;font-size:.68rem}.visitor-stat + .visitor-stat{padding-left:8px}.visitor-stat strong{font-size:.98rem}}
+
+/* Selected publications: compact journal cover thumbnails */
+#publications .card{display:flex;flex-direction:column;gap:16px;min-width:0}
+#publications .pub-featured-top{display:flex;align-items:flex-start;gap:12px;min-width:0;flex:1}
+#publications .pub-featured-top h3{flex:1;min-width:0;margin:0;overflow-wrap:break-word;font-size:1.08rem;line-height:1.37}
+#publications .pub-journal-thumb{display:block;flex:0 0 70px;width:70px;height:92px;object-fit:cover;object-position:center top;border:1px solid #d7e3e6;border-radius:3px;background:#eef6f7;box-shadow:0 3px 10px rgba(9,52,66,.12)}
+#publications .item-meta{margin-top:auto}
+@media(max-width:400px){#publications .pub-journal-thumb{flex-basis:60px;width:60px;height:80px}}
 </style>
 <script src="assets/site-i18n.js" defer></script>
 </head>
@@ -303,15 +311,15 @@
         </div>
         <div class="cards">
           <article class="card">
-            <h3 lang="en">Developmental TiO₂ Nanoparticle Exposure and Parkinson’s Disease-Related Phenotypes in <i>C. elegans</i></h3>
+            <div class="pub-featured-top"><h3 lang="en">Developmental TiO₂ Nanoparticle Exposure and Parkinson’s Disease-Related Phenotypes in <i>C. elegans</i></h3><img class="pub-journal-thumb" src="https://img.medsci.cn/images/journal/cover/2021/uuS_202109271314197440.jpg" alt="Aquatic Toxicology journal cover" width="70" height="92" loading="lazy" decoding="async" referrerpolicy="no-referrer"/></div>
             <p class="item-meta"><cite lang="en">Aquatic Toxicology</cite> · 2026 · <a class="textlink" href="https://doi.org/10.1016/j.aquatox.2026.108081">DOI ↗</a></p>
           </article>
           <article class="card">
-            <h3 lang="en">PCPE-1 in Cardiac Fibrosis Associated with Aging and Obesity</h3>
+            <div class="pub-featured-top"><h3 lang="en">PCPE-1 in Cardiac Fibrosis Associated with Aging and Obesity</h3><img class="pub-journal-thumb" src="https://img1.wsimg.com/isteam/ip/3c8e3a4f-f14c-4909-9323-02b48c3cf273/Cover.jpg" alt="JCI Insight journal cover" width="70" height="92" loading="lazy" decoding="async" referrerpolicy="no-referrer"/></div>
             <p class="item-meta"><cite lang="en">JCI Insight</cite> · 2026 · <a class="textlink" href="https://insight.jci.org/articles/view/195508">JCI Insight ↗</a></p>
           </article>
           <article class="card">
-            <h3 lang="en">Early-Life Aflatoxin B1 Exposure, Aging, and Innate Immunity in Worms</h3>
+            <div class="pub-featured-top"><h3 lang="en">Early-Life Aflatoxin B1 Exposure, Aging, and Innate Immunity in Worms</h3><img class="pub-journal-thumb" src="https://img.medsci.cn/images/journal/cover/2021/tKy_202109271314405040.jpg" alt="Chemico-Biological Interactions journal cover" width="70" height="92" loading="lazy" decoding="async" referrerpolicy="no-referrer"/></div>
             <p class="item-meta"><cite lang="en">Chemico-Biological Interactions</cite> · 2025 · <a class="textlink" href="https://pubmed.ncbi.nlm.nih.gov/39675545/">PubMed ↗</a></p>
           </article>
         </div>
