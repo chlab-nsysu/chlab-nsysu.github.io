@@ -208,6 +208,17 @@
  #home.hero{background-position:center,center,54% center}
 }
 
+/* Keep mobile language switcher fully visible above the sticky navigation. */
+@media(max-width:900px){
+  .topline{position:sticky;top:0;z-index:12;}
+  .topline .container{min-height:44px;justify-content:flex-end;align-items:center;}
+  .topline .university{display:none;}
+  .topline .language-options{display:flex;align-items:center;gap:8px;padding:6px 0;}
+  .topline .language-options a{display:inline-flex;justify-content:center;align-items:center;min-width:46px;min-height:32px;padding:5px 10px;line-height:1.2;}
+  header{top:44px;}
+  html{scroll-padding-top:120px;}
+}
+
 /* Selected publications: compact journal cover thumbnails */
 #publications .card{display:flex;flex-direction:column;gap:16px;min-width:0}
 #publications .pub-featured-top{display:flex;align-items:flex-start;gap:12px;min-width:0;flex:1}
