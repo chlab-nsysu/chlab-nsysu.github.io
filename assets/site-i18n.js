@@ -113,6 +113,7 @@ const zh={
 ['Conference','研討會'],['✦ Lab diary','✦ 實驗室日誌 · 2026'],
 ['Three poster presentations at the 41st Symposium of Natural Products','第 41 屆天然藥物研討會：三篇海報發表'],
 ['From marine natural products to healthy aging','研究主題涵蓋海洋天然物、健康老化與神經保護，於 2026 年高雄醫學大學舉行的聯合學術研討會分享。'],
+['Congratulations to undergraduate students Wan-Jing Huang','恭喜大專生黃菀靚、林芳莛及林易辰於第 41 屆天然藥物研討會中進行研究海報發表！'],
 ['Posters','篇海報'],['Marine bioactives & longevity','海洋天然物與延長壽命'],['Marine fungal metabolites','海洋真菌代謝物'],['Neurodegenerative disease models','神經退化疾病模式'],
 ['CONFERENCE MOMENTS','研討會花絮'],['A little glimpse behind the science','研究之外的精彩片刻 ✺'],
 ['5 photos · Kaohsiung 2026','5 張照片 · 2026 高雄'],['Lab crew · 2026','實驗室團隊 · 2026'],
