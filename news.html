@@ -415,6 +415,9 @@ html:not([data-language]) .jsot-photo [data-copy][lang="zh-TW"]{display:none;}
 .news-event-gallery-shot img{display:block;width:100%;height:100%;object-fit:cover}
 @media(hover:none){.news-event-photo:hover img,.news-event-gallery-shot:hover img{transform:none}}
 @media(prefers-reduced-motion:reduce){.news-event-photo img,.news-event-gallery-shot img{transition:none}}
+.news-event-gallery{display:none}
+#board-game-night-2026.photos-ready .news-event-gallery{display:grid}
+#board-game-night-2026.photos-ready .news-event-illustration{display:none}
 </style><link rel="stylesheet" href="assets/site-i18n.css"/>
 <script src="assets/site-i18n.js?v=news-cards-20261110" defer></script>
 </head><body><a class="skip-link" href="#main">Skip to content</a>
@@ -434,6 +437,7 @@ html:not([data-language]) .jsot-photo [data-copy][lang="zh-TW"]{display:none;}
       <div class="news-links"><a class="inline-link" href="https://news.nsysu.edu.tw/p/406-1120-384522%2Cr2910.php?Lang=zh-tw" target="_blank" rel="noopener noreferrer">NSYSU official Open House announcement ↗</a></div>
     </article>
     <article class="news-highlight news-event-card" id="board-game-night-2026">
+      <div class="news-event-illustration" role="img" aria-label="Board game night event graphic"><span class="news-dice" aria-hidden="true">⚄</span><span>ENGLISH SOCIAL<br><strong>BOARD GAME NIGHT</strong></span></div>
       <div class="news-event-gallery" aria-label="Four photographs from the English Board Game Night, 11 November 2026">
         <div class="news-event-gallery-shot"><img src="assets/boardgame-2026-1.jpg" alt="Group photo of students and teachers at English Board Game Night" loading="lazy" decoding="async" onerror="this.onerror=null;this.style.visibility='hidden'"></div>
         <div class="news-event-gallery-shot"><img src="assets/boardgame-2026-2.jpg" alt="Local and international students enjoying board games together" loading="lazy" decoding="async" onerror="this.onerror=null;this.style.visibility='hidden'"></div>
@@ -485,6 +489,16 @@ html:not([data-language]) .jsot-photo [data-copy][lang="zh-TW"]{display:none;}
   </div>
   <details class="news-archive"><summary>Earlier conference activities <span aria-hidden="true">⌄</span></summary><div class="news-archive-body"><div class="news-meta"><time datetime="2025-05">May 2025</time><span class="news-type">Oral presentation</span></div><p><strong>A novel spontaneous atrial fibrillation mouse model unveils fibrotic remodeling.</strong></p><p>XXV World Congress of the International Society for Heart Research (ISHR), Nara, Japan.</p></div></details>
 </div></section>
+<script>
+(function(){
+  const card=document.getElementById('board-game-night-2026');
+  if(!card)return;
+  const images=Array.from(card.querySelectorAll('.news-event-gallery img'));
+  const check=()=>{if(images.length===4&&images.every(img=>img.complete&&img.naturalWidth>0))card.classList.add('photos-ready')};
+  images.forEach(img=>img.addEventListener('load',check));
+  check();
+})();
+</script>
 </main><footer><div class="container"><div><b>CHANG LAB</b><br/>Marine Natural Products &amp; Aging Research Laboratory</div><div>© <span id="year">2026</span> Chang Lab · National Sun Yat-sen University</div></div></footer><script>(function(){const button=document.getElementById('menuButton'),nav=document.getElementById('navLinks');if(button&&nav){button.addEventListener('click',()=>{const x=nav.classList.toggle('open');button.setAttribute('aria-expanded',String(x))});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');button.setAttribute('aria-expanded','false')}));}document.getElementById('year').textContent=new Date().getFullYear();})();
 </script><dialog class="snp-lightbox" id="snpLightbox" aria-label="Conference photo and poster viewer">
 <button class="snp-lightbox-close" type="button" aria-label="Close image">×</button><button class="snp-lightbox-prev" type="button" aria-label="Previous image">‹</button>
