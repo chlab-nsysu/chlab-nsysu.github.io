@@ -98,6 +98,14 @@ const zh={
 ['Search papers','搜尋論文'],['Year','年份'],['All years','所有年份']
 ],
 'news.html':[
+['Introducing Marine Biotechnology to Future Students at NSYSU Open House','中山大學 Open House：帶領高中生認識海洋生物科技'],
+['During the 2026 NSYSU Open House, Dr. Chun-Han Chang introduced','2026 年中山大學校園開放日，張鈞涵老師向到訪的高中生介紹海洋生物科技暨資源學系，分享海洋研究的多元面向、系所學習資源與科學探索的樂趣。'],
+['NSYSU official Open House announcement','中山大學 Open House 官方活動公告 ↗'],
+['English Board Game Night: Connecting Students and Faculty','English Board Game Night：師生與國際學生的交流之夜'],
+['The College of Marine Sciences brought local and international students','海洋科學學院舉辦 English Board Game Night，讓本地與國際學生及教師在桌遊、笑聲與英語交流中共度愉快夜晚。張鈞涵老師也參與其中，享受輕鬆而難忘的互動時光。'],
+['Official College of Marine Sciences English events','海科院英語活動官方公告 ↗'],
+['Outreach · Open House','系所推廣 · 校園開放日'],
+['Campus Life · International Exchange','校園生活 · 國際交流'],
 ['News & Activities','活動消息'],
 ['Research publications, conference presentations','記錄實驗室的期刊研究、研討會發表與學術活動。研究成果與海報標題均保留英文原文。'],
 ['LATEST MILESTONES','近期成果'],['2026 Highlights','2026 年研究亮點'],
