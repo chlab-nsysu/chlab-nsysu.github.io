@@ -226,6 +226,14 @@
 #publications .pub-journal-thumb{display:block;flex:0 0 70px;width:70px;height:92px;object-fit:cover;object-position:center top;border:1px solid #d7e3e6;border-radius:3px;background:#eef6f7;box-shadow:0 3px 10px rgba(9,52,66,.12)}
 #publications .item-meta{margin-top:auto}
 @media(max-width:400px){#publications .pub-journal-thumb{flex-basis:60px;width:60px;height:80px}}
+
+/* Shared News feed: homepage pulls the newest three dated activities from news.html */
+#news .news-preview-card .home-news-link{display:flex;flex-direction:column;min-height:100%;height:100%;text-decoration:none;color:inherit;}
+#news .news-preview-card .home-news-link:hover h3,#news .news-preview-card .home-news-link:focus-visible h3{color:var(--teal-dark)}
+#news .news-preview-card .home-news-link:focus-visible{outline:3px solid #e69d55;outline-offset:-3px;border-radius:12px}
+#news .news-preview-card .home-news-link .highlight-thumb{flex-shrink:0}
+#news .news-preview-card .home-news-link .news-preview-text{width:100%}
+#news .home-news-fallback-note{font-size:.76rem;color:var(--muted);grid-column:1/-1}
 </style>
 <script src="assets/site-i18n.js" defer></script>
 </head>
@@ -385,7 +393,7 @@
           </div>
           <a class="textlink" href="news.html"><span data-copy lang="zh-TW">更多消息與活動（英文）</span><span data-copy lang="en">More news and activities</span> ↗</a>
         </div>
-        <div class="cards">
+        <div class="cards" id="home-news-feed" aria-live="polite">
           <article class="card news-preview-card"><div class="highlight-paper-art" role="img" aria-label="Aquatic Toxicology journal cover"><div class="paper-art-copy" aria-hidden="true"><b>AQUATIC<br>TOXICOLOGY</b><small>Elsevier / 2026</small></div><img src="assets/paper-aquatox-108081-thumb.jpg" alt="" loading="lazy" decoding="async"></div><div class="news-preview-text"><h3><span data-copy lang="zh-TW">二氧化鈦奈米粒子研究獲期刊接受</span><span data-copy lang="en">Nanoparticle Study Accepted in <i>Aquatic Toxicology</i></span></h3>
             <p><span data-copy lang="zh-TW">2026 年 11 月</span><span data-copy lang="en">November 2026</span></p></div></article>
           <article class="card news-preview-card"><img class="highlight-thumb" src="assets/snp-group.jpg" alt="Chang Lab at the 41st Symposium of Natural Products" loading="lazy" decoding="async"><div class="news-preview-text"><h3><span data-copy lang="zh-TW">在第 41 屆天然物研討會發表三篇海報</span><span data-copy lang="en">Three Posters at the 41st Symposium of Natural Products</span></h3>
@@ -616,5 +624,58 @@
     chartPanel.addEventListener('toggle',()=>{if(chartPanel.open)show()});
   })();
   </script>
+
+<script>
+/* One source of truth: dated cards in news.html. The static cards remain as a
+   fallback if the site is offline or the request fails. */
+(function(){
+  'use strict';
+  const grid=document.getElementById('home-news-feed');
+  if(!grid)return;
+  const locale=()=>document.documentElement.dataset.language==='en'?'en':'zh-TW';
+  const format=(day,lang)=>{
+    const d=new Date(day+'T12:00:00Z');
+    return new Intl.DateTimeFormat(lang==='en'?'en-US':'zh-TW',{
+      timeZone:'Asia/Taipei',year:'numeric',month:lang==='en'?'long':'numeric',day:'numeric'
+    }).format(d);
+  };
+  const make=(tag,className)=>{const el=document.createElement(tag);if(className)el.className=className;return el};
+  let entries=[];
+  function draw(){
+    if(!entries.length)return;
+    const lang=locale(),fragment=document.createDocumentFragment();
+    for(const item of entries){
+      const card=make('article','card news-preview-card');
+      const link=make('a','home-news-link');link.href='news.html#'+encodeURIComponent(item.id);
+      const picture=make('img','highlight-thumb');picture.src=item.image;picture.loading='lazy';picture.decoding='async';picture.alt=item.titleEn;
+      picture.addEventListener('error',()=>{picture.style.background='#dce9ec';picture.style.objectFit='contain';picture.alt=''});
+      const body=make('div','news-preview-text');
+      const heading=make('h3');heading.textContent=lang==='en'?item.titleEn:item.titleZh;
+      const date=make('p');date.textContent=format(item.date,lang);
+      body.append(heading,date);link.append(picture,body);card.append(link);fragment.append(card);
+    }
+    grid.replaceChildren(fragment);
+  }
+  async function refresh(){
+    try{
+      const resp=await fetch('news.html',{cache:'no-store'});
+      if(!resp.ok)throw new Error('News feed unavailable');
+      const doc=new DOMParser().parseFromString(await resp.text(),'text/html');
+      const cards=[...doc.querySelectorAll('.news-highlight[data-home-date][data-home-image][data-home-zh][id]')];
+      const list=cards.map(el=>({
+        id:el.id,date:el.dataset.homeDate,image:el.dataset.homeImage,
+        titleZh:el.dataset.homeZh,titleEn:el.querySelector('h3')?.textContent?.trim()||''
+      })).filter(x=>/^\d{4}-\d{2}-\d{2}$/.test(x.date)&&x.titleEn&&x.titleZh&&x.image)
+       .sort((a,b)=>b.date.localeCompare(a.date));
+      if(!list.length)throw new Error('No dated entries');
+      entries=list.slice(0,3);draw();
+    }catch(err){/* Keep the original three cards if the source is unreachable. */}
+  }
+  refresh();
+  // Language changes in the homepage do not reload the document.
+  const languageButtons=document.querySelectorAll('.language-options a');
+  languageButtons.forEach(button=>button.addEventListener('click',()=>requestAnimationFrame(draw)));
+})();
+</script>
 </body>
 </html>
